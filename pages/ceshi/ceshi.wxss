@@ -1,0 +1,10 @@
+/* pages/ceshi/ceshi.wxss */
+.left{
+  position: absolute;
+  
+  width: 50rpx;
+  height: 50rpx;
+  background-color: violet;
+  border-radius: 50%;
+  transition-duration: 2s; 
+}

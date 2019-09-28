@@ -1,0 +1,55 @@
+/* pages/loading/loading.wxss */
+.max{
+ position: fixed;
+  height: 100%; 
+  width: 100%;
+  overflow: hidden;
+}
+.max_image{
+  position: fixed;
+  top: 0rpx;
+  width: 100%;
+  height: 100%;
+}
+.max_image image{
+  width: 100%;
+  height: 100%;
+}
+.max_xz{
+position: fixed;
+height: 100%; 
+width: 100%; 
+display:flex; 
+flex-direction:column;
+align-items:center; 
+justify-content: center;
+}
+.max_xz_img{
+  width: 100%;
+  height: 580rpx;
+}
+.max_xz_img image{
+  width: 80%;
+  height: 100%;
+  margin-left: 10%;
+  transition: 0.5s; 
+  animation: rotate 10s linear infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate(0);
+      }
+    50%{
+    	transform:rotate(180deg);
+    }
+    100%{
+         transform: rotate(360deg);
+    	}
+}
+.max_xz_text{
+  position: absolute;
+  top:47.3%;
+  color: white;
+  font-size: 50rpx;
+  font-weight: 100;
+}

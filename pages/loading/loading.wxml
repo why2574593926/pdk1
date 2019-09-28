@@ -1,0 +1,15 @@
+<!--pages/loading/loading.wxml-->
+<view class='max'>
+  <view class='max_image'>
+    <image mode='scaleToFill' class='' src='../img/loadingbg.png'></image>
+  </view>
+  <view bindtap='start_yz' class='max_xz'>
+    <view class='max_xz_img'>
+      <image mode='scaleToFill' src='../img/loadingxz.png'></image>
+    </view>
+    <view class='max_xz_text'>
+      <text>开始</text>
+    </view>
+
+  </view>
+</view>

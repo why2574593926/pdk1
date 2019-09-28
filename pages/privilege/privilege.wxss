@@ -1,0 +1,112 @@
+/**index.wxss**/
+/* 搜索 */
+.top_max{
+  z-index: 888;
+  width: 100%;
+  height: 430rpx;
+  background-color: #FF6D10;
+}
+.search{
+  width: 90%;
+  height: 70rpx;
+  float: left;
+  margin-left: 5%;
+  margin-top: 20rpx;
+}
+.search input{
+  width: 87%;
+  height: 100%;
+  color: #3B3B3B;
+  background-color: white;
+  border-radius: 50rpx;
+  padding-left: 90rpx;
+}
+.placer{
+  color: #D2D2D2;
+}
+.search image{
+  position: absolute;
+  top: 35rpx;
+  left: 70rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+/* 顶部滚动 */
+.top_max swiper{
+  float: left;
+  width: 100%;
+  height: 320rpx;
+}
+.top_max swiper image{
+  width: 100%;
+  height: 350rpx;
+}
+/* 特权 */
+.tequan1{
+  z-index: 999;
+  width: 100%;
+  height: 45rpx;
+}
+.tequan1 image{
+  width: 100%;
+  height: 45rpx;
+}
+.category-box {  
+  background-color: #fff;
+  clear: both;
+}
+.category-list{
+  width:180rpx;
+  margin-top:20rpx;
+  text-align: center;
+  display: inline-block;
+  overflow: hidden;
+}
+.category-column{
+  width:100%;
+  margin-top:20rpx;
+  overflow: hidden;
+}
+.category-imgbox{
+  width:64px;
+  height:64px;
+}
+.category-imgbox2{
+  width:45px;
+  height:45px;
+}
+.category-title{
+  font-size: 24rpx;
+  text-align:center;
+  margin-top:10rpx;
+}
+
+.tag{
+  width: 75rpx;
+  height: 22rpx;
+  position: absolute;
+  top: -20rpx;
+  right: 10rpx;
+  z-index: 1;
+  margin: 10px 0px 0 5px;
+}
+.pipiicon{
+  width: 100%;
+  height: 100rpx;
+}
+.pipiicon image{
+  float: left;
+  width: 25rpx;
+  height: 55rpx;
+  margin-top: 27rpx;
+  margin-left: 30rpx;
+}
+.pipiicon text{
+  float: left;
+  color: #000000;
+  font-size: 36rpx;
+  font-weight: bold;
+  line-height: 100rpx;
+  margin-left: 10rpx;
+}
+

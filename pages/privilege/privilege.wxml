@@ -1,0 +1,148 @@
+<!--pages/privilege/privilege.wxml-->
+<!--index.wxml-->
+
+<view class='top_max'>
+  <!-- 顶部搜索 -->
+  <view class='search'>
+    <input placeholder-class='placer' placeholder='搜索商品或特权'></input>
+    <image src='../img/search1.png'></image>
+  </view>
+  <!-- 顶部滚动 -->
+  <swiper indicator-dots='true' indicator-active-color='#FF6D10' indicator-color='white' autoplay='true' interval='3000' duration='1000'>
+    <swiper-item>
+      <image src='../img/guanggao1.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../img/guanggao2.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../img/guanggao3.png'></image>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 热门特权 -->
+<view class='tequan1'>
+  <image src='../img/tequan1.jpg'></image>
+</view>
+<view class='pipiicon'>
+  <image src='../img/shop_icon.jpg'></image>
+  <text>热门特权</text>
+</view>
+<view class="category-box">
+  <view class="category-list" wx:key wx:for="{{tequan1}}" id="{{item.tag}}">
+    <view class="category-column">
+
+      <view style="position: relative;">
+        <image wx:if="{{index<4}}" class="category-imgbox" src="{{item.url}}"></image>
+        <image wx:else class="category-imgbox2" src="{{item.url}}"></image>
+
+        <view wx:if="{{item.url2}}">
+          <image class="tag" src="{{item.url2}}" />
+        </view>
+      </view>
+
+
+      <view class="category-title">{{item.content}}</view>
+      <view a:if="{{item.reservedata1}}" class="category-title">{{item.reservedata1}}</view>
+    </view>
+  </view>
+</view>
+<!-- car功能区 -->
+<view class='pipiicon'>
+  <image src='../img/shop_icon.jpg'></image>
+  <text>汽车服务</text>
+</view>
+  <view class="category-box" style="margin-top:-20px">
+          <view class="category-list" wx:key wx:for="{{cars}}" id="{{item.tag}}">
+            <view class="category-column" >
+              
+              <view style="position: relative;">
+                <image  class="category-imgbox2" src="{{item.url}}"></image>
+
+                <view wx:if="{{item.reservedata2}}">
+                  <image class="tag" src="{{reservedata1[item.reservedata2].url}}"/>
+                </view>
+              </view>
+              
+              
+              <view class="category-title">{{item.content}}</view>
+              <view wx:if="{{item.reservedata1=='-1'}}" class="category-title"><text style="opacity: 0;">text</text></view>
+              <view wx:else class="category-title">{{item.reservedata1}}</view>
+            </view>          
+          </view>
+  </view>
+ <!--  -->
+<!-- 货车服务 -->
+<view class='pipiicon'>
+  <image src='../img/shop_icon.jpg'></image>
+  <text>货车服务</text>
+</view>
+  <view class="category-box" style="margin-top:-20px">
+          <view class="category-list" wx:key wx:for="{{kache}}" id="{{item.tag}}">
+            <view class="category-column" >
+              
+              <view style="position: relative;">
+                <image  class="category-imgbox2" src="{{item.url}}"></image>
+
+                 <view wx:if="{{item.reservedata2}}">
+                  <image class="tag" src="{{reservedata1[item.reservedata2].url}}"/>
+                </view>
+              </view>
+              
+              
+             <view class="category-title">{{item.content}}</view>
+             <view wx:if="{{item.reservedata1=='-1'}}" class="category-title"><text style="opacity: 0;">text</text></view>
+             <view wx:else class="category-title">{{item.reservedata1}}</view>
+            </view>          
+          </view>
+  </view>
+
+
+<!-- 机车服务 -->
+<view class='pipiicon'>
+  <image src='../img/shop_icon.jpg'></image>
+  <text>机车服务</text>
+</view>
+  <view class="category-box" style="margin-top:-20px">
+          <view class="category-list" wx:key wx:for="{{jiche}}" id="{{item.tag}}" >
+            <view class="category-column" >
+              
+              <view style="position: relative;">
+                <image  class="category-imgbox2" src="{{item.url}}"></image>
+
+                <view wx:if="{{item.reservedata2}}">
+                  <image class="tag" src="{{reservedata1[item.reservedata2].url}}"/>
+                </view>
+              </view>
+              
+              
+              <view class="category-title">{{item.content}}</view>
+            </view>          
+          </view>
+  </view>
+
+<!-- 旅行服务 -->
+<view class='pipiicon'>
+  <image src='../img/shop_icon.jpg'></image>
+  <text>旅行服务</text>
+</view>
+<view class="category-box" style="margin-top:-20px">
+          <view class="category-list" wx:key wx:for="{{lvxing}}" id="{{item.tag}}" >
+            <view class="category-column" >
+              
+              <view style="position: relative;">
+                 <image  class="category-imgbox" src="{{item.url}}"></image>
+
+                 <view wx:if="{{item.reservedata2}}">
+                  <image class="tag" src="{{reservedata1[item.reservedata2].url}}"/>
+                </view>
+              </view>
+              
+              
+              <view class="category-title">{{item.content}}</view>
+            </view>          
+          </view>
+  </view>
+
+<!-- 导航 -->
+<mp-nav id="mpnav"></mp-nav>

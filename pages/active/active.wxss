@@ -1,0 +1,63 @@
+/* pages/active/active.wxss */
+.max{
+ position: fixed;
+  height: 100%; 
+  width: 100%;
+  overflow: hidden;
+}
+.max_image{
+  position: fixed;
+  top: 0rpx;
+  width: 100%;
+  height: 100%;
+}
+.max_image image{
+  width: 100%;
+  height: 100%;
+
+}
+.max_image image{
+  width: 100%;
+  height: 100%;
+}
+.text{
+  position: fixed;
+  width: 100%;
+  height: 300rpx;
+  color: white;
+  line-height: 300rpx;
+  font-weight: 200;
+  text-align: center;
+  font-size: 40rpx;
+}
+form{
+  position: fixed;
+  top: 300rpx;
+  display: block;
+  width: 100%;
+  height: 700rpx;
+}
+form input{
+  width: 77%;
+  height: 90rpx;
+  margin-top: 60rpx;
+  margin-left: 10%;
+  border-radius: 50rpx;
+  color: white;
+  font-size: 30rpx;
+  background-color:rgba(147, 162, 169, 0.5);
+  padding-left: 40rpx;
+}
+.phcolor{
+  color: #CDD3D4;
+}
+form button{
+  width: 40%;
+  height: 90rpx;
+  margin-top: 60rpx;
+  border-radius: 50rpx;
+  line-height: 90rpx;
+  background-color: #FF7419;
+  color: white;
+  font-size: 30rpx;
+}

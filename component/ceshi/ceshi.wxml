@@ -1,0 +1,8 @@
+<!--component/ceshi/ceshi.wxml-->
+<view class='nav'>
+  <navigator open-type='navigate'  url='../index/index'>首页</navigator>
+  <navigator>订单</navigator>
+  <navigator>社区</navigator>
+  <navigator>用户</navigator>
+</view>
+

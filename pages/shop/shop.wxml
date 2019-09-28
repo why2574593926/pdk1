@@ -1,0 +1,85 @@
+<!--index.wxml-->
+
+<view class='top_max'>
+  <!-- 顶部搜索 -->
+  <view class='search'>
+    <input placeholder-class='placer' placeholder='搜索商品或特权'></input>
+    <image src='../img/search1.png'></image>
+  </view>
+  <!-- 顶部滚动 -->
+  <swiper indicator-dots='true' indicator-active-color='#FF6D10' indicator-color='white' autoplay='true' interval='3000' duration='1000'>
+    <swiper-item>
+      <image src='../img/guanggao1.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../img/guanggao2.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../img/guanggao3.png'></image>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 汽车改装 -->
+<view class='pipiicon'>
+  <image src='../img/shop_icon.jpg'></image>
+  <text>汽车改装</text>
+</view>
+<!-- 商品循环 -->
+<view class='shop_max'>
+  <view class='shop'>
+    <view class='shop_img'>
+      <image src='../img/scroll.jpg'></image>
+    </view>
+    <view class='shop_text1'>皮皮定制专用卡套</view>
+    <view class='shop_text2'>￥<text>19.8</text>+<text>16</text>皮豆</view>
+  </view>
+</view>
+<view class='shop_max'>
+  <view class='shop'>
+    <view class='shop_img'>
+      <image src='../img/scroll.jpg'></image>
+    </view>
+    <view class='shop_text1'>皮皮定制专用卡套</view>
+    <view class='shop_text2'>￥<text>19.8</text>+<text>16</text>皮豆</view>
+  </view>
+</view>
+<!-- 商品max_view -->
+<view class='shop_max_view'>
+<!-- 汽车用品 -->
+<view class='pipiicon'>
+  <image src='../img/shop_icon.jpg'></image>
+  <text>汽车用品</text>
+</view>
+<!-- 商品循环 -->
+<view class='shop_max'>
+  <view class='shop'>
+    <view class='shop_img'>
+      <image src='http://120.24.183.24/images/挂靠物流.png'></image>
+    </view>
+    <view class='shop_text1'>皮皮定制专用卡套</view>
+    <view class='shop_text2'>￥<text>19.8</text>+<text>16</text>皮豆</view>
+  </view>
+</view>
+<view class='shop_max'>
+  <view class='shop'>
+    <view class='shop_img'>
+      <image src='../img/scroll.jpg'></image>
+    </view>
+    <view class='shop_text1'>皮皮定制专用卡套</view>
+    <view class='shop_text2'>￥<text>19.8</text>+<text>16</text>皮豆</view>
+  </view>
+</view>
+</view>
+<!-- 商城底部敬请期待 -->
+<view class='shop_bottom'>
+<view class='shop_bottom1'>
+    <text class="line"></text>
+   	<text decode="{{true}}" class="txt">&nbsp;敬请期待&nbsp;</text>
+   	<text class="line"></text>
+</view>
+<view class='shop_bottom2'>
+<text>正品二手改装件买卖</text>
+</view>
+</view>
+<!-- 导航 -->
+<mp-nav id="mpnav"></mp-nav>

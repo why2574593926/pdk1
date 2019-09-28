@@ -1,0 +1,5 @@
+<!--pages/ceshi/ceshi.wxml-->
+<mp-nav></mp-nav>
+<button id='b1' bindtap='money'>1</button>
+<view wx:key class='left' wx:for="{{jinbi}}" style='top: {{item.left_top}};left: {{item.left_left}};'></view>
+<button id='b2' bindtap='money'>2</button>
