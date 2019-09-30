@@ -28,20 +28,23 @@
 <view class='shop_max'>
   <view class='shop'>
     <view class='shop_img'>
-      <image src='../img/scroll.jpg'></image>
+      <image src='../img/cargai1.jpg'></image>
     </view>
     <view class='shop_text1'>皮皮定制专用卡套</view>
     <view class='shop_text2'>￥<text>19.8</text>+<text>16</text>皮豆</view>
   </view>
 </view>
-<view class='shop_max'>
-  <view class='shop'>
-    <view class='shop_img'>
-      <image src='../img/scroll.jpg'></image>
-    </view>
-    <view class='shop_text1'>皮皮定制专用卡套</view>
-    <view class='shop_text2'>￥<text>19.8</text>+<text>16</text>皮豆</view>
-  </view>
+
+<!-- 商品结尾 -->
+<view class='shop_last_max'>
+<view class='shop_last'>
+<text class='shop_last_text3'></text>
+<text class='shop_last_text1'>更多配件</text>
+<text class='shop_last_text2'>敬请期待</text>
+
+<image class='shop_last_img' src='../img/loadingbg.png'></image>
+</view>
+
 </view>
 <!-- 商品max_view -->
 <view class='shop_max_view'>
@@ -54,20 +57,23 @@
 <view class='shop_max'>
   <view class='shop'>
     <view class='shop_img'>
-      <image src='http://120.24.183.24/images/挂靠物流.png'></image>
+      <image src='../img/caryong1.jpg'></image>
     </view>
     <view class='shop_text1'>皮皮定制专用卡套</view>
     <view class='shop_text2'>￥<text>19.8</text>+<text>16</text>皮豆</view>
   </view>
 </view>
-<view class='shop_max'>
-  <view class='shop'>
-    <view class='shop_img'>
-      <image src='../img/scroll.jpg'></image>
-    </view>
-    <view class='shop_text1'>皮皮定制专用卡套</view>
-    <view class='shop_text2'>￥<text>19.8</text>+<text>16</text>皮豆</view>
-  </view>
+
+<!-- 商品结尾 -->
+<view class='shop_last_max'>
+<view class='shop_last'>
+<text class='shop_last_text3'></text>
+<text class='shop_last_text1'>更多商品</text>
+<text class='shop_last_text2'>敬请期待</text>
+
+<image class='shop_last_img' src='../img/loadingbg.png'></image>
+</view>
+
 </view>
 </view>
 <!-- 商城底部敬请期待 -->

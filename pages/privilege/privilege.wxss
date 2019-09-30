@@ -60,12 +60,10 @@
   margin-top:20rpx;
   text-align: center;
   display: inline-block;
-  overflow: hidden;
 }
 .category-column{
   width:100%;
   margin-top:20rpx;
-  overflow: hidden;
 }
 .category-imgbox{
   width:64px;
@@ -82,13 +80,54 @@
 }
 
 .tag{
-  width: 75rpx;
-  height: 22rpx;
+  
+  height: 30rpx;
   position: absolute;
   top: -20rpx;
-  right: 10rpx;
+  left: 90rpx;
   z-index: 1;
-  margin: 10px 0px 0 5px;
+  background-color: #FF6D10;
+  color: white;
+  line-height: 30rpx;
+  font-size: 22rpx;
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+.tag2{
+  left: 80rpx;
+  width: 90rpx;
+}
+.tag7{
+  left: 80rpx;
+  width: 120rpx;
+}
+.icg{
+  
+  height: 30rpx;
+  position: absolute;
+  top: -20rpx;
+  left: 90rpx;
+  z-index: 1;
+  background-color: #FF6D10;
+  color: white;
+  line-height: 30rpx;
+  font-size: 22rpx;
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+.icg2{
+  left: 80rpx;
+  width: 90rpx;
+}
+.icg4{
+  left: 80rpx;
+  width: 120rpx;
 }
 .pipiicon{
   width: 100%;

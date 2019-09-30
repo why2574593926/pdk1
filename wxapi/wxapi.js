@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://120.24.183.24:8080/ppcard/'
+const API_BASE_URL = 'https://pptq.online/ppcard/'
 const request = (url, method, data) => {
   let _url = API_BASE_URL + url
   return new Promise((resolve, reject) => {

@@ -36,7 +36,8 @@
         <image wx:else class="category-imgbox2" src="{{item.url}}"></image>
 
         <view wx:if="{{item.url2}}">
-          <image class="tag" src="{{item.url2}}" />
+          <view wx:if="{{index<4}}" style="top:-10rpx;" class="tag {{item.tag}}">{{item.url2}}</view>
+          <view wx:else class="tag {{item.tag}}">{{item.url2}}</view>
         </view>
       </view>
 
@@ -69,21 +70,13 @@
 <view class='shop_max'>
   <view class='shop'>
     <view class='shop_img'>
-      <image src='../img/scroll.jpg'></image>
+      <image src='../img/shouye1.jpg'></image>
     </view>
-    <view class='shop_text1'>皮皮定制专用卡套</view>
+    <view class='shop_text1'>欧姆尼全合成机油</view>
     <view class='shop_text2'>￥<text>19.8</text>+<text>16</text>皮豆</view>
   </view>
 </view>
-<view class='shop_max'>
-  <view class='shop'>
-    <view class='shop_img'>
-      <image src='../img/scroll.jpg'></image>
-    </view>
-    <view class='shop_text1'>皮皮定制专用卡套</view>
-    <view class='shop_text2'>￥<text>19.8</text>+<text>16</text>皮豆</view>
-  </view>
-</view>
+
 
 <!-- 导航 -->
 <mp-nav id="mpnav"></mp-nav>

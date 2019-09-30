@@ -37,7 +37,8 @@
         <image wx:else class="category-imgbox2" src="{{item.url}}"></image>
 
         <view wx:if="{{item.url2}}">
-          <image class="tag" src="{{item.url2}}" />
+          <view wx:if="{{index<4}}" style="top:-10rpx;" class="tag {{item.tag}}">{{item.url2}}</view>
+          <view wx:else class="tag {{item.tag}}">{{item.url2}}</view>
         </view>
       </view>
 
@@ -60,7 +61,7 @@
                 <image  class="category-imgbox2" src="{{item.url}}"></image>
 
                 <view wx:if="{{item.reservedata2}}">
-                  <image class="tag" src="{{reservedata1[item.reservedata2].url}}"/>
+                <view class="icg {{item.tag}}">{{reservedata1[item.reservedata2].content}}</view>
                 </view>
               </view>
               
@@ -85,7 +86,7 @@
                 <image  class="category-imgbox2" src="{{item.url}}"></image>
 
                  <view wx:if="{{item.reservedata2}}">
-                  <image class="tag" src="{{reservedata1[item.reservedata2].url}}"/>
+                  <view class="icg {{item.tag}}">{{reservedata1[item.reservedata2].content}}</view>
                 </view>
               </view>
               
@@ -111,7 +112,7 @@
                 <image  class="category-imgbox2" src="{{item.url}}"></image>
 
                 <view wx:if="{{item.reservedata2}}">
-                  <image class="tag" src="{{reservedata1[item.reservedata2].url}}"/>
+                  <view class="icg {{item.tag}}">{{reservedata1[item.reservedata2].content}}</view>
                 </view>
               </view>
               
@@ -134,7 +135,7 @@
                  <image  class="category-imgbox" src="{{item.url}}"></image>
 
                  <view wx:if="{{item.reservedata2}}">
-                  <image class="tag" src="{{reservedata1[item.reservedata2].url}}"/>
+                  <view class="icg {{item.tag}}" style="top:-10rpx;">{{reservedata1[item.reservedata2].content}}</view>
                 </view>
               </view>
               

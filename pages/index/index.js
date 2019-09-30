@@ -9,70 +9,70 @@ Page({
     ceshi:'',
     tequan1:[
       {
-        'tag':'',
+        'tag':'tag1',
         'url':'../img/icon1.png',
         'content':'皮皮互助',
         'reservedata1': '',
         'reservedata2':'1',
-        "url2":'../img/hot.png'
+        "url2":'HOT'
       },
       {
-        'tag': '',
+        'tag': 'tag2',
         'url': '../img/icon2.png',
         'content': '高速积分',
         'reservedata1': '',
         'reservedata2': '1',
-        "url2": '../img/huochezhuanyong.png'
+        "url2": '货车专用'
       },{
-        'tag':'',
+        'tag':'tag3',
         'url':'../img/icon3.png',
         'content':'结伴而行',
         'reservedata1': '',
         'reservedata2':'1',
-        "url2":'../img/new.png'
+        "url2":'NEW'
       },
       {
-        'tag': '',
+        'tag': 'tag4',
         'url': '../img/icon4.png',
         'content': '定制旅游',
         'reservedata1': '',
         'reservedata2': '1',
-        "url2": '../img/new.png'
+        "url2": 'NEW'
       },
       {
-        'tag': '',
+        'tag': 'tag5',
         'url': '../img/icon5.png',
         'content': '货车加油',
         'reservedata1': '笔笔返现',
         'reservedata2': '1',
-        "url2": '../img/new.png'
+        "url2": 'NEW'
       },
       {
-        'tag': '',
+        'tag': 'tag6',
         'url': '../img/icon6.png',
         'content': '违章举报',
         'reservedata1': '有奖举报',
         'reservedata2': '1',
-        "url2": '../img/youjiang.png'
+        "url2": '有奖'
       },
       {
-        'tag': '',
+        'tag': 'tag7',
         'url': '../img/icon7.png',
         'content': '加油打折',
         'reservedata1': '92折优惠',
         'reservedata2': '1',
-        "url2": '../img/quanguowuwanjia.png'
+        "url2": '全国五万家'
       },
       {
-        'tag': '',
+        'tag': 'tag8',
         'url': '../img/icon8.png',
         'content': '办理ETC',
         'reservedata1': '返现20元',
         'reservedata2': '1',
-        "url2": '../img/mianfei.png'
+        "url2": '免费'
       },
       {
-        'tag': '',
+        'tag': 'tag9',
         'url': '../img/icon9.png',
         'content': '道路救援',
         'reservedata1': '',
@@ -80,7 +80,7 @@ Page({
         "url2": ''
       },
       {
-        'tag': '',
+        'tag': 'tag10',
         'url': '../img/icon10.png',
         'content': '机车改装',
         'reservedata1': '',
@@ -88,15 +88,15 @@ Page({
         "url2": ''
       },
       {
-        'tag': '',
+        'tag': 'tag11',
         'url': '../img/icon11.png',
         'content': '酒店住宿',
         'reservedata1': '',
         'reservedata2': '1',
-        "url2": '../img/7zheqi.png'
+        "url2": '7折起'
       },
       {
-        'tag': '',
+        'tag': 'tag12',
         'url': '../img/icon12.png',
         'content': '更多服务',
         'reservedata1': '',
