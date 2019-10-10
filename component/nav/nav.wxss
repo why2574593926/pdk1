@@ -15,14 +15,14 @@
   width: 25%;
 }
 navigator image{
-  margin-top: 10rpx;
-  width: 40rpx;
-  height: 40rpx;
+  margin-top: 15rpx;
+  width: 35rpx;
+  height: 35rpx;
 }
 navigator text{
   display: block;
   color:#AEAEAE;
-  font-size: 30rpx;
+  font-size: 25rpx;
 }
 .nav_dingge{
   float: left;

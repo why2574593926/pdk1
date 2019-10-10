@@ -1,0 +1,36 @@
+<view class='friends_max'>
+  <image src='../img/friends1.png'></image>
+  <view class='fb_max'>
+    <view class='fb'>
+      <view class='fb_min1'>
+        <view>结伴而行</view>
+        <view>
+          <view class="tui-picker-content">
+            <picker bindchange="changeRegin" mode="region" value="{{region}}">
+              <view class="tui-picker-detail">{{region[0]}} - {{region[1]}} - {{region[2]}}</view>
+            </picker>
+          </view>
+          <view class="tui-picker-content">
+            <picker bindchange="changeRegin1" mode="region" value="{{region1}}">
+              <view class="tui-picker-detail">{{region1[0]}} - {{region1[1]}} - {{region1[2]}}</view>
+            </picker>
+          </view>
+        </view>
+        <view>
+          <view class="tui-picker-content">
+            <picker bindchange="time" mode="date" value="{{time}}">
+              <view class="tui-picker-detail">{{time}}</view>
+            </picker>
+          </view>
+          <view class="tui-picker-content">
+            <picker bindchange="time1" mode="date" value="{{time1}}">
+              <view class="tui-picker-detail">{{time1}}</view>
+            </picker>
+          </view>
+        </view>
+        <view>10月6日从成都出发到香港</view>
+      </view>
+      <view class='fb_min2'>发布</view>
+    </view>
+  </view>
+</view>

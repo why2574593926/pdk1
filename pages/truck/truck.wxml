@@ -1,0 +1,63 @@
+<view class='my_max'>
+<view class='img1'>
+<image src='../img/truck1.png'></image>
+</view>
+<view class='img2'>
+<image src='../img/truck5.png'></image>
+</view>
+<view class="tui-picker-content">
+  <picker bindchange="changeRegin" mode = "region" value="{{region}}">
+    <view class="tui-picker-detail">{{region[0]}} - {{region[1]}} - {{region[2]}}</view>
+  </picker>
+</view>
+<view class="tui-picker-content">
+  <picker bindchange="changeRegin1" mode = "region" value="{{region1}}">
+    <view class="tui-picker-detail">{{region1[0]}} - {{region1[1]}} - {{region1[2]}}</view>
+  </picker>
+</view>
+<!-- 皮豆计算时的动画 -->
+<view wx:if="{{car_show>=1}}" wx:key class='left' wx:for="{{jinbi}}" style='top: {{item.left_top}};right: {{item.left_left}};'>
+  <image src='../img/pd.png' style='width: {{item.w}};height: {{item.h}};'></image>
+</view>
+<!-- 汽车 -->
+<view catchtap='car_s'  wx:if="{{car_show==0}}" class='car'>
+  <image  src='../img/truck4.png'></image>
+  <image src='../img/truck6.png'></image>
+</view><image></image>
+<view catchtap='car_s'  wx:if="{{car_show==1}}" class='car1'>
+  <image  src='../img/truck2.png'></image>
+  <image src='../img/truck6.png'></image>
+  <text>{{car_time}}</text>
+</view><image></image>
+<view catchtap='car_s'  wx:if="{{car_show==2}}" class='car2'>
+  <image  src='../img/truck3.png'></image>
+  <image src='../img/truck6.png'></image>
+</view><image></image>
+
+<!-- 皮豆数量 -->
+<view class='pdnumber'>
+  <image src='../img/pd.png'></image>
+  <text>皮豆：200</text>
+</view>
+<!-- 签到 -->
+<view catchtap='pd_display' class='qiandao'>
+<text>皮豆说明</text>
+</view>
+<!-- 皮豆说明详情 -->
+<view class='pd_xq_max' wx:if='{{pd_display}}'>
+<view class='pd_xq'>
+  <view class='pd_xq1'>
+  <text>皮豆说明</text>
+  <text>1、我们会根据你的实际路程和时间共同计算出皮豆.</text>
+  <text>2、如果行驶时间不足1小时按1小时计算.</text>
+  <text>3、单次出行超过6小时取6小时计算.</text>
+  <text>4、任何作弊手段都会清掉皮豆.</text>
+  <text>5、皮都可以直接在商场购买东西哦.</text>
+  </view>
+  <view class='pd_xq2'>
+  <text id='pd2' catchtap='pd_display'>知道了</text>
+  </view>
+</view>
+</view>
+
+</view>

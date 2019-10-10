@@ -1,7 +1,7 @@
 <!--component/nav/nav.wxml-->
 <view class='nav_dingge'></view>
 <view class='nav'>
-  <navigator wx:key wx:for='{{nav}}' open-type='navigate' url='{{item.url2}}'>
+  <navigator bindtap='icon' id='{{item.name}}' wx:key wx:for='{{nav}}' open-type='redirect' url='{{item.url2}}'>
     <image  src='{{item.url}}'></image>
     <text style='color:{{item.color}};'>{{item.name}}</text>
   </navigator>

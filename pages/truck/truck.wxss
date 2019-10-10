@@ -1,0 +1,246 @@
+/* pages/my/my.wxss */
+.my_max{
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #F8F8F8;
+}
+/* 底图 */
+.img1{
+  width: 100%;
+  height: 60%;
+}
+.img2{
+  width: 100%;
+  height: 25%;
+}
+.img1 image,.img2 image{
+  width: 100%;
+  height: 100%;
+}
+/* 地区选择 */
+.tui-picker-content{
+  float: left;
+  width: 50%;
+  height: 5%;
+  text-align: center;
+  margin-top: 8%;
+  color: #ABABAB;
+}
+.tui-picker-name{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+picker{
+  width: 96%;
+  margin-left: 2%;
+  border-bottom: 1rpx solid #9F9F9F;
+}
+.tui-picker-detail{
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #fff;
+  font-size: 30rpx;
+  padding: 0 10px;
+  overflow: hidden;
+}
+/* 汽车 */
+.car{
+  position: fixed;
+  top: 55%;
+}
+.car image:nth-of-type(1){
+  display: block;
+  width: 90rpx;
+  height: 90rpx;
+  margin-left: 10rpx;
+  transition: 0.5s; 
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: scale(1);
+      }
+    50%{
+    	transform:scale(1.2);
+    }
+    100%{
+         transform: scale(1);
+    	}
+}
+.car image:nth-of-type(2){
+  position: relative;
+  display: block;
+  margin-top: -88rpx;
+  width: 250rpx;
+  height: 160rpx;
+}
+.car1{
+  position: fixed;
+  top: 68%;
+  right: 100rpx;
+}
+.car1 image:nth-of-type(1){
+  display: block;
+  width: 90rpx;
+  height: 90rpx;
+  margin-left: 10rpx;
+  transition: 0.5s; 
+  animation: rotate1 1s linear infinite;
+}
+@keyframes rotate1{
+    0%{
+        transform: scale(1);
+      }
+    50%{
+    	transform:scale(1.2);
+    }
+    100%{
+         transform: scale(1);
+    	}
+}
+.car1 image:nth-of-type(2){
+  position: relative;
+  display: block;
+  margin-top: -88rpx;
+  width: 250rpx;
+  height: 160rpx;
+}
+.car1 text{
+  position: relative;
+  top: -110rpx;
+  left: 17rpx;
+  color: #36629C;
+  font-size: 18rpx;
+}
+.car2{
+  position: fixed;
+  top: 68%;
+  right: 0rpx;
+}
+.car2 image:nth-of-type(1){
+  display: block;
+  width: 90rpx;
+  height: 90rpx;
+  margin-left: 10rpx;
+  transition: 0.5s; 
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate2{
+    0%{
+        transform: scale(1);
+      }
+    50%{
+    	transform:scale(1.2);
+    }
+    100%{
+         transform: scale(1);
+    	}
+}
+.car2 image:nth-of-type(2){
+  position: relative;
+  display: block;
+  margin-top: -88rpx;
+  width: 250rpx;
+  height: 160rpx;
+}
+/* 皮豆计算时的动画 */
+.left{
+  text-align: center;
+  position: fixed;
+  transition-duration: 2s; 
+}
+.left image{
+  width: 40rpx;
+  height: 40rpx;
+  transition-duration: 2s; 
+}
+/* 皮豆数量 */
+.pdnumber{
+  position: fixed;
+  top: 50rpx;
+  right: 0rpx;
+  width: 300rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 25rpx;
+  color: white;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 50rpx;
+}
+.pdnumber image{
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 20rpx;
+}
+.pdnumber text{
+  margin-left: 10rpx;
+}
+/* 皮豆说明 */
+.qiandao{
+  position: fixed;
+  top: 230rpx;
+  right: 0rpx;
+  width: 170rpx;
+  height: 80rpx;
+  text-align: center;
+  border-top-left-radius:50rpx; 
+  border-bottom-left-radius:50rpx; 
+  background-image: linear-gradient(to right , #FF730F, #FF940A);
+  color: #FFFEFE;
+  line-height: 80rpx;
+  font-size: 25rpx;
+}
+/* 皮豆说明详情 */
+.pd_xq_max{
+  position: fixed;
+  top: 0rpx;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+.pd_xq{
+  position: fixed;
+  top: 300rpx;
+  left: 5%;
+  width: 90%;
+  height: 500rpx;
+  border-radius: 25rpx;
+  background-color: white;
+}
+.pd_xq1{
+  width: 100%;
+  height: 75%;
+  border-bottom: 1rpx solid #E7E2E2;
+}
+.pd_xq1 text{
+  display: block;
+  width: 90%;
+  margin-left: 5%;
+  font-size: 31rpx;
+  color: #5B5B5B;
+}
+.pd_xq1 text:nth-of-type(1){
+  color: #111111;
+  line-height:120rpx;
+  font-size: 40rpx; 
+  text-align: center;
+  
+}
+.pd_xq2{
+  width: 100%;
+}
+.pd_xq2 text{
+  margin-left: 32%;
+  margin-top: 25rpx;
+  text-align: center;
+  display: block;
+  width: 36%;
+  height: 75rpx;
+  color: #FEF9F8;
+  font-size: 31rpx;
+  line-height: 75rpx;
+  border-radius:50rpx; 
+  background-image: linear-gradient(to right , #FEBB88, #E93E6A);
+}

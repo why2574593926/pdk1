@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "mp-nav": "../../component/nav/nav"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "结伴而行"
+}

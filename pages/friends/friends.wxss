@@ -1,0 +1,100 @@
+/* pages/my/my.wxss */
+.friends_max{
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.friends_max image{
+  width: 100%;
+  height: 100%;
+}
+/* 发布资料填写 */
+.fb_max{
+  position: fixed;
+  top: 0rpx;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4)
+}
+.fb{
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 40%;
+  background-color: #FF6D10;
+  border-radius: 20rpx;
+  height: 600rpx;
+}
+.fb_min1{
+  width: 94%;
+  height: 420rpx;
+  float: left;
+  margin-left: 3%;
+  margin-top: 5%;
+  background-color: white;
+  border-radius: 20rpx;
+}
+.fb_min1>view:nth-of-type(1){
+  width: 100%;
+  height: 105rpx;
+  line-height: 105rpx;
+  text-align: center;
+  color: #5B5B5B;
+  font-weight: bold;
+  font-size: 35rpx;
+  border-bottom: 1rpx dashed #FFC59F;
+}
+.fb_min1>view:nth-of-type(2){
+  width: 100%;
+  height: 105rpx;
+  line-height: 105rpx;
+  color: #606060;
+  font-size: 35rpx;
+  border-bottom: 1rpx solid #F6F6F6;
+}
+.fb_min1>view:nth-of-type(3){
+  width: 100%;
+  height: 105rpx;
+  line-height: 105rpx;
+  text-align: center;
+  color: #5B5B5B;
+  font-size: 35rpx;
+  border-bottom: 1rpx solid #F6F6F6;
+}
+.fb_min1>view:nth-of-type(4){
+  width: 100%;
+  height: 105rpx;
+  line-height: 105rpx;
+  text-align: center;
+  color: #5B5B5B;
+  font-size: 30rpx;
+}
+.fb_min2{
+  float: left;
+  width: 40%;
+  margin-left: 30%;
+  height: 80rpx;
+  margin-top: 30rpx;
+  text-align: center;
+  color: white;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  border-radius: 50rpx;
+  background-image: linear-gradient(to right , #FFBF89, #E93E6A);
+}
+/* 地区选择 */
+.tui-picker-content{
+  float: left;
+  width: 50%;
+  height: 5%;
+  text-align: center;
+  color: #ABABAB;
+}
+picker{
+  width: 96%;
+}
+.tui-picker-detail{
+  background-color: #fff;
+  font-size: 25rpx;
+  overflow: hidden;
+}

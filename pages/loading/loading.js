@@ -25,10 +25,12 @@ Page({
                 userInfo:res.data,
                 uid: res.data.uid
               })
-              
+              app.globalData.userInfo = that.data.userInfo;
+              app.globalData.uid = that.data.uid;
+              console.log(app.globalData.userInfo)
+              console.log(app.globalData.uid)
             }
-            app.globalData.userInfo = that.data.userInfo;
-            app.globalData.uid = that.data.uid; 
+            
             // 根据获得的cardId和cardStr判断用户是否激活
             if (!that.data.userInfo.cardId && !that.data.userInfo.cardStr){
               wx.redirectTo({

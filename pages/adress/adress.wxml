@@ -1,0 +1,27 @@
+<view class='my_max'>
+<!-- 收货地址 -->
+<view class='adress_max'>
+<view class='my_pd'>
+<view class='my_pd_img'>
+<image src='../img/adress3.png'></image>
+</view>
+<view class='my_pd_text'>
+<text>淡然</text>
+  <text>12587456935</text>
+  <text>我的收货地址</text>
+</view>
+  
+</view>
+<view class='my_tc'>
+  <image catchtap='img_gou' wx:if="{{img_gou}}" src='../img/adress1.png'></image>
+  <image catchtap='img_gou' wx:else src='../img/adress2.png'></image>
+  <text>默认地址</text>
+  <view catchtap='add'>添加</view>
+  <view catchtap='gai'>编辑</view>
+  <view catchtap='delete1'>删除</view>
+</view>
+</view>
+
+<!-- 导航 -->
+<mp-nav id="mpnav"></mp-nav>
+</view>

@@ -1,0 +1,24 @@
+<view class='my_max'>
+<!-- 收货地址 -->
+<view class='adress_max'>
+<view class='my_pd'>
+  <form>
+    <view><input name='name' placeholder='收货人:'></input></view>
+    <view><input name='手机号码' placeholder='手机号码:'></input></view>
+    <view><input name='详细地址' placeholder='详细地址:'></input></view>
+  </form>
+
+  
+</view>
+<view class='my_tc'>
+  <image catchtap='img_gou' wx:if="{{img_gou}}" src='../img/adress1.png'></image>
+  <image catchtap='img_gou' wx:else src='../img/adress2.png'></image>
+  <text>设为默认地址</text>
+</view>
+</view>
+<view class='adress_bt'>
+  确认添加
+</view>
+<!-- 导航 -->
+<mp-nav id="mpnav"></mp-nav>
+</view>

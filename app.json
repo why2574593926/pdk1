@@ -1,15 +1,21 @@
 {
   "pages": [
+    "pages/friends/pd",
+    "pages/friends/friends",
+    "pages/my/my",
+    "pages/truck/truck",
+    "pages/loading/loading",
+    "pages/adress_gai/adress_gai",
+    "pages/adress_add/adress_add",
+    "pages/adress/adress",
+    "pages/set/set",
     "pages/index/index",
     "pages/privilege/privilege",
     "pages/shop/shop",
-    
     "pages/active/active",
-    "pages/loading/loading",
     "pages/ceshi/ceshi",
     "pages/logs/logs",
     "component/nav/nav"
-    
   ],
   "window": {
     "backgroundTextStyle": "light",

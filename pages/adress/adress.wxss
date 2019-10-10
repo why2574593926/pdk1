@@ -1,0 +1,87 @@
+/* pages/adress/adress.wxss */.my_max{
+  width: 100%;
+  height: 1200rpx;
+  background-color: #F8F8F8;
+}
+.adress_max{
+  width: 100%;
+  background-color: violet;
+  float: left;
+  margin-top: 30rpx;
+}
+/* 地址 */
+.my_pd{
+  width: 100%;
+  height: 120rpx;
+  background-color: #FFFFFF;
+  border-bottom: 2rpx dashed #E1DADB;
+}
+.my_pd_img{
+  float: left;
+  width: 15%;
+  height: 100%;
+}
+.my_pd_img image{
+  float: left;
+  margin-top: 25%;
+  margin-left: 20%;
+  width: 55%;
+  height: 50%;
+}
+.my_pd_text{
+float: left;
+width: 80%;
+height: 100%;
+}
+.my_pd_text text:nth-of-type(1){
+  color: #636363;
+  font-size: 30rpx;
+  line-height: 70rpx;
+}
+.my_pd_text text:nth-of-type(2){
+  margin-left: 25rpx;
+  color: #636363;
+  line-height: 70rpx;
+  font-size: 30rpx;
+}
+.my_pd_text text:nth-of-type(3){
+  display: block;
+  color: #AFAEAE;
+  font-size: 30rpx;
+}
+.my_tc{
+  width: 100%;
+  float: left;
+  height: 120rpx;
+  background-color: #FFFFFF;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+.my_tc image{
+  float: left;
+  margin-left: 30rpx;
+  margin-top: 40rpx;
+  width: 30rpx;
+  height: 30rpx;
+  background-color: #AEAEAE;
+  border-radius: 50%;
+}
+.my_tc text{
+  float: left;
+  margin-left: 30rpx;
+  margin-top: 35rpx;
+  font-size: 30rpx;
+  color: #6E6E6E;
+}
+.my_tc view{
+  float: left;
+  border: 1rpx solid #E3DCDD;
+  color: #6E6E6E;
+  width: 90rpx;
+  height: 50rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  margin-top: 28rpx;
+  margin-left: 50rpx;
+}

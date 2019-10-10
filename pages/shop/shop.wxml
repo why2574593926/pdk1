@@ -34,7 +34,15 @@
     <view class='shop_text2'>￥<text>19.8</text>+<text>16</text>皮豆</view>
   </view>
 </view>
-
+<view class='shop_max'>
+  <view class='shop'>
+    <view class='shop_img'>
+      <image src='../img/cargai1.jpg'></image>
+    </view>
+    <view class='shop_text1'>皮皮定制专用卡套</view>
+    <view class='shop_text2'>￥<text>19.8</text>+<text>16</text>皮豆</view>
+  </view>
+</view>
 <!-- 商品结尾 -->
 <view class='shop_last_max'>
 <view class='shop_last'>

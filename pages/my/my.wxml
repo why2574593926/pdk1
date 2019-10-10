@@ -1,0 +1,105 @@
+<!--pages/my/my.wxml-->
+<view class='my_max'>
+
+<!-- top -->
+<view class='top'>
+  <image class='img1' src='../img/my_top.png'></image>
+  <text class='text1'>卡号：192392001</text>
+  <view class='text2'><image class='img2' src='../img/pd.png'></image><text>皮豆：200</text></view>
+</view>
+<!-- 我的订单 -->
+<view class='my_order'>
+  <view class='my_order_text'>我的订单</view>
+  <view class='my_order_icon'>
+    <view><image src='../img/my1.png'></image><text>待付款</text> </view>
+    <view> <image src='../img/my2.png'></image><text>待发货</text> </view>
+    <view> <image src='../img/my3.png'></image><text>待收货</text> </view>
+    <view> <image src='../img/my4.png'></image><text>订单服务</text> </view>
+  </view>
+</view>
+<!-- 我的钱包 -->
+<view class='my_money'>
+  <view class='my_money_text'>我的钱包</view>
+  <view class='my_money_icon'>
+    <view><text class='my_money_text1'>0</text><text class='my_money_text2'>充值(元)</text> </view>
+    <view> <text class='my_money_text1'>0</text><text class='my_money_text2'>皮豆(个)</text> </view>
+    <view> <text class='my_money_text1'>0</text><text class='my_money_text2'>优惠券(张)</text> </view>
+  </view>
+</view>
+<!-- 皮豆说明 -->
+<view id='pd1' catchtap='pd' class='my_pd'>
+  <text>皮豆说明</text>
+  <image src='../img/my_jiantou.png'></image>
+</view>
+<!-- 客服与帮助 -->
+<view catchtap='service' class='my_pd'>
+  <text>客服与帮助</text>
+  <image src='../img/my_jiantou.png'></image>
+</view>
+<!-- 设置 -->
+<view catchtap='set' class='my_pd'>
+  <text>设置</text>
+  <image src='../img/my_jiantou.png'></image>
+</view>
+<!-- 签到 -->
+<view catchtap='qiandao_xy' class='qiandao'>
+<text>签到</text>
+</view>
+<!-- 签到内容 -->
+<view class='qiandao_max' catchtap='qiandao_xy' wx:if="{{qiandao_display}}">
+<view class='qiandao_tishi'>
+点击空白退出
+</view>
+<view class='qiandao_min' catchtap>
+  <view class='qiandao_min1'>累计签到得奖励</view>
+  <view class='qiandao_xian'><image src='../img/qiandaoxian.png'></image></view>
+  <view class='qiandao_min2'>
+  <view class='qiandao2_min' wx:key wx:for='{{qiandao}}'>
+    <view class='qiandao2_min1'>
+    <image wx:if="{{qiandao_day_pd-1==index}}" src='../img/qiandaoliwu.png' style='width:30rpx;height:30rpx;'></image>
+    <image wx:else src='{{item.img1}}'></image>
+    <text wx:if="{{qiandao_day_pd-1!=index}}">{{item.pd}}</text></view>
+    <view class='qiandao2_min2'>
+    <image wx:if="{{index<qiandao_day_gou-1}}" src='{{item.img2}}'></image>
+    <image wx:if="{{index==qiandao_day_gou-1&&qiandao_day_pd!=-1}}" src='../img/qiandaotuoyuan.png' style='width:25rpx;height:25rpx;'></image>
+    <image wx:if="{{index==qiandao_day_gou-1&&qiandao_day_pd==-1}}" src='{{item.img2}}'></image>
+    <image wx:if="{{index>qiandao_day_gou-1}}" src='../img/qiandaotuoyuan2.png' style='width:22rpx;height:22rpx;'></image>
+    </view>
+    <view class='qiandao2_min3'><text>{{item.day}}</text></view>
+  </view>
+  </view>
+  <view class='qiandao_min3'>
+  <text class='qiandao_min3_text1' wx:if="{{qiandao_day_pd==-1}}">今天已签到，本月已累计<text>{{qiandao_day_gou}}</text>天</text>
+  <text class='qiandao_min3_text2' wx:else catchtap='qiandao'>立即签到</text>
+  </view>
+  </view>
+</view>
+<!-- 皮豆说明详情 -->
+<view class='pd_xq_max' style='display:{{pd_display}};'>
+<view class='pd_xq'>
+  <view class='pd_xq1'>
+  <text>皮豆说明</text>
+  <text>1、皮豆是你在使用皮皮特权的过程中累计的一种虚拟货币.</text>
+  <text>2、一个皮豆价值等于1元人民币.</text>
+  <text>3、任何作弊手段获得的皮豆，都将清0.</text>
+  <text>4、皮豆可以在皮皮商城直接购买商品.</text>
+  <text>5、皮豆与你的z账号绑定,不可转让出售皮豆.</text>
+  </view>
+  <view class='pd_xq2'>
+  <text id='pd2' bindtap='pd'>知道了</text>
+  </view>
+</view>
+</view>
+<!-- 客服详情 -->
+<view catchtap='service' class='service_max' wx:if="{{service_display}}">
+<view class='service_tishi'>点击空白退出</view>
+<view catchtap class='service'>
+  <view>联系客服</view>
+  <view>如有需要可联系我们的客服小姐姐哦~</view>
+  <view><image open-type='contact' src='../img/service.png'></image><contact-button class='contentbt'></contact-button></view>
+</view>
+</view>
+
+<!-- 导航 -->
+<mp-nav id="mpnav"></mp-nav>
+</view>

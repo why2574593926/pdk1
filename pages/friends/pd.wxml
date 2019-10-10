@@ -1,0 +1,31 @@
+<view class='friends_max'>
+  <view class='top_js'>
+    <image src='../img/friends2.png'></image>
+    <text>不要转账给陌生人，以防被骗。</text>
+  </view>
+  <view class='users' id='user1'>
+    <view>
+      <image src='../img/cargai1.jpg'></image>
+    </view>
+    <view>
+      <text>core-淡然</text>
+      <text>1小时前</text>
+    </view>
+  </view>
+  <view class='users'>
+    <image src='../img/friends5.png'></image>
+    <text>往返时间：<text id='text_t'>10-6-5</text></text>
+  </view>
+  <view class='users'>
+    <image src='../img/friends6.png'></image>
+    <text>目的地：<text id='text_t'>大理</text></text>
+  </view>
+  <view class='users'>
+    <image src='../img/friends7.png'></image>
+    <text>从四川出发</text>
+  </view>
+  <view class='users'>
+    <image src='../img/friends8.png'></image>
+    <text id='text_t'>10月6日从成都出发</text>
+  </view>
+</view>

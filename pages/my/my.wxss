@@ -1,0 +1,416 @@
+/* pages/my/my.wxss */
+.my_max{
+  width: 100%;
+  height: 1200rpx;
+  background-color: #F8F8F8;
+}
+/* top */
+.top{
+  width: 100%;
+  height: 210rpx;
+  position: relative;
+}
+.img1{
+  width: 100%;
+  height: 100%;
+}
+.text1{
+  position: absolute;
+  top: 116rpx;
+  right: 100rpx;
+  color: #FD7621;
+  font-size: 27rpx; 
+  font-weight: 600;
+}
+.text2{
+  position: absolute;
+  top: 160rpx;
+  right: 100rpx;
+  color: #FD7621;
+  font-size: 25rpx; 
+  font-weight: 500;
+}
+.text2 text{
+  float: left;
+  margin-left: 30rpx;
+}
+.img2{
+  float: left;
+  margin-top: 8rpx;
+  width: 22rpx;
+  height: 22rpx;
+}
+/* 我的订单 */
+.my_order{
+  width: 94%;
+  height: 250rpx;
+  margin-left: 3%;
+  margin-top: -30rpx;
+  background-color: #FFFFFF;
+  border-radius: 15rpx;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+.my_order_text{
+  width: 90%;
+  color: #0A0A0A;
+  float: left;
+  font-size: 40rpx;
+  font-weight: 500;
+  margin-top: 70rpx;
+  margin-left: 3.5%;
+}
+.my_order_icon{
+  text-align: center;
+  float: left;
+  width: 100%;
+  height: 100rpx;
+  margin-top: 20rpx;
+}
+.my_order_icon view{
+  float: left;
+  width: 20%;
+  margin-left: 5%;
+}
+.my_order_icon view image{
+  display: block;
+  width: 40rpx;
+  margin-left: 35%;
+  height: 40rpx;
+  margin-top: 10rpx;
+}
+.my_order_icon view text{
+  line-height: 50rpx;
+  font-size: 25rpx;
+  color: #5B5B5B;
+  font-weight: 500;
+}
+/* 我的钱包 */
+.my_money{
+  width: 94%;
+  height: 280rpx;
+  margin-left: 3%;
+  margin-top: 20rpx;
+  background-color: #FFFFFF;
+  border-radius: 15rpx;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+.my_money_text{
+  width: 90%;
+  color: #0A0A0A;
+  float: left;
+  font-size: 40rpx;
+  font-weight: 500;
+  margin-top: 30rpx;
+  margin-left: 3.5%;
+}
+.my_money_icon{
+  text-align: center;
+  float: left;
+  width: 100%;
+  height: 100rpx;
+  margin-top: 20rpx;
+}
+.my_money_icon view{
+  float: left;
+  width: 33%;
+}
+.my_money_icon view:nth-of-type(1){
+  border-right:1rpx solid #DED6D7; 
+}
+.my_money_icon view:nth-of-type(2){
+  border-right:1rpx solid #DED6D7; 
+}
+.my_money_text1{
+  display: block;
+  margin-top: 20rpx;
+  font-weight: bold;
+  font-size: 40rpx;
+}
+.my_money_text2{
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #5B5B5B;
+  color: #5B5B5B;
+  font-weight: 500;
+}
+
+/* 皮豆说明 */
+.my_pd{
+  width: 94%;
+  height: 120rpx;
+  margin-left: 3%;
+  margin-top: 20rpx;
+  background-color: #FFFFFF;
+  border-radius: 15rpx;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+.my_pd text{
+  width: 81%;
+  color: #696969;
+  float: left;
+  font-size: 30rpx;
+  font-weight: 500;
+  line-height: 120rpx;
+  margin-left: 8%;
+}
+.my_pd image{
+  width: 15rpx;
+  height: 25rpx;
+  margin-top: 45rpx;
+}
+/* 签到 */
+.qiandao{
+  position: fixed;
+  top: 430rpx;
+  right: 0rpx;
+  width: 170rpx;
+  height: 80rpx;
+  text-align: center;
+  border-top-left-radius:50rpx; 
+  border-bottom-left-radius:50rpx; 
+  background-image: linear-gradient(to right , #FF730F, #FF940A);
+  color: #FFFEFE;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+/* 签到内容 */
+.qiandao_max{
+  position: fixed;
+  top: 0rpx;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+.qiandao_tishi{
+  width: 100%;
+  height: 200rpx;
+  position: fixed;
+  top: 100rpx;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+}
+.qiandao_xian{
+  position: relative;
+  top: 52rpx;
+  width: 90%;
+  height: 20rpx;
+  margin-left: 5%;
+}
+@media only screen and (max-width: 320px) {
+    .qiandao_xian{
+  position: relative;
+  top: 44rpx;
+  width: 90%;
+  height: 20rpx;
+  margin-left: 5%;
+}
+}
+.qiandao_xian image{
+  width: 100%;
+  height: 6rpx;
+}
+.qiandao_min{
+  position: fixed;
+  top: 300rpx;
+  left: 5%;
+  width: 90%;
+  height: 370rpx;
+  border-radius: 25rpx;
+  background-image: linear-gradient(to right , #FECD91, #FBA96F);
+}
+.qiandao_min1{
+  width: 80%;
+  height: 80rpx;
+  color: #FFF8F1;
+  font-size: 30rpx;
+  margin-left: 5%;
+  line-height: 80rpx;
+}
+.qiandao_min2{
+  width: 90%;
+  height: 120rpx;
+  margin-left: 5%;
+}
+.qiandao2_min{
+  float: left;
+  text-align: center;
+  width: 14.25%;
+  height: 100%;
+  font-size: 25rpx;
+  color: white;
+}
+.qiandao2_min1{
+  width: 100%;
+  height: 40%;
+}
+.qiandao2_min1 image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.qiandao2_min1 text{
+  font-size: 25rpx;
+  margin-left: 5rpx;
+}
+.qiandao2_min2{
+  position: relative;
+  width: 100%;
+  height: 40%;
+}
+.qiandao2_min2 image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.qiandao2_min3{
+  width: 100%;
+}
+.qiandao_min3{
+  width: 100%;
+}
+.qiandao_min3_text2{
+  display: block;
+  width: 80%;
+  margin-left: 10%;
+  height: 80rpx;
+  background-color: #FAF35A;
+  color: #0A0A03;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  text-align: center;
+  border-radius: 25rpx;
+  margin-top: 30rpx;
+  font-weight: bold;
+}
+.qiandao_min3_text1{
+  display: block;
+  width: 80%;
+  margin-left: 10%;
+  height: 80rpx;
+  background-color: #F9853B;
+  color: #FDDECA;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  text-align: center;
+  border-radius: 25rpx;
+  margin-top: 30rpx;
+  font-weight: bold;
+}
+.qiandao_min3_text1 text{
+  color: #FAE255;
+  font-size: 35rpx;
+}
+/* 皮豆详情 */
+.pd_xq_max{
+  position: fixed;
+  top: 0rpx;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+.pd_xq{
+  position: fixed;
+  top: 300rpx;
+  left: 5%;
+  width: 90%;
+  height: 500rpx;
+  border-radius: 25rpx;
+  background-color: white;
+}
+.pd_xq1{
+  width: 100%;
+  height: 75%;
+  border-bottom: 1rpx solid #E7E2E2;
+}
+.pd_xq1 text{
+  display: block;
+  width: 90%;
+  margin-left: 5%;
+  font-size: 31rpx;
+  color: #5B5B5B;
+}
+.pd_xq1 text:nth-of-type(1){
+  color: #111111;
+  line-height:120rpx;
+  font-size: 40rpx; 
+  text-align: center;
+  
+}
+.pd_xq2{
+  width: 100%;
+}
+.pd_xq2 text{
+  margin-left: 32%;
+  margin-top: 25rpx;
+  text-align: center;
+  display: block;
+  width: 36%;
+  height: 75rpx;
+  color: #FEF9F8;
+  font-size: 31rpx;
+  line-height: 75rpx;
+  border-radius:50rpx; 
+  background-image: linear-gradient(to right , #FEBB88, #E93E6A);
+}
+/* 客服详情 */
+.service_max{
+  position: fixed;
+  top: 0rpx;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+.service_tishi{
+  width: 100%;
+  height: 200rpx;
+  position: fixed;
+  top: 100rpx;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+}
+.service{
+  position: fixed;
+  top: 290rpx;
+  width: 80%;
+  left: 10%;
+  height: 400rpx;
+  border-radius: 15rpx;
+  background-color: white;
+}
+.service view:nth-of-type(1){
+  width: 100%;
+  text-align: center;
+  height: 120rpx;
+  color: #242424;
+  font-size: 35rpx;
+  font-weight: bold;
+  line-height: 120rpx;  
+}
+.service view:nth-of-type(2){
+  width: 100%;
+  text-align: center;
+  height: 120rpx;
+  color: #636363;
+  font-size: 28rpx;
+  line-height: 120rpx;  
+}
+.service view:nth-of-type(3){
+  width: 100%;
+  text-align: center;
+  height: 100rpx;
+  color: #242424;
+  font-size: 35rpx;
+  font-weight: bold;
+  line-height: 100rpx;  
+}
+.service image{
+  width: 90rpx;
+  height: 90rpx;
+  margin-left: 80rpx;
+}
+.contentbt{
+  width: 90rpx;
+  height: 90rpx;
+  position: relative;
+  left: -90rpx;
+  top: -54rpx;
+  opacity: 0;
+}
