@@ -12,7 +12,7 @@
 /* 地址 */
 .my_pd{
   width: 100%;
-  height: 370rpx;
+  height: 500rpx;
   background-color: #FFFFFF;
 }
 .my_pd view{
@@ -59,4 +59,20 @@
   margin-left: 35%;
   border-radius: 50rpx;
   margin-top: 30rpx;
+}
+/* 地区选择 */
+.tui-picker-content{
+  float: left;
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+picker{
+  width: 100%;
+}
+picker input{
+  float: left;
+  display: block;
+  margin-top: 40rpx;
+  margin-left: -20rpx;
 }

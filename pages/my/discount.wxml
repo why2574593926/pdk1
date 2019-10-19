@@ -1,0 +1,16 @@
+<!--pages/my/discount.wxml-->
+<view class='top'>
+  <view catchtap='xxk' id='x1'><text style='color:{{style_x1[0]}};border-bottom: 1rpx solid {{style_x1[1]}};'>未使用</text></view>
+  <view catchtap='xxk' id='x2'><text style='color:{{style_x2[0]}};border-bottom: 1rpx solid {{style_x2[1]}};'>已过期</text></view>
+  <view catchtap='xxk' id='x3'><text style='color:{{style_x3[0]}};border-bottom: 1rpx solid {{style_x3[1]}};'>已使用</text></view>
+</view>
+<view class='yh_max'>
+  <view class='yh'><text>优惠券名称</text><text>1</text></view>
+  <view class='yh'><text>优惠券名称</text><text>1</text></view>
+  <view class='yh'><text>优惠券名称</text><text>1</text></view>
+</view>
+<view class='m_img'>
+    <image src='../img/header.png'></image>
+    <text>暂无优惠券!</text>
+</view>
+

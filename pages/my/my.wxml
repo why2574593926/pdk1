@@ -4,17 +4,17 @@
 <!-- top -->
 <view class='top'>
   <image class='img1' src='../img/my_top.png'></image>
-  <text class='text1'>卡号：192392001</text>
-  <view class='text2'><image class='img2' src='../img/pd.png'></image><text>皮豆：200</text></view>
+  <text class='text1'>卡号：{{users.cardId}}</text>
+  <view class='text2'><image class='img2' src='../img/pd.png'></image><text>皮豆：{{users.pd}}</text></view>
 </view>
 <!-- 我的订单 -->
 <view class='my_order'>
-  <view class='my_order_text'>我的订单</view>
+  <view catchtap='order_tiao' id='x1' class='my_order_text'>我的订单</view>
   <view class='my_order_icon'>
-    <view><image src='../img/my1.png'></image><text>待付款</text> </view>
-    <view> <image src='../img/my2.png'></image><text>待发货</text> </view>
-    <view> <image src='../img/my3.png'></image><text>待收货</text> </view>
-    <view> <image src='../img/my4.png'></image><text>订单服务</text> </view>
+    <view catchtap='order_tiao' id='x2'><image src='../img/my1.png'></image><text>待付款</text> </view>
+    <view catchtap='order_tiao' id='x3'> <image src='../img/my2.png'></image><text>待发货</text> </view>
+    <view catchtap='order_tiao' id='x4'> <image src='../img/my3.png'></image><text>待收货</text> </view>
+    <view catchtap='order_tiao' id='x5'> <image src='../img/my4.png'></image><text>订单服务</text> </view>
   </view>
 </view>
 <!-- 我的钱包 -->
@@ -22,8 +22,8 @@
   <view class='my_money_text'>我的钱包</view>
   <view class='my_money_icon'>
     <view><text class='my_money_text1'>0</text><text class='my_money_text2'>充值(元)</text> </view>
-    <view> <text class='my_money_text1'>0</text><text class='my_money_text2'>皮豆(个)</text> </view>
-    <view> <text class='my_money_text1'>0</text><text class='my_money_text2'>优惠券(张)</text> </view>
+    <view catchtap='pd_tiao'> <text class='my_money_text1'>{{users.pd}}</text><text class='my_money_text2'>皮豆(个)</text> </view>
+    <view catchtap='discount_tiao'> <text class='my_money_text1'>0</text><text class='my_money_text2'>优惠券(张)</text> </view>
   </view>
 </view>
 <!-- 皮豆说明 -->
@@ -69,7 +69,7 @@
   </view>
   </view>
   <view class='qiandao_min3'>
-  <text class='qiandao_min3_text1' wx:if="{{qiandao_day_pd==-1}}">今天已签到，本月已累计<text>{{qiandao_day_gou}}</text>天</text>
+  <text class='qiandao_min3_text1' wx:if="{{qiandao_day_pd==-1}}">今天已签到，本周已累计<text>{{qiandao_day}}</text>天</text>
   <text class='qiandao_min3_text2' wx:else catchtap='qiandao'>立即签到</text>
   </view>
   </view>

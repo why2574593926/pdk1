@@ -56,7 +56,7 @@ module.exports = {
   // 登录
   log: (data) => {
     console.log(data)
-    var res = request('user/login', 'post', data)
+    var res = request('user/login/1', 'post', data)
     console.log(res)
     return res
   },
@@ -73,5 +73,68 @@ module.exports = {
     var res = request('file/images/list', 'post', data)
     console.log(res)
     return res
-  }
+  },
+  // 获取用户信息
+  users: (data) => {
+    console.log(data)
+    var res = request('user/getUserInfo', 'post', data)
+    console.log(res)
+    return res
+  },
+  // 获取用户信息
+  sign: (data) => {
+    console.log(data)
+    var res = request('user/sign', 'post', data)
+    console.log(res)
+    return res
+  },
+  // 更新皮豆
+  gxpd: (data) => {
+    console.log(data)
+    var res = request('user/pd/update', 'post', data)
+    console.log(res)
+    return res
+  },
+  // 获取皮豆数量
+  hqpd: (data) => {
+    console.log(data)
+    var res = request('/user/pd/getAll', 'post', data)
+    console.log(res)
+    return res
+  },
+  // 商品获取
+  shop: (data) => {
+    console.log(data)
+    var res = request('/goods/list', 'post', data)
+    console.log(res)
+    return res
+  },
+  // 收货地址获取
+  adress: (data) => {
+    console.log(data)
+    var res = request('/user/address/list', 'post', data)
+    console.log(res)
+    return res
+  },
+  // 添加收货地址
+  adress_add: (data) => {
+    console.log(data)
+    var res = request('/user/address/add', 'post', data)
+    console.log(res)
+    return res
+  },
+  // 地址修改
+  adress_isDefault: (data) => {
+    console.log(data)
+    var res = request('/user/address/update', 'post', data)
+    console.log(res)
+    return res
+  },
+// 删除收货地址
+adress_delete: (data) => {
+  console.log(data)
+  var res = request('/user/address/delete', 'post', data)
+  console.log(res)
+  return res
+}
 }

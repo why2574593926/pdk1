@@ -7,103 +7,9 @@ Page({
     userInfo: {},
     // 测试
     ceshi: '',
-    tequan1: [
-      {
-        'tag': '',
-        'url': '../img/icon1.png',
-        'content': '皮皮互助',
-        'reservedata1': '',
-        'reservedata2': '1',
-        "url2": '../img/hot.png'
-      },
-      {
-        'tag': '',
-        'url': '../img/icon2.png',
-        'content': '高速积分',
-        'reservedata1': '',
-        'reservedata2': '1',
-        "url2": '../img/huochezhuanyong.png'
-      }, {
-        'tag': '',
-        'url': '../img/icon3.png',
-        'content': '结伴而行',
-        'reservedata1': '',
-        'reservedata2': '1',
-        "url2": '../img/new.png'
-      },
-      {
-        'tag': '',
-        'url': '../img/icon4.png',
-        'content': '定制旅游',
-        'reservedata1': '',
-        'reservedata2': '1',
-        "url2": '../img/new.png'
-      },
-      {
-        'tag': '',
-        'url': '../img/icon5.png',
-        'content': '货车加油',
-        'reservedata1': '笔笔返现',
-        'reservedata2': '1',
-        "url2": '../img/new.png'
-      },
-      {
-        'tag': '',
-        'url': '../img/icon6.png',
-        'content': '违章举报',
-        'reservedata1': '有奖举报',
-        'reservedata2': '1',
-        "url2": '../img/youjiang.png'
-      },
-      {
-        'tag': '',
-        'url': '../img/icon7.png',
-        'content': '加油打折',
-        'reservedata1': '92折优惠',
-        'reservedata2': '1',
-        "url2": '../img/quanguowuwanjia.png'
-      },
-      {
-        'tag': '',
-        'url': '../img/icon8.png',
-        'content': '办理ETC',
-        'reservedata1': '返现20元',
-        'reservedata2': '1',
-        "url2": '../img/mianfei.png'
-      },
-      {
-        'tag': '',
-        'url': '../img/icon9.png',
-        'content': '道路救援',
-        'reservedata1': '',
-        'reservedata2': '1',
-        "url2": ''
-      },
-      {
-        'tag': '',
-        'url': '../img/icon10.png',
-        'content': '机车改装',
-        'reservedata1': '',
-        'reservedata2': '1',
-        "url2": ''
-      },
-      {
-        'tag': '',
-        'url': '../img/icon11.png',
-        'content': '酒店住宿',
-        'reservedata1': '',
-        'reservedata2': '1',
-        "url2": '../img/7zheqi.png'
-      },
-      {
-        'tag': '',
-        'url': '../img/icon12.png',
-        'content': '更多服务',
-        'reservedata1': '',
-        'reservedata2': '1',
-        "url2": ''
-      }
-    ]
+    //商品
+    shop1: {},
+    shop2: {}
   },
   //事件处理函数
   bindViewTap: function () {
@@ -113,12 +19,38 @@ Page({
   },
   onLoad: function () {
     let that = this;
+    
     // 导航判断
     app.globalData.nav = that.data.nav;
     this.selectComponent("#mpnav").navbh();
+    // 商品获取
+    let aa = { 'page': 1, 'pageSize': 1000 }
+    WXAPI.shop(aa).then(function (res) {
+      if (res.code == 0) {
+        console.log(res.data.list)
+        let bb = [];
+        let cc = [];
+        for (let i = 0; i < res.data.list.length; i++) {
+          if (res.data.list[i].category == 2) {
+            bb.push(res.data.list[i])
+          }
+          if (res.data.list[i].category == 3) {
+            cc.push(res.data.list[i])
+          }
+        }
+        that.setData({
+          shop1: bb,
+          shop2: cc
+        })
+        console.log(that.data.shop)
+      }
+    })
   },
   onReady: function () {
-
-
+    // 页面指定位置跳转
+    wx.pageScrollTo({
+      selector: '.' + app.globalData.index_tiao
+    })
+    app.globalData.index_tiao='index'
   }
 })

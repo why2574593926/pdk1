@@ -12,5 +12,17 @@ Page({
     // 时间
     time: "出发时间",
     time1: "返回时间",
+    // 滚动
+    left1:'0rpx',
+    left2:'480rpx'
+  },
+  onLoad:function(){
+    let that=this;
+    setInterval(function(){
+      that.setData({
+        left1:'-480rpx',
+        left2:'0'
+      })
+    },4000)
   }
 })

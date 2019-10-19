@@ -37,7 +37,7 @@
 <!-- 皮豆数量 -->
 <view class='pdnumber'>
   <image src='../img/pd.png'></image>
-  <text>皮豆：200</text>
+  <text>皮豆：{{pd_num}}</text>
 </view>
 <!-- 签到 -->
 <view catchtap='pd_display' class='qiandao'>

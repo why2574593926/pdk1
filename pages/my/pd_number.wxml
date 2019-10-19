@@ -1,0 +1,15 @@
+<!--pages/my/pd_number.wxml-->
+<view class='pd'>
+  <view>当前皮豆（个）</view>
+  <view><text>1111111</text><image src='../img/pd.png'></image></view>
+  <view>去使用</view>
+</view>
+<view class='pd_mx'>
+  <view>皮豆收支明细</view>
+  <view><text>货车高速积分</text><text>+58</text></view>
+  <view><text>汽车高速积分</text><text>+20</text></view>
+  <view>
+    <image src='../img/pd.png'></image>
+    <text>您还没有获得皮豆,快去使用特权吧！</text>
+  </view>
+</view>

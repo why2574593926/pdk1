@@ -167,5 +167,24 @@ Page({
   onReady: function () {
 
 
+  },
+  // 特权跳转
+  tequantiaozhuan: function (e) {
+    let that = this;
+    if (e.currentTarget.id == 'tag3') {
+      wx.navigateTo({
+        url: '../friends/friends'
+      })
+    }
+    else if (e.currentTarget.id == 'tag2') {
+      wx.navigateTo({
+        url: '../truck/truck'
+      })
+    } else {
+      wx.showModal({
+        title: '暂未开通',
+        content: '敬请期待',
+      })
+    }
   }
 })

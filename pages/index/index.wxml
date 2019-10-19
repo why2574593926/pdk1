@@ -28,7 +28,7 @@
   <text>热门特权</text>
 </view>
 <view class="category-box">
-  <view class="category-list" wx:key wx:for="{{tequan1}}" id="{{item.tag}}">
+  <view catchtap='tequantiaozhuan' class="category-list" wx:key wx:for="{{tequan1}}" id="{{item.tag}}">
     <view class="category-column">
 
       <view style="position: relative;">
@@ -50,13 +50,13 @@
 <!-- 中部滑块 -->
 <view class="a-scroll">
   <scroll-view scroll-x class="my-scroll">
-    <view id="img1" class="s-item">
+    <view catchtap='huakuai_tiao' id="img1" class="s-item">
       <image src="../img/scroll1.png"></image>
     </view>
-    <view id="img2" class="s-item">
+    <view catchtap='huakuai_tiao' id="img2" class="s-item">
       <image src="../img/scroll2.png"></image>
     </view>
-    <view id="img3" class="s-item">
+    <view catchtap='huakuai_tiao' id="img3" class="s-item">
       <image src="../img/scroll3.png"></image>
     </view>
   </scroll-view>
@@ -67,16 +67,26 @@
   <text>皮皮商城</text>
 </view>
 <!-- 商品循环 -->
-<view class='shop_max'>
+<view class='shop_max' wx:key wx:for='{{shop}}'>
   <view class='shop'>
     <view class='shop_img'>
-      <image src='../img/shouye1.jpg'></image>
+      <image src='{{item.pic}}'></image>
     </view>
-    <view class='shop_text1'>欧姆尼全合成机油</view>
-    <view class='shop_text2'>￥<text>19.8</text>+<text>16</text>皮豆</view>
+    <view class='shop_text1'>{{item.name}}</view>
+    <view class='shop_text2'><text>会员专享</text><text>￥</text><text>{{item.price}}</text></view>
+    <view class='shop_shengqian_max'><text class='shop_shengqian'>省{{item.pd-item.price}}元</text></view>
   </view>
 </view>
+<!-- 商品结尾 -->
+<view class='shop_last_max'>
+<view class='shop_last'>
+<text class='shop_last_text3'></text>
+<text class='shop_last_text1'>更多商品</text>
+<text class='shop_last_text2'>持续上线中  </text>
+<text class='shop_last_text4'>......  </text>
 
-
+<image class='shop_last_img' src='../img/loadingbg.png'></image>
+</view>
+</view>
 <!-- 导航 -->
 <mp-nav id="mpnav"></mp-nav>

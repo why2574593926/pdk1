@@ -39,7 +39,11 @@ Page({
     jinbi1:[],
     // 地区是否选择判断
     adress1:0,
-    adress2:0
+    adress2:0,
+    // 皮豆数量
+    pd_num:'',
+    // 行车时间
+    pd_time:''
   },
   // 选择省市区函数
   changeRegin(e) {
@@ -64,6 +68,14 @@ Page({
     let that = this;
     that.setData({
       jinbi1:that.data.jinbi
+    })
+    // 获取皮豆
+    let aa = { 'id': app.globalData.uid}
+    WXAPI.hqpd(aa).then(function (res) {
+      console.log(res.data)
+      that.setData({
+        pd_num:res.data
+      })
     })
   },
 // 皮豆说明判断
@@ -121,6 +133,9 @@ Page({
           that.setData({
             car_time: t
           })
+          that.setData({
+            pd_time:h
+          })
         }, 1000)
       }else{
         wx.showModal({
@@ -155,6 +170,21 @@ Page({
         }, 100);
       that.setData({
         car_show: 2
+      })
+      // 皮豆计算
+      let aa = { 'id': app.globalData.uid ,'pd':''}
+      if(that.data.pd_time<=0){
+        aa.pd=1;
+      } else if (that.data.pd_time <= 6 && that.data.pd_time>0){
+        aa.pd = that.data.pd_time
+      }else{
+        aa.pd=6;
+      }
+      WXAPI.gxpd(aa).then(function (res) {
+        console.log(res.data)
+        that.setData({
+          pd_num: res.data.pd
+        })
       })
     }
     // 再次选择地区

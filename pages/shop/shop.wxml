@@ -1,6 +1,6 @@
 <!--index.wxml-->
 
-<view class='top_max'>
+<view class='top_max index'>
   <!-- 顶部搜索 -->
   <view class='search'>
     <input placeholder-class='placer' placeholder='搜索商品或特权'></input>
@@ -9,46 +9,38 @@
   <!-- 顶部滚动 -->
   <swiper indicator-dots='true' indicator-active-color='#FF6D10' indicator-color='white' autoplay='true' interval='3000' duration='1000'>
     <swiper-item>
-      <image src='../img/guanggao1.png'></image>
-    </swiper-item>
-    <swiper-item>
       <image src='../img/guanggao2.png'></image>
     </swiper-item>
     <swiper-item>
       <image src='../img/guanggao3.png'></image>
     </swiper-item>
+    <swiper-item>
+      <image src='../img/guanggao4.png'></image>
+    </swiper-item>
   </swiper>
 </view>
 <!-- 汽车改装 -->
-<view class='pipiicon'>
+<view class='pipiicon cars_gaizhuang'>
   <image src='../img/shop_icon.jpg'></image>
   <text>汽车改装</text>
 </view>
 <!-- 商品循环 -->
-<view class='shop_max'>
+<view class='shop_max' wx:key wx:for="{{shop1}}">
   <view class='shop'>
     <view class='shop_img'>
-      <image src='../img/cargai1.jpg'></image>
+      <image src='{{item.pic}}'></image>
     </view>
-    <view class='shop_text1'>皮皮定制专用卡套</view>
-    <view class='shop_text2'>￥<text>19.8</text>+<text>16</text>皮豆</view>
-  </view>
-</view>
-<view class='shop_max'>
-  <view class='shop'>
-    <view class='shop_img'>
-      <image src='../img/cargai1.jpg'></image>
-    </view>
-    <view class='shop_text1'>皮皮定制专用卡套</view>
-    <view class='shop_text2'>￥<text>19.8</text>+<text>16</text>皮豆</view>
+    <view class='shop_text1'>{{item.name}}</view>
+    <view class='shop_text2'>￥<text>{{item.price}}</text>+<text>{{item.pd}}</text>皮豆</view>
   </view>
 </view>
 <!-- 商品结尾 -->
 <view class='shop_last_max'>
 <view class='shop_last'>
 <text class='shop_last_text3'></text>
-<text class='shop_last_text1'>更多配件</text>
-<text class='shop_last_text2'>敬请期待</text>
+<text class='shop_last_text1'>更多商品</text>
+<text class='shop_last_text2'>持续上线中  </text>
+<text class='shop_last_text4'>......  </text>
 
 <image class='shop_last_img' src='../img/loadingbg.png'></image>
 </view>
@@ -57,18 +49,18 @@
 <!-- 商品max_view -->
 <view class='shop_max_view'>
 <!-- 汽车用品 -->
-<view class='pipiicon'>
+<view class='pipiicon cars_yong'>
   <image src='../img/shop_icon.jpg'></image>
   <text>汽车用品</text>
 </view>
 <!-- 商品循环 -->
-<view class='shop_max'>
+<view class='shop_max' wx:key wx:for="{{shop2}}">
   <view class='shop'>
     <view class='shop_img'>
-      <image src='../img/caryong1.jpg'></image>
+      <image src='{{item.pic}}'></image>
     </view>
-    <view class='shop_text1'>皮皮定制专用卡套</view>
-    <view class='shop_text2'>￥<text>19.8</text>+<text>16</text>皮豆</view>
+    <view class='shop_text1'>{{item.name}}</view>
+    <view class='shop_text2'>￥<text>{{item.price}}</text>+<text>{{item.pd}}</text>皮豆</view>
   </view>
 </view>
 
@@ -77,7 +69,8 @@
 <view class='shop_last'>
 <text class='shop_last_text3'></text>
 <text class='shop_last_text1'>更多商品</text>
-<text class='shop_last_text2'>敬请期待</text>
+<text class='shop_last_text2'>持续上线中  </text>
+<text class='shop_last_text4'>......  </text>
 
 <image class='shop_last_img' src='../img/loadingbg.png'></image>
 </view>

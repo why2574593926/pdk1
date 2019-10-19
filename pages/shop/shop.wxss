@@ -94,6 +94,9 @@
   font-size: 24rpx;
   color: #686868;
   letter-spacing: 0rpx;
+  overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
 }
 .shop_text2{
   width: 100%;
@@ -101,6 +104,9 @@
   font-size: 24rpx;
   color: #FF8D45;
   letter-spacing: 0rpx;
+  overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
 }
 .shop_text2 text{
   font-size: 30rpx;
@@ -139,6 +145,14 @@
   text-align: center;
   display: block;
   width: 100%;
+}
+.shop_last_text4{
+  position: absolute;
+  top: 220rpx;
+  text-align: center;
+  display: block;
+  width: 100%;
+  line-height: 20rpx;
 }
 .shop_last_text3{
   position: absolute;

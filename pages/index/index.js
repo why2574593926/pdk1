@@ -103,7 +103,9 @@ Page({
         'reservedata2': '1',
         "url2": ''
       }
-    ]
+    ],
+    //商品
+    shop:{}
   },
   //事件处理函数
   bindViewTap: function() {
@@ -116,9 +118,58 @@ Page({
     // 导航判断
     app.globalData.nav=that.data.nav;
     this.selectComponent("#mpnav").navbh();
+    // 商品获取
+    let aa = {'page': 1,'pageSize': 10}
+    WXAPI.shop(aa).then(function (res) {
+      if (res.code == 0) {
+        console.log(res.data.list)
+        let bb=[];
+        for(let i=0;i<res.data.list.length;i++){
+          if (res.data.list[i].category==1){
+            bb.push(res.data.list[i])
+          }
+        }
+        that.setData({
+          shop:bb
+        })
+        console.log(that.data.shop)
+      }
+    })
   },
   onReady:function(){
     
     
+  },
+  // 特权跳转
+  tequantiaozhuan:function(e){
+      let that = this;
+    if (e.currentTarget.id=='tag3') {
+        wx.navigateTo({
+          url: '../friends/friends'
+        })
+      }
+    else if (e.currentTarget.id == 'tag2') {
+      wx.navigateTo({
+        url: '../truck/truck'
+      })
+    }else{
+      wx.showModal({
+        title: '暂未开通',
+        content: '敬请期待',
+      })
+    }
+  },
+  // 滑块跳转
+  huakuai_tiao:function(e){
+    if(e.currentTarget.id=='img1'){
+      app.globalData.index_tiao ='cars_yong'
+    } else if (e.currentTarget.id == 'img2') {
+      app.globalData.index_tiao = 'cars_gaizhuang'
+    }else{
+      app.globalData.index_tiao = 'index'
+    }
+    wx.reLaunch({
+      url: '../shop/shop'
+    })
   }
 })

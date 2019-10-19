@@ -85,3 +85,8 @@ height: 100%;
   margin-top: 28rpx;
   margin-left: 50rpx;
 }
+/* 无地址添加提示按钮 */
+.add_tishi{
+  color: #FF731B;
+  font-size: 30rpx;
+}

@@ -1,0 +1,133 @@
+/* pages/my/order.wxss */
+page{
+  background-color: #F9F9F9;
+}
+.top{
+  width: 90%;
+  margin-left: 5%;
+  height: 80rpx;
+  text-align: center;
+}
+.top view{
+  float: left;
+  width: 20%;
+  color: #9C9C9C;
+  font-size: 30rpx;
+}
+.top view text{
+  height: 80rpx;
+  display: block;
+  width: 120rpx;
+  margin-left: 5rpx;
+  line-height: 80rpx;
+}
+/* 订单循环 */
+.order{
+  width: 94%;
+  margin-left: 3%;
+  background-color: white;
+  border-radius: 25rpx;
+  height: 300rpx;
+  margin-top: 30rpx;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+}
+.order1{
+  width: 30%;
+  height: 150rpx;
+  float: left;
+}
+.order1 image{
+  width: 70%;
+  height: 90%;
+  margin-top: 5%;
+  margin-left: 15%;
+}
+.order2{
+  text-indent: 30rpx; 
+  width: 40%;
+  height: 150rpx;
+  float: left;
+  color: #6A6A6A;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  display:-webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp:3;
+}
+.order3{
+  width: 25%;
+  float: left;
+}
+.order3 text:nth-of-type(1){
+  display: block;
+  width: 100%;
+  text-align: right;
+  color: #6A6A6A;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  float: right;
+}
+.order3 text:nth-of-type(2){
+  display: block;
+  width: 100%;
+  text-align: right;
+  color: #FF802F;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  float: right;
+}
+.order4{
+  width: 95%;
+  text-align: right;
+  height: 80rpx;
+  float: left;
+  color: #6A6A6A;
+  font-size: 25rpx;
+  line-height: 80rpx;
+}
+.order5{
+  width: 130rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 25rpx;
+  color: #6A6A6A;
+  border: 1rpx solid #6A6A6A;
+  border-radius: 10rpx;
+  float: right;
+  margin-right: 5%;
+}
+.order6{
+  width: 130rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 50rpx;
+  font-size: 25rpx;
+  color: #FF873A;
+  border: 1rpx solid #FF873A;
+  border-radius: 10rpx;
+  float: right;
+   margin-right: 5%;
+}
+/* 无订单 */
+.m_img{
+  width: 90%;
+  margin-left: 5%;
+  color: #5D5D5D;
+  font-size: 30rpx;
+  height: 120rpx;
+  text-align: center;
+}
+.m_img image{
+  width: 160rpx;
+  height: 170rpx;
+  margin-top: 150rpx;
+}
+.m_img text{
+  display: block;
+  width: 100%;
+  margin-top: 50rpx;
+}

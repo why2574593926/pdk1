@@ -109,20 +109,20 @@
 .a-scroll{
   margin-top: 30rpx;
   width: 100%;
-  height: 320rpx;
+  height: 280rpx;
 }
 .my-scroll{
   width: 100%;
   white-space: nowrap; 
 }
 .s-item{
-  width: 40%;
+  width: 35%;
   margin-left: 20rpx;
   display: inline-block;
 }
 .a-scroll image{
   width: 100%;
-  height: 320rpx;
+  height: 280rpx;
 }
 ::-webkit-scrollbar{
 width: 0;
@@ -177,6 +177,9 @@ color: transparent;
   font-size: 24rpx;
   color: #686868;
   letter-spacing: 0rpx;
+  overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
 }
 .shop_text2{
   width: 100%;
@@ -184,10 +187,45 @@ color: transparent;
   font-size: 24rpx;
   color: #FF8D45;
   letter-spacing: 0rpx;
+  overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
 }
-.shop_text2 text{
+.shop_text2 text:nth-of-type(3){
   font-size: 30rpx;
   font-weight:600;
+}
+.shop_text2 text:nth-of-type(2){
+  display: inline-block;
+  height: 35rpx;
+  line-height: 35rpx;
+  font-size: 23rpx;
+  text-align: center;
+}
+.shop_text2 text:nth-of-type(1){
+   display: inline-block;
+  width: 100rpx;
+  height: 35rpx;
+  line-height: 35rpx;
+  color: white;
+  background-color: #FF6D10;
+  border-radius: 50rpx;
+  font-size: 23rpx;
+  text-align: center;
+}
+.shop_shengqian_max{
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: -160rpx;
+}
+.shop_shengqian{
+  padding: 5rpx;
+  color: white;
+  background-color: #FF6D10;
+  border-radius: 50rpx;
+  font-size: 25rpx;
+  text-align: center;
 }
 /* 商品结尾 */
 .shop_last_max{
@@ -222,6 +260,14 @@ color: transparent;
   text-align: center;
   display: block;
   width: 100%;
+}
+.shop_last_text4{
+  position: absolute;
+  top: 220rpx;
+  text-align: center;
+  display: block;
+  width: 100%;
+  line-height: 20rpx;
 }
 .shop_last_text3{
   position: absolute;

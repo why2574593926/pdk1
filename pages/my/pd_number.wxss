@@ -1,0 +1,97 @@
+/* pages/my/pd_number.wxss */
+.pd{
+  width: 100%;
+  height: 300rpx;
+  background-image: url('https://pptq.online/images/1571102578_pdjuxing.png');
+  background-size: 100% 100%;
+}
+.pd view:nth-of-type(1){
+  width: 90%;
+  color: white;
+  font-size: 30rpx;
+  margin-left: 5%;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+.pd view:nth-of-type(2){
+  float: left;
+  width: 70%;
+  margin-left: 5%;
+  color: #FF6D10;
+  font-size: 80rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+.pd view:nth-of-type(2) text{
+  float: left;
+}
+.pd view:nth-of-type(2) image{
+  margin-top: 30rpx;
+  width: 60rpx;
+  float: left;
+  height: 55rpx;
+  margin-left: 50rpx;
+}
+.pd view:nth-of-type(3){
+  float: left;
+  width: 150rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  color: white;
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-image: linear-gradient(to right , #FFBF89, #FFE6D0); 
+  border-radius: 50rpx;
+  margin-right: 5%;
+}
+.pd_mx{
+  width: 100%;
+  height: 800rpx;
+  background-color: white;
+  border-radius: 25rpx;
+  margin-top: -20rpx;
+}
+.pd_mx view:nth-of-type(1){
+  width: 90%;
+  margin-left: 5%;
+  color: #5D5D5D;
+  font-size: 30rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-weight: bold;
+  border-bottom: 1rpx solid #DED6D7;
+}
+.pd_mx view:nth-of-type(2),.pd_mx view:nth-of-type(3){
+  width: 90%;
+  margin-left: 5%;
+  color: #6B6B6B;
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx; 
+  border-bottom: 1rpx solid #DED6D7;
+}
+.pd_mx view:nth-of-type(2) text:nth-of-type(1),.pd_mx view:nth-of-type(3) text:nth-of-type(1){
+  float: left;
+}
+.pd_mx view:nth-of-type(2) text:nth-of-type(2),.pd_mx view:nth-of-type(3) text:nth-of-type(2){
+  float: right;
+}
+.pd_mx view:nth-of-type(4){
+  width: 90%;
+  margin-left: 5%;
+  color: #5D5D5D;
+  font-size: 30rpx;
+  height: 120rpx;
+  text-align: center;
+}
+.pd_mx view:nth-of-type(4) image{
+  width: 200rpx;
+  height: 180rpx;
+  margin-top: 150rpx;
+}
+.pd_mx view:nth-of-type(4) text{
+  display: block;
+  width: 100%;
+  margin-top: 50rpx;
+}

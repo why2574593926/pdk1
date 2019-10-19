@@ -28,9 +28,10 @@
             </picker>
           </view>
         </view>
-        <view>10月6日从成都出发到香港</view>
+        <view wx:if="{{time_pd!=1}}">请选择</view>
+        <view wx:else>{{time}}从{{region[0]}}出发到{{region1[0]}}</view>
       </view>
-      <view class='fb_min2'>发布</view>
+      <view catchtap='fb' class='fb_min2'>发布</view>
     </view>
   </view>
 </view>

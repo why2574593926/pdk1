@@ -1,27 +1,27 @@
 <view class='my_max'>
-<!-- 收货地址 -->
-<view class='adress_max'>
-<view class='my_pd'>
-<view class='my_pd_img'>
-<image src='../img/adress3.png'></image>
-</view>
-<view class='my_pd_text'>
-<text>淡然</text>
-  <text>12587456935</text>
-  <text>我的收货地址</text>
-</view>
-  
-</view>
-<view class='my_tc'>
-  <image catchtap='img_gou' wx:if="{{img_gou}}" src='../img/adress1.png'></image>
-  <image catchtap='img_gou' wx:else src='../img/adress2.png'></image>
-  <text>默认地址</text>
-  <view catchtap='add'>添加</view>
-  <view catchtap='gai'>编辑</view>
-  <view catchtap='delete1'>删除</view>
-</view>
-</view>
+  <!-- 收货地址 -->
+  <view class='adress_max' wx:key wx:for='{{adress1}}'>
+    <view class='my_pd'>
+      <view class='my_pd_img'>
+        <image src='../img/adress3.png'></image>
+      </view>
+      <view class='my_pd_text'>
+        <text>{{item.username}}</text>
+        <text>{{item.mobile}}</text>
+        <text>{{item.address}}</text>
+      </view>
 
-<!-- 导航 -->
-<mp-nav id="mpnav"></mp-nav>
+    </view>
+    <view class='my_tc'>
+      <image id='{{item.id}}' catchtap='img_gou' wx:if="{{item.isDefault==0}}" src='../img/adress1.png'></image>
+      <image id='{{item.id}}' catchtap='img_gou' wx:else src='../img/adress2.png'></image>
+      <text>默认地址</text>
+      <view catchtap='add'>添加</view>
+      <view catchtap='gai' id='{{item.id}}'>编辑</view>
+      <view catchtap='delete1' id='{{item.id}}'>删除</view>
+    </view>
+  </view>
+  <button class="add_tishi" wx:if='{{adress1.length==0}}' catchtap='add'>暂无收货地址，点击添加添加</button>
+  <!-- 导航 -->
+  <mp-nav id="mpnav"></mp-nav>
 </view>

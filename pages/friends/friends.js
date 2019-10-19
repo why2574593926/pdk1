@@ -45,5 +45,19 @@ Page({
     this.setData({
       time1_pd: 1
     })
+  },
+  // 跳转
+  fb:function(){
+    let that=this;
+    if (that.data.adress1 == 1 && that.data.adress2 == 1 && that.data.time1_pd == 1 && that.data.time_pd == 1){
+      wx.navigateTo({
+        url: '../friends/pd'
+      })
+    }else{
+      wx.showModal({
+        title: '请填写信息',
+        content: '请完整填写信息',
+      })
+    }
   }
 })

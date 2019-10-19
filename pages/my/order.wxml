@@ -1,0 +1,37 @@
+<!--pages/my/order.wxml-->
+<view class='top'>
+  <view catchtap='xxk' id='x1'><text style='color:{{style_x1[0]}};border-bottom: 1rpx solid {{style_x1[1]}};'>全部</text></view>
+  <view catchtap='xxk' id='x2'><text style='color:{{style_x2[0]}};border-bottom: 1rpx solid {{style_x2[1]}};'>待付款</text></view>
+  <view catchtap='xxk' id='x3'><text style='color:{{style_x3[0]}};border-bottom: 1rpx solid {{style_x3[1]}};'>待发货</text></view>
+  <view catchtap='xxk' id='x4'><text style='color:{{style_x4[0]}};border-bottom: 1rpx solid {{style_x4[1]}};'>待收货</text></view>
+  <view catchtap='xxk' id='x5'><text style='color:{{style_x5[0]}};border-bottom: 1rpx solid {{style_x5[1]}};'>订单服务</text></view>
+</view>
+<!-- 循环订单 -->
+<view class='order'>
+  <view class='order1'><image src='../img/scroll1.png'></image></view>
+  <view class='order2'>宝马3系用AP8520刹车,正品卡钳配国产380mm的盘sddddddddddddddddddddddddddddddddddddddddd</view>
+  <view class='order3'>
+    <text>￥11680</text>
+    <text>+5320</text>
+  </view>
+  <view class='order4'><text>共一件商品 合计：￥11680</text></view>
+  <view class='order6'>付款</view>
+  <view class='order5'>取消订单</view>
+</view>
+<!--  -->
+<view class='order'>
+  <view class='order1'><image src='../img/scroll1.png'></image></view>
+  <view class='order2'>宝马3系用AP8520刹车,正品卡钳配国产380mm的盘sddddddddddddddddddddddddddddddddddddddddd</view>
+  <view class='order3'>
+    <text>￥11680</text>
+    <text>+5320</text>
+  </view>
+  <view class='order4'><text>共一件商品 合计：￥11680</text></view>
+  <view class='order6'>付款</view>
+  <view class='order5'>取消订单</view>
+</view>
+<!-- 无订单 -->
+<view class='m_img'>
+    <image src='../img/header1.png'></image>
+    <text>暂无优惠券!</text>
+</view>
