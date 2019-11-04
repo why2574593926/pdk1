@@ -26,6 +26,6 @@ navigator text{
 }
 .nav_dingge{
   float: left;
-   height: 140rpx;
+   height: 120rpx;
   width: 100%;
 }

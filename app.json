@@ -1,18 +1,19 @@
 {
   "pages": [
-    "pages/shop_content/shop_pay",
-    "pages/shop_content/shop_content",
-    "pages/loading/loading",
     "pages/index/index",
-    "pages/truck/truck",
+  "pages/truck/truck",
     "pages/adress/adress",
     "pages/adress_add/adress_add",
+    
+    
     "pages/my/my",
     "pages/my/order",
     "pages/my/discount",
     "pages/my/pd_number",
     "pages/friends/friends",
     "pages/friends/pd",
+    
+    "pages/loading/loading",
     "pages/adress_gai/adress_gai",
     "pages/set/set",
     "pages/privilege/privilege",
