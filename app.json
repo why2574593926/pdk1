@@ -1,27 +1,37 @@
 {
-  "pages": [
+  "pages": ["pages/loading/loading",
+    "pages/truck/truck",
+    
     "pages/index/index",
-  "pages/truck/truck",
+    "pages/privilege/reply",
+    "pages/friends/pp_content",
+    "pages/privilege/privilege",
+    "pages/index/challenge",
+    "pages/index/huochejifen",
+    "pages/index/friends",
+    "pages/index/Luxury_car_rental",
+    "pages/active/active",
+    "pages/pp_help/pp_help",
+    "pages/my/my",
+    "pages/shop_content/shop_content",
+    "pages/shop_content/shop_pay",
+    
     "pages/adress/adress",
     "pages/adress_add/adress_add",
-    
-    
-    "pages/my/my",
     "pages/my/order",
     "pages/my/discount",
     "pages/my/pd_number",
     "pages/friends/friends",
     "pages/friends/pd",
-    
-    "pages/loading/loading",
     "pages/adress_gai/adress_gai",
     "pages/set/set",
-    "pages/privilege/privilege",
     "pages/shop/shop",
-    "pages/active/active",
     "pages/ceshi/ceshi",
     "pages/logs/logs",
-    "component/nav/nav"
+    "component/nav/nav",
+    "pages/my/pay_order",
+    "pages/youhui/youhui",
+    "pages/privilege/add_dynamic"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,5 +39,11 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "navigateToMiniProgramAppIdList": [
+    "wx03fedf147c324919",
+    "wx694af04f8681686f",
+    "wx8d709ee6a311f04f",
+    "wx8c66ffb4cc3c1baf"
+  ]
 }

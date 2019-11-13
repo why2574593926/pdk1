@@ -36,6 +36,4 @@
     确认添加
   </button>
   </form>
-  <!-- 导航 -->
-  <mp-nav id="mpnav"></mp-nav>
 </view>

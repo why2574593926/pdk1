@@ -23,24 +23,26 @@ Page({
     if (rg.test(e.detail.value.number)){
       let that = this;
       let aa = {
-        uid: app.globalData.uid,
+        uid: app.globalData.userInfo.uid,
         cardId: e.detail.value.ppcard,
         username: e.detail.value.user,
         phone: e.detail.value.number
       }
       console.log(e.detail.value)
       WXAPI.active(aa).then(function (res) {
-        // 根据获得的cardId和cardStr判断用户是否激活
         if (res.code == 0) {
+          //发起网络请求
+              app.globalData.userInfo = res.data;
+              app.globalData.uid = res.data.id;
           wx.showModal({
             title: '激活成功',
             success: function (res) {
               if (res.confirm) {
-                wx.redirectTo({
+                wx.reLaunch({
                   url: '../index/index',
                 })
               } else {
-                wx.redirectTo({
+                wx.reLaunch({
                   url: '../index/index',
                 })
               }
@@ -60,6 +62,27 @@ Page({
       })
     
     }
+  },
+  // 卖卡小程序跳转
+  xcx_tiao:function(){
+    wx.navigateToMiniProgram({
+      appId: 'wx03fedf147c324919',//要打开的小程序 appId
+      path: 'pages/index/index',//打开的页面路径，如果为空则打开首页
+      extraData: {
+        foo: 'bar'//需要传递给目标小程序的数据，目标小程序可在 App.onLaunch，App.onShow 中获取到这份数据
+      },
+      envVersion: 'release',//要打开的小程序版本。仅在当前小程序为开发版或体验版时此参数有效。如果当前小程序是正式版，则打开的小程序必定是正式版。
+      success(res) {
+        // 打开成功
+        console.log('成功')
+      }
+    })
+  },
+  // 跳过激活
+  tiaoguo:function(){
+    wx.navigateTo({
+      url: '../index/index',
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

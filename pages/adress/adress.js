@@ -20,9 +20,6 @@ Page({
   },
   onLoad: function () {
     let that = this;
-    // 导航判断
-    app.globalData.nav = 3;
-    this.selectComponent("#mpnav").navbh();
     // 地址获取
     let aa = { 'id': app.globalData.uid};
     WXAPI.adress(aa).then(function (res) {
@@ -32,8 +29,16 @@ Page({
       })
     })
   },
-  onReady: function () {
-
+  onShow: function () {
+    let that = this;
+    // 地址获取
+    let aa = { 'id': app.globalData.uid };
+    WXAPI.adress(aa).then(function (res) {
+      console.log(res.data)
+      that.setData({
+        adress1: res.data
+      })
+    })
 
   },
   // 皮豆
@@ -130,6 +135,23 @@ Page({
         }
       }
     })
+    
+  },
+  // 商品跳进来的地址选择
+  adress_x:function(e){
+    let that=this;
+    if (app.globalData.address_pay==1){
+      for (let i = 0; i < that.data.adress1.length; i++) {
+        if (that.data.adress1[i].id == e.currentTarget.id) {
+          app.globalData.adress_xz = that.data.adress1[i]
+          app.globalData.address_pay=0;
+          wx.navigateBack({
+            url: '../shop_pay/shop_pay',
+          })
+        }
+      }
+
+    }
     
   }
 })

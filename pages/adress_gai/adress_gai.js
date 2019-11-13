@@ -29,9 +29,7 @@ Page({
   },
   onLoad: function () {
     let that = this;
-    // 导航判断
-    app.globalData.nav = 3;
-    this.selectComponent("#mpnav").navbh();
+
     // 初始值
     that.setData({
       form: app.globalData.adress_gai
@@ -80,7 +78,7 @@ Page({
     f.addressM = e.detail.value.addressM;
     f.isDefault = that.data.isDefault;
     f.mobile = e.detail.value.phone;
-    f.userId = 11;
+    f.userId = e.detail.value.userId;
     f.username = e.detail.value.name
     that.setData({
       form: f
@@ -96,7 +94,7 @@ Page({
     } else {
       WXAPI.adress_isDefault(that.data.form).then(function (res) {
         console.log(res)
-        wx.reLaunch({
+        wx.navigateBack({
           url: '../adress/adress',
         })
       })

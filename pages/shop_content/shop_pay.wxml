@@ -1,0 +1,43 @@
+<!--pages/shop_content/shop_pay.wxml-->
+<wxs module="we">
+  var toFixed = function (value) {
+  return value.toFixed(2);
+}
+module.exports = {
+   toFixed :toFixed
+}
+</wxs>
+<view class="adress" catchtap="adress_tiao">
+  <view class="adress1">
+    <image src="../img/adress3.png"></image>
+  </view>
+  <view class="adress2">
+    <text>{{adress_con.username}}</text>
+    <text>{{adress_con.mobile}}</text>
+    <text>{{adress_con.address}}</text>
+  </view>
+  <view class="adress3">
+    <image src="../img/jiantou.png"></image>
+  </view>
+</view>
+<view class="content">
+  <view class="content1">
+    <view class="content1_img">
+      <image src="{{shop_con.pic}}"></image>
+    </view>
+    <view class="content1_t1">
+      <text>{{shop_con.name}}</text>
+      <text wx:if="{{gg}}">规格：{{gg}}</text>
+      <text wx:else></text>
+    </view>
+    <view class="content1_t2">
+    <text wx:if='{{shop_con.category!=1}}'>￥{{we.toFixed(xs_s_price+price_zuigai)}}</text>
+      <text wx:else>￥{{we.toFixed(xs_s_price)}}</text>
+      <text wx:if='{{shop_con.category!=1}}'>最高优惠</text>
+      <text wx:if='{{shop_con.category!=1}}'>-{{price_zuigai}}</text>
+    </view>
+  </view>
+  <view wx:if='{{shop_con.category!=1}}' class="content2">共{{s_number}}件商品 合计： ￥{{we.toFixed(xs_s_price+price_zuigai)}}+邮费￥{{we.toFixed(yf)}}</view>
+  <view wx:else class="content2">共{{s_number}}件商品 合计： ￥{{we.toFixed(xs_s_price)}}+邮费￥{{we.toFixed(yf)}}</view>
+  <button catchtap="pdpd" class="bt">付款</button>
+</view>

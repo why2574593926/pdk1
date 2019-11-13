@@ -1,0 +1,37 @@
+<view class='friends_max'>
+  <view class='top_js'>
+    <image src='../img/friends2.png'></image>
+    <text>不要转账给陌生人，以防被骗。</text>
+  </view>
+  <view catchtap="pp_xuanze" id="pp1" class="pp1">
+    <text style="border-bottom: {{dx1}}rpx solid #FF7A25;">匹配中</text>
+  </view>
+  <view catchtap="pp_xuanze" id="pp2" class="pp1">
+    <text style="border-bottom: {{dx2}}rpx solid #FF7A25;">已匹配</text>
+  </view>
+  <view class="content_max" wx:for='{{con}}' wx:key>
+    <view class='users'>
+      <image src='../img/friends5.png'></image>
+      <text>往返时间：<text id='text_t'>{{item.json.content1}}</text></text>
+    </view>
+    <view class='users'>
+      <image src='../img/friends6.png'></image>
+      <text>目的地：<text id='text_t'>{{item.json.content2}}</text></text>
+    </view>
+    <view class='users'>
+      <image src='../img/friends8.png'></image>
+      <text id='text_t'>{{item.json.content4}}</text>
+    </view>
+    <view class='users' id='user1'>
+      <view>
+        <image src='{{item.json.img}}'></image>
+      </view>
+      <view>
+        <text>{{item.json.name}}</text>
+        <text>{{item.time}}小时前</text>
+      </view>
+      <image catchtap="delete1" id='{{item.id}}' src="../img/friends10.png"></image>
+    </view>
+  </view>
+  
+</view>

@@ -31,6 +31,19 @@
   width: 40rpx;
   height: 40rpx;
 }
+/* 模糊查询 */
+.chaxun{
+  z-index: 99999999;
+  position: fixed;
+  top: 100rpx;
+  width: 90%;
+  left: 5%;
+  background-color: rgba(255,255,255,0.8);
+  line-height: 80rpx;
+}
+.chaxun view{
+  border-bottom: 1rpx solid gainsboro;
+}
 /* 顶部滚动 */
 .top_max swiper{
   float: left;
@@ -97,13 +110,9 @@
   padding-left: 10rpx;
   padding-right: 10rpx;
 }
-.tag2{
+.tag1{
   left: 80rpx;
-  width: 90rpx;
-}
-.tag7{
-  left: 80rpx;
-  width: 120rpx;
+  width: 100rpx;
 }
 /* 中部滑块 */
 .a-scroll{
@@ -159,7 +168,7 @@ color: transparent;
   width: 90%;
   height: 100%;
   margin-left: 5%;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 }
 .shop_img{
   width: 100%;
@@ -194,6 +203,8 @@ white-space: nowrap;
 .shop_text2 text:nth-of-type(3){
   font-size: 30rpx;
   font-weight:600;
+  position: relative;
+  top: -10rpx;
 }
 .shop_text2 text:nth-of-type(2){
   display: inline-block;
@@ -201,31 +212,49 @@ white-space: nowrap;
   line-height: 35rpx;
   font-size: 23rpx;
   text-align: center;
+  margin-left:5rpx;
+  position: relative;
+  top: -10rpx;
 }
 .shop_text2 text:nth-of-type(1){
    display: inline-block;
-  width: 100rpx;
-  height: 35rpx;
-  line-height: 35rpx;
+  width: 50rpx;
+  height: 54rpx;
+  line-height: 27rpx;
   color: white;
   background-color: #FF6D10;
-  border-radius: 50rpx;
-  font-size: 23rpx;
+  border-radius: 10rpx;
+  font-size: 20rpx;
   text-align: center;
+  position: relative;
+  top: 0rpx;
+  white-space:normal;
 }
 .shop_shengqian_max{
   width: 100%;
   text-align: center;
   position: relative;
-  top: -160rpx;
+  top: -190rpx;
 }
 .shop_shengqian{
   padding: 5rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  margin-left: 10rpx;
   color: white;
   background-color: #FF6D10;
   border-radius: 50rpx;
   font-size: 25rpx;
   text-align: center;
+}
+#text_add{
+  color: #CCCCCC;
+  text-decoration:line-through;
+  font-size: 20rpx;
+  line-height: 45rpx;
+  margin-left: 5rpx;
+  position: relative;
+  top: -10rpx;
 }
 /* 商品结尾 */
 .shop_last_max{
@@ -241,7 +270,7 @@ white-space: nowrap;
   width: 90%;
   height: 100%;
   margin-left: 5%;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 }
 .shop_last_img{
   width: 100%;
@@ -273,7 +302,99 @@ white-space: nowrap;
   position: absolute;
   top: 0rpx;
   display: block;
-  width: 100%;
+  width: 90%;
   height: 350rpx;
   background-color: rgba(0,0,0,0.5);
+}
+/* 未开通弹窗 */
+.no_kt_max{
+  position: fixed;
+  top: 0rpx;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background-color: rgba(0, 0, 0, 0.4)
+}
+.no_kt{
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 300rpx;
+  height: 550rpx;
+  border-radius: 15rpx;
+  background-color: white;
+  /* padding-top: 10rpx; */
+}
+.no_kt view:nth-of-type(1){
+  width: 100%;
+  height: 50%;
+}
+.no_kt view:nth-of-type(1) image{
+  width: 100%;
+  height:100%;
+}
+.no_kt view:nth-of-type(2){
+  width: 100%;
+  text-align: center;
+  height:30%;
+  border-bottom: 1rpx solid #D8D8D8;
+}
+.no_kt view:nth-of-type(2) text{
+  display: block;
+  color: #313131;
+  font-size: 35rpx;
+  line-height: 50rpx;
+}
+.no_kt view:nth-of-type(3){
+  width: 100%;
+}
+.no_kt view:nth-of-type(3) text{
+  display: block;
+  width: 30%;
+  margin-top: 20rpx;
+  margin-left: 35%;
+  height: 70rpx;
+  line-height: 70rpx;
+  background-image: linear-gradient(to right, #FEBD88 , #E93E6A);
+  text-align: center;
+  border-radius: 50rpx;
+  color: white;
+  font-size: 35rpx
+}
+/* 右边浮窗 */
+.order2{
+  z-index: 999;
+  position: fixed;
+  top: 40%;
+  right: 0rpx;
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: white;
+  background-color: #FF6D10;
+  border-top-left-radius: 50rpx;
+  border-bottom-left-radius: 50rpx;
+  box-shadow: 0px 0px 0px rgba(0,0,0,0.2);
+  font-size: 25rpx;
+  background-image: linear-gradient(to right , #FF730F, #FF940A);
+}
+.order3{
+  z-index: 999;
+  position: fixed;
+  top: 45%;
+  right: 0rpx;
+  width: 120rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: white;
+  background-color: #FF6D10;
+  border-top-left-radius: 50rpx;
+  border-bottom-left-radius: 50rpx;
+  box-shadow: 0px 0px 0px rgba(0,0,0,0.2);
+  font-size: 25rpx;
+  background-image: linear-gradient(to right , #FF730F, #FF940A);
+}
+.order4{
+  opacity: 0;
 }

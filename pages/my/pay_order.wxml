@@ -1,0 +1,38 @@
+<!--pages/shop_content/shop_pay.wxml-->
+<wxs module="we">
+  var toFixed = function (value) {
+  return value.toFixed(2);
+}
+module.exports = {
+   toFixed :toFixed
+}
+</wxs>
+<view class="adress" catchtap="adress_tiao">
+  <view class="adress1">
+    <image src="../img/adress3.png"></image>
+  </view>
+  <view class="adress2">
+    <text>{{adres.username}}</text>
+    <text>{{adres.mobile}}</text>
+    <text>{{adres.address}}</text>
+  </view>
+</view>
+<view class="content">
+  <view class="content1" wx:for='{{sh_content}}' wx:key>
+    <view class="content1_img">
+      <image src="{{item.pic}}"></image>
+    </view>
+    <view class="content1_t1">
+      <text>{{item.name}}</text>
+      <text wx:if='{{gnumber.guige}}'>规格：{{gnumber.guige}}</text>
+      <text wx:else></text>
+    </view>
+    <view class="content1_t2">
+    <text>￥{{we.toFixed(or_content.total-goods[0].postPay)}}</text>
+    <text wx:if='{{item.category!=1}}'>皮豆减免</text>
+      <text wx:if='{{item.category!=1}}'>-￥{{we.toFixed(s_pd)}}</text>
+    </view>
+  </view>
+  <view class="content2">共{{or_content.goodsNumber}}件商品 合计： ￥{{we.toFixed(or_content.total-goods[0].postPay)}}+邮费￥{{we.toFixed(goods[0].postPay)}}</view>
+  <button catchtap="pdpd" class="bt" wx:if='{{w_pay==-1}}'>付款</button>
+</view>

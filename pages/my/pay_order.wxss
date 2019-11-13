@@ -1,0 +1,136 @@
+/* pages/shop_content/shop_pay.wxss */
+page{
+  background-color: #F9F9F9;
+}
+.adress{
+  width: 94%;
+  height: 150rpx;
+  background-color: white;
+  box-shadow: 0rpx 0rpx 10rpx rgba(0, 0, 0, 0.2);
+  border-radius: 15rpx;
+  margin-left: 3%;
+  margin-top: 30rpx;
+}
+.adress1{
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+.adress1 image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 50rpx;
+  margin-left: 50rpx;
+}
+.adress2{
+  float: left;
+  color: #5E5E5E;
+  width: 70%;
+  height:120rpx;
+  font-size: 30rpx;
+  margin-top:20rpx;
+}
+.adress2 text:nth-of-type(1){
+  line-height: 60rpx;
+}
+.adress2 text:nth-of-type(2){
+  margin-top: 20rpx;
+  line-height: 60rpx;
+  margin-left: 20rpx;
+}
+.adress2 text:nth-of-type(3){
+  color: #AEADAD;
+  display: block;
+}
+.adress3{
+  width: 10%;
+  float: left;
+  height:40rpx;
+  margin-top: 50rpx;
+  color: #AEADAD;
+}
+.adress3 image{
+  width: 25rpx;
+  height: 25rpx;
+}
+/* 详情 */
+.content{
+  float: left;
+  position: fixed;
+  top: 200rpx;
+  width: 94%;
+  left: 3%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0rpx 0rpx 10rpx rgba(0, 0, 0, 0.2);
+  border-radius: 15rpx;
+  line-height: 37.5rpx;
+}
+.content1{
+  width: 100%;
+  height: 210rpx;
+}
+.content1_img{
+  float: left;
+  width: 150rpx;
+  margin-left: 50rpx;
+  margin-top: 30rpx;
+}
+.content1 image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.content1_t1{
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+  width: 60%;
+  float: left;
+}
+.content1_t1 text:nth-of-type(1){
+  display: block;
+  color: #777777 ;
+  font-size: 27rpx;
+}
+.content1_t1 text:nth-of-type(2){
+  display: block;
+  color: #B5B4B4;
+  font-size: 25rpx;
+}
+.content1_t2{
+  width: 60%;
+  float: left;
+  font-size: 27rpx;
+  margin-left: 20rpx;
+  text-align: left;
+}
+.content1_t2 text:nth-of-type(1){
+    color: #777777 ;
+}
+.content1_t2 text:nth-of-type(2){
+    color: #FF6D10 ;
+    margin-left: 30rpx;
+}
+.content1_t2 text:nth-of-type(3){
+    color: #FF6D10 ;
+    margin-left: 10rpx;
+}
+.content2{
+  width: 90%;
+  float: right;
+  margin-right: 50rpx;
+  text-align: right;
+  font-size: 27rpx;
+  color: #777777 ;
+}
+.bt{
+  position: fixed;
+  bottom: 60rpx;
+  width: 70%;
+  left: 15%;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 35rpx;
+  color: white;
+  border-radius: 50rpx;
+  background-color: #FF6D10;
+}

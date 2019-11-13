@@ -26,7 +26,7 @@
   float: left;
 }
 .pd view:nth-of-type(2) image{
-  margin-top: 30rpx;
+  margin-top: 40rpx;
   width: 60rpx;
   float: left;
   height: 55rpx;
@@ -52,7 +52,23 @@
   border-radius: 25rpx;
   margin-top: -20rpx;
 }
-.pd_mx view:nth-of-type(1){
+
+.pd_mx_view{
+  width: 90%;
+  margin-left: 5%;
+  color: #6B6B6B;
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx; 
+  border-bottom: 1rpx solid #DED6D7;
+}
+.pd_mx_view>text:nth-of-type(1){
+  float: left;
+}
+.pd_mx_view>text:nth-of-type(2){
+  float: right;
+}
+.pd_mx_view1{
   width: 90%;
   margin-left: 5%;
   color: #5D5D5D;
@@ -62,22 +78,7 @@
   font-weight: bold;
   border-bottom: 1rpx solid #DED6D7;
 }
-.pd_mx view:nth-of-type(2),.pd_mx view:nth-of-type(3){
-  width: 90%;
-  margin-left: 5%;
-  color: #6B6B6B;
-  font-size: 30rpx;
-  height: 80rpx;
-  line-height: 80rpx; 
-  border-bottom: 1rpx solid #DED6D7;
-}
-.pd_mx view:nth-of-type(2) text:nth-of-type(1),.pd_mx view:nth-of-type(3) text:nth-of-type(1){
-  float: left;
-}
-.pd_mx view:nth-of-type(2) text:nth-of-type(2),.pd_mx view:nth-of-type(3) text:nth-of-type(2){
-  float: right;
-}
-.pd_mx view:nth-of-type(4){
+.pd_mx_viewlast{
   width: 90%;
   margin-left: 5%;
   color: #5D5D5D;
@@ -85,12 +86,12 @@
   height: 120rpx;
   text-align: center;
 }
-.pd_mx view:nth-of-type(4) image{
+.pd_mx_viewlast image{
   width: 200rpx;
   height: 180rpx;
   margin-top: 150rpx;
 }
-.pd_mx view:nth-of-type(4) text{
+.pd_mx_viewlast text{
   display: block;
   width: 100%;
   margin-top: 50rpx;

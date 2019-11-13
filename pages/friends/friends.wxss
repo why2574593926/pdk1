@@ -20,10 +20,10 @@
 .fb{
   width: 94%;
   margin-left: 3%;
-  margin-top: 40%;
+  margin-top: 35%;
   background-color: #FF6D10;
   border-radius: 20rpx;
-  height: 600rpx;
+  height: 680rpx;
 }
 .fb_min1{
   width: 94%;
@@ -73,14 +73,27 @@
   float: left;
   width: 40%;
   margin-left: 30%;
-  height: 80rpx;
-  margin-top: 30rpx;
+  height: 70rpx;
+  margin-top: 40rpx;
   text-align: center;
   color: white;
   font-size: 30rpx;
-  line-height: 80rpx;
+  line-height: 70rpx;
   border-radius: 50rpx;
   background-image: linear-gradient(to right , #FFBF89, #E93E6A);
+}
+.fb_min3{
+  float: left;
+  width: 40%;
+  margin-left: 30%;
+  height: 70rpx;
+  margin-top: 20rpx;
+  text-align: center;
+  color: white;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  border-radius: 50rpx;
+  text-decoration:underline;
 }
 /* 地区选择 */
 .tui-picker-content{

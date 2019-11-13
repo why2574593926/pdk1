@@ -4,17 +4,18 @@
 <!-- top -->
 <view class='top'>
   <image class='img1' src='../img/my_top.png'></image>
-  <text class='text1'>卡号：{{users.cardId}}</text>
+  <text wx:if='{{users.cardStr!=null}}' class='text1'>卡号：{{users.cardStr}}</text>
+  <text wx:else class='text1'>卡号：未激活</text>
   <view class='text2'><image class='img2' src='../img/pd.png'></image><text>皮豆：{{users.pd}}</text></view>
 </view>
 <!-- 我的订单 -->
 <view class='my_order'>
   <view catchtap='order_tiao' id='x1' class='my_order_text'>我的订单</view>
   <view class='my_order_icon'>
-    <view catchtap='order_tiao' id='x2'><image src='../img/my1.png'></image><text>待付款</text> </view>
+    <view catchtap='order_tiao' id='x2'><image src='../img/my1.png'></image><text>待付款</text> <view wx:if='{{dingdan_number1}}'>{{dingdan_number1}}</view></view>
     <view catchtap='order_tiao' id='x3'> <image src='../img/my2.png'></image><text>待发货</text> </view>
-    <view catchtap='order_tiao' id='x4'> <image src='../img/my3.png'></image><text>待收货</text> </view>
-    <view catchtap='order_tiao' id='x5'> <image src='../img/my4.png'></image><text>订单服务</text> </view>
+    <view catchtap='order_tiao' id='x4'> <image src='../img/my3.png'></image><text>待收货</text><view wx:if='{{dingdan_number3}}'>{{dingdan_number3}}</view> </view>
+    <view catchtap='order_tiao' id='x5'> <image src='../img/my4.png'></image><text>已收货</text> </view>
   </view>
 </view>
 <!-- 我的钱包 -->
@@ -83,7 +84,7 @@
   <text>2、一个皮豆价值等于1元人民币.</text>
   <text>3、任何作弊手段获得的皮豆，都将清0.</text>
   <text>4、皮豆可以在皮皮商城直接购买商品.</text>
-  <text>5、皮豆与你的z账号绑定,不可转让出售皮豆.</text>
+  <text>5、皮豆与你的账号绑定,不可转让出售皮豆.</text>
   </view>
   <view class='pd_xq2'>
   <text id='pd2' bindtap='pd'>知道了</text>

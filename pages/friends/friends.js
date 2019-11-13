@@ -49,6 +49,9 @@ Page({
   // 跳转
   fb:function(){
     let that=this;
+    // 将内容保存到缓存
+    let aa = { 'c1': that.data.time + '到' + that.data.time1, 'c2': that.data.region1[0], 'c3': that.data.region[0], 'c4': that.data.time + '从' + that.data.region[0]+'出发'}
+    wx.setStorageSync('content',aa)
     if (that.data.adress1 == 1 && that.data.adress2 == 1 && that.data.time1_pd == 1 && that.data.time_pd == 1){
       wx.navigateTo({
         url: '../friends/pd'
@@ -59,5 +62,30 @@ Page({
         content: '请完整填写信息',
       })
     }
+  },
+  onLoad:function(){
+    // 查看是否授权
+    console.log(44444)
+    wx.getSetting({
+      success: function (res) {
+        if (res.authSetting['scope.userInfo']) {
+          // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+          wx.getUserInfo({
+            success: function (res) {
+              console.log(res.userInfo)
+              wx.setStorageSync('user1', res.userInfo)
+            }
+          })
+        }
+      }
+    })
+  },
+  bindGetUserInfo: function (e) {
+    console.log(e.detail.userInfo)
+    wx.setStorageSync('user1', e.detail.userInfo)
+  },
+  // 跳过
+  tiaoguo:function(){
+    wx.navigateTo({ url: 'pp_content'})
   }
 })

@@ -61,3 +61,15 @@ form button{
   color: white;
   font-size: 30rpx;
 }
+/* 办卡 */
+.card{
+  position: relative;
+  bottom: 0rpx;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color:rgba(255, 255, 255, 0.9);
+  background-color: #FF7419;
+  font-size: 27rpx;
+  text-align: center;
+}

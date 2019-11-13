@@ -3,19 +3,14 @@
 <view class='top_max'>
   <!-- 顶部搜索 -->
   <view class='search'>
-    <input placeholder-class='placer' placeholder='搜索商品或特权'></input>
+    <input placeholder-class='placer' bindinput='watchPassWord' placeholder='请输入商品名'></input>
     <image src='../img/search1.png'></image>
   </view>
+
   <!-- 顶部滚动 -->
   <swiper indicator-dots='true' indicator-active-color='#FF6D10' indicator-color='white' autoplay='true' interval='3000' duration='1000'>
     <swiper-item>
-      <image src='../img/guanggao1.png'></image>
-    </swiper-item>
-    <swiper-item>
       <image src='../img/guanggao2.png'></image>
-    </swiper-item>
-    <swiper-item>
-      <image src='../img/guanggao3.png'></image>
     </swiper-item>
   </swiper>
 </view>
@@ -32,12 +27,12 @@
     <view class="category-column">
 
       <view style="position: relative;">
-        <image wx:if="{{index<4}}" class="category-imgbox" src="{{item.url}}"></image>
-        <image wx:else class="category-imgbox2" src="{{item.url}}"></image>
+        
+        <image class="category-imgbox2" src="{{item.url}}"></image>
 
         <view wx:if="{{item.url2}}">
-          <view wx:if="{{index<4}}" style="top:-10rpx;" class="tag {{item.tag}}">{{item.url2}}</view>
-          <view wx:else class="tag {{item.tag}}">{{item.url2}}</view>
+          <!-- <view wx:if="{{index<4}}" style="top:-10rpx;" class="tag {{item.tag}}">{{item.url2}}</view> -->
+          <view  class="tag {{item.tag}}">{{item.url2}}</view>
         </view>
       </view>
 
@@ -67,13 +62,13 @@
   <text>皮皮商城</text>
 </view>
 <!-- 商品循环 -->
-<view class='shop_max' wx:key wx:for='{{shop}}'>
+<view catchtap="xiangqing_tiao" id='{{item.id}}' class='shop_max' wx:key wx:for='{{shop}}'>
   <view class='shop'>
     <view class='shop_img'>
       <image src='{{item.pic}}'></image>
     </view>
     <view class='shop_text1'>{{item.name}}</view>
-    <view class='shop_text2'><text>会员专享</text><text>￥</text><text>{{item.price}}</text></view>
+    <view class='shop_text2'><text>会员专享</text><text>￥</text><text>{{item.price}}</text><text id="text_add">￥{{item.pd}}</text></view>
     <view class='shop_shengqian_max'><text class='shop_shengqian'>省{{item.pd-item.price}}元</text></view>
   </view>
 </view>
@@ -87,6 +82,30 @@
 
 <image class='shop_last_img' src='../img/loadingbg.png'></image>
 </view>
+</view>
+<!-- 未开通弹窗 -->
+<view class="no_kt_max" style="display:{{notkt_dis}}">
+  <view class="no_kt">
+    <view>
+      <image mode="scaleToFill" src="../img/wkt.png"/>
+    </view>
+  <view>
+    <text>非常抱歉</text>
+    <text>功能正在开发中</text>
+    <text>敬请期待</text>
+  </view>
+  <view>
+    <text catchtap="no_kt">知道了</text>
+  </view>
+</view>
+</view>
+<view catchtap="youhuifanxian" class="order2"><text>优惠</text><text>返现</text></view>
+
+<view class="order3">在线客服</view>
+<contact-button class="order3 order4" ></contact-button>
+<!-- 模糊查询遍历 -->
+<view wx:if='{{cx0==1}}' class="chaxun">
+  <view wx:for='{{cx}}' wx:key catchtap="xiangqing_tiao" id="{{item.id}}">{{item.name}}</view>
 </view>
 <!-- 导航 -->
 <mp-nav id="mpnav"></mp-nav>

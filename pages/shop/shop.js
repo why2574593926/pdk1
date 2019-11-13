@@ -9,13 +9,40 @@ Page({
     ceshi: '',
     //商品
     shop1: {},
-    shop2: {}
+    shop2: {},
+    // 价格，皮豆
+    shop_price:'',
+    shop_pd: ''
   },
   //事件处理函数
   bindViewTap: function () {
     wx.navigateTo({
       url: '../logs/logs'
     })
+  },
+  watchPassWord: function (e) {
+    let that = this;
+    that.setData({
+      cx0: 1
+    })
+    console.log(e.detail.value)
+    // 商品获取
+    if (e.detail.value == '') {
+      that.setData({
+        cx: {}
+      })
+    } else {
+      let aa = {
+        'nameLike': e.detail.value
+      }
+      WXAPI.shop(aa).then(function (res) {
+        console.log(res.data.list)
+        that.setData({
+          cx: res.data.list
+        })
+      })
+    }
+
   },
   onLoad: function () {
     let that = this;
@@ -46,11 +73,22 @@ Page({
       }
     })
   },
+  toFix: function (value) {
+    return value.toFixed(2)//此处2为保留两位小数，保留几位小数，这里写几
+  },
   onReady: function () {
     // 页面指定位置跳转
     wx.pageScrollTo({
       selector: '.' + app.globalData.index_tiao
     })
     app.globalData.index_tiao='index'
+  },
+  // 跳转商品详情页
+  xiangqing_tiao: function (e) {
+      app.globalData.shop_id = e.currentTarget.id;
+      wx: wx.navigateTo({
+        url: '../shop_content/shop_content'
+      })
+    
   }
 })

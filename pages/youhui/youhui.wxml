@@ -1,0 +1,22 @@
+<view class='my_max'>
+<!-- 我的收货地址 -->
+<view catchtap='youhui_content' class='my_pd'>
+  <text>道路救援</text>
+</view>
+<!-- 优惠说明 -->
+<view class='pd_xq_max' wx:if="{{pd_display==1}}">
+<view class='pd_xq'>
+  <view class='pd_xq1'>
+  <text>道路救援优惠条件</text>
+  <text>1、必须为本商城会员.</text>
+  <text>2、必须从本商城进入道路救援够买优惠卡.</text>
+  <text>3、必须在买卡之后返回本商城首页.</text>
+  <text>4、必须在返回首页后主动联系客服进行返现.</text>
+  <text>5、我们将返现48元.</text>
+  </view>
+  <view class='pd_xq2'>
+  <text id='pd2' bindtap='pd'>知道了</text>
+  </view>
+</view>
+</view>
+</view>

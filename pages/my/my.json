@@ -4,5 +4,6 @@
   },
   "navigationBarBackgroundColor": "#ffffff",
   "navigationBarTextStyle": "black",
-  "navigationBarTitleText": "我的"
+  "navigationBarTitleText": "我的",
+    "enablePullDownRefresh": true
 }

@@ -16,9 +16,6 @@ Page({
   },
   onLoad: function () {
     let that = this;
-    // 导航判断
-    app.globalData.nav = 3;
-    this.selectComponent("#mpnav").navbh();
   },
   onReady: function () {
 

@@ -14,10 +14,22 @@
 .img2{
   width: 100%;
   height: 25%;
+  margin: 0rpx;
+  background-color: #7F8480;
+}
+.swiper-item{
+  width: 100%;
+  height: 100%;
 }
 .img1 image,.img2 image{
   width: 100%;
   height: 100%;
+}
+.mb{
+  width: 100%;
+  height: 80%;
+  position: fixed;
+  top: 0rpx;
 }
 /* 地区选择 */
 .tui-picker-content{
@@ -145,6 +157,21 @@ picker{
   width: 250rpx;
   height: 160rpx;
 }
+/* 时间 */
+.car_time{
+  position: fixed;
+  top: 230rpx;
+  left: 35%;
+  text-align: center;
+  width: 30%;
+  background-color: #BCB7B7;
+  color: white;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-weight: bold;
+  border: 1rpx solid #9D9B9B;
+  border-radius: 25rpx;
+}
 /* 皮豆计算时的动画 */
 .left{
   text-align: center;
@@ -183,13 +210,13 @@ picker{
   top: 230rpx;
   right: 0rpx;
   width: 170rpx;
-  height: 80rpx;
+  height: 60rpx;
   text-align: center;
   border-top-left-radius:50rpx; 
   border-bottom-left-radius:50rpx; 
   background-image: linear-gradient(to right , #FF730F, #FF940A);
   color: #FFFEFE;
-  line-height: 80rpx;
+  line-height: 60rpx;
   font-size: 25rpx;
 }
 /* 皮豆说明详情 */

@@ -37,9 +37,7 @@ Page({
   },
   onLoad: function () {
     let that = this;
-    // 导航判断
-    app.globalData.nav = 3;
-    this.selectComponent("#mpnav").navbh();
+
   },
   onReady: function () {
 
@@ -100,7 +98,7 @@ Page({
     }else{
       WXAPI.adress_add(that.data.form).then(function (res) {
         console.log(res)
-        wx.reLaunch({
+        wx.navigateBack({
           url: '../adress/adress',
         })
       })

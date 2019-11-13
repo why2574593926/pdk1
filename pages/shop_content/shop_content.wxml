@@ -1,0 +1,102 @@
+<!--pages/shop_content/shop_content.wxml-->
+<wxs module="we">
+  var toFixed = function (value) {
+  return value.toFixed(2);
+}
+module.exports = {
+   toFixed :toFixed
+}
+</wxs>
+<view class="top_max">
+  <!-- 顶部滚动 -->
+  <swiper indicator-dots='true' indicator-active-color='#FF6D10' indicator-color='white' autoplay='true' interval='3000' duration='1000'>
+    <swiper-item wx:key wx:for='{{shop_con.pics}}'>
+      <image src='{{item}}'></image>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 顶部价格 -->
+<view class="top_price">
+  <view>
+    <text>￥</text>
+    <text wx:if='{{shop_con.category==1}}'>{{shop_con.price}}</text>
+    <text wx:else>{{we.toFixed(shop_con.price-shop_con.pd)}}</text>
+    <text wx:if='{{shop_con.category!=1}}'>+</text>
+    <text wx:if='{{shop_con.category!=1}}'>{{shop_con.pd}}</text>
+    <text wx:if='{{shop_con.category!=1}}'>皮豆</text>
+    <text id="top_price6">月销：{{shop_con.sells}}</text>
+  </view>
+</view>
+<!-- 标题 -->
+<view class="title">
+  <text>{{shop_con.name}}</text>
+</view>
+<!-- 颜色 -->
+<!-- <view class="color">
+  <view class="color1">
+    <text>颜色</text>
+    <text>规格</text>
+  </view>
+  <view class="color2"></view>
+  <view class="color3"></view>
+  <view class="color4"></view>
+</view> -->
+<!-- 点赞 -->
+<view class="aid">
+  <image catchtap="aid" src="{{aid_img}}"></image>
+  <text>{{aid_number}}人点赞</text>
+</view>
+<!-- 快递 -->
+<view class="kd">快递：{{yf}}元</view>
+<!-- 立即购买 -->
+<view class="bt1">
+  <view catchtap="buy">立即购买</view>
+</view>
+<!-- 规格和数量 -->
+<view catchtap="buy" class="com_color_max" style="display:{{con_color_max_dis}};">
+  <view class="com_color_top">点击空白隐藏</view>
+  <view catchtap class="com_color" style="bottom:{{con_color_dis}};">
+    <view class="com_color_content">
+      <view>
+        <image src="{{shop_con.pic}}"></image>
+      </view>
+      <view>
+      <text wx:if='{{shop_con.category==1}}'>￥{{we.toFixed(shop_con.price*con_color_number)}}</text>
+        <text wx:else>￥{{we.toFixed((shop_con.price)*con_color_number)}}</text>
+        <text>库存{{shop_con.stock}}件</text>
+        <text>已选{{guige}}</text>
+      </view>
+    </view>
+    <scroll-view class="guige_scroll" scroll-y="true">
+      <view wx:if='{{item1[1].value!=""}}' class="com_color_color">
+      <view>颜色</view>
+      <view wx:if='{{item.color1}}' style="border: 1rpx solid {{item.color1}};color:{{item.color2}};" wx:for='{{item1}}' wx:key catchtap="radioChange1" id="{{index}}" class="com_color_color_v2">{{item.value}}</view>
+    </view>
+    <view wx:if='{{item2[1].value!=""}}' class="com_color_color">
+      <view>大小</view>
+      <view wx:if='{{item.color1}}' style="border: 1rpx solid {{item.color1}};color:{{item.color2}};" wx:for='{{item2}}' wx:key catchtap="radioChange2" id="{{index}}" class="com_color_color_v2">{{item.value}}</view>
+    </view>
+    <view wx:if='{{item3[1].value!=""}}' class="com_color_color">
+      <view>品牌</view>
+      <view wx:if='{{item.color1}}' style="border: 1rpx solid {{item.color1}};color:{{item.color2}};" wx:for='{{item3}}' wx:key catchtap="radioChange3" id="{{index}}" class="com_color_color_v2">{{item.value}}</view>
+    </view>
+    <view wx:if='{{item4[1].value!=""}}' class="com_color_color">
+      <view>型号</view>
+      <view wx:if='{{item.color1}}' style="border: 1rpx solid {{item.color1}};color:{{item.color2}};" wx:for='{{item4}}' wx:key catchtap="radioChange4" id="{{index}}" class="com_color_color_v2">{{item.value}}</view>
+    </view>
+    </scroll-view>
+    
+    <view class="com_color_number">
+      <view>数量</view>
+      <view>
+        <text id="0" catchtap="numberjj">-</text>
+        <text>{{con_color_number}}</text>
+        <text id="1" catchtap="numberjj">+</text>
+      </view>
+    </view>
+    <view class="dingge"></view>
+    <view class="com_color_bt">
+      <view catchtap="queding">确定</view>
+    </view>
+  </view>
+</view>

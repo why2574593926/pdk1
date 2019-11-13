@@ -31,6 +31,19 @@
   width: 40rpx;
   height: 40rpx;
 }
+/* 模糊查询 */
+.chaxun{
+  z-index: 99999999;
+  position: fixed;
+  top: 100rpx;
+  width: 90%;
+  left: 5%;
+  background-color: rgba(255,255,255,0.8);
+  line-height: 80rpx;
+}
+.chaxun view{
+  border-bottom: 1rpx solid gainsboro;
+}
 /* 顶部滚动 */
 .top_max swiper{
   float: left;
@@ -76,7 +89,7 @@
   width: 90%;
   height: 100%;
   margin-left: 5%;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 }
 .shop_img{
   width: 100%;
@@ -126,7 +139,7 @@ white-space: nowrap;
   width: 90%;
   height: 100%;
   margin-left: 5%;
-  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 }
 .shop_last_img{
   width: 100%;

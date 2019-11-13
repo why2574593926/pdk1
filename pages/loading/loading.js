@@ -17,28 +17,30 @@ Page({
     wx.login({
       success(res) {
         if (res.code) {
+          
           //发起网络请求
           let aa = { 'js_code': res.code }
           WXAPI.log(aa).then(function (res) {
+            console.log(res)
             if (res.code == 0) {
               that.setData({
                 userInfo:res.data,
-                uid: res.data.uid
               })
-              app.globalData.userInfo = that.data.userInfo;
-              app.globalData.uid = that.data.uid;
-              console.log(app.globalData.userInfo)
+              app.globalData.uid = res.data.id
               console.log(app.globalData.uid)
+              app.globalData.oppid = res.data.uid;
+              app.globalData.userInfo = that.data.userInfo;
+              console.log(app.globalData.userInfo)
             }
             
             // 根据获得的cardId和cardStr判断用户是否激活
-            if (!that.data.userInfo.cardId && !that.data.userInfo.cardStr){
-              wx.redirectTo({
-                url: '../active/active',
+            if (!app.globalData.userInfo.cardId && !app.globalData.userInfo.cardStr) {
+              wx: wx.navigateTo({
+                url: '../active/active'
               })
-            }else{
-              wx.redirectTo({
-                url: '../index/index',
+            } else {
+              wx: wx.navigateTo({
+                url: '../index/index'
               })
             }
           })

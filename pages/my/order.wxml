@@ -1,37 +1,49 @@
 <!--pages/my/order.wxml-->
+<wxs module="we">
+  var toFixed = function (value) {
+  return value.toFixed(2);
+}
+module.exports = {
+   toFixed :toFixed
+}
+</wxs>
 <view class='top'>
-  <view catchtap='xxk' id='x1'><text style='color:{{style_x1[0]}};border-bottom: 1rpx solid {{style_x1[1]}};'>全部</text></view>
-  <view catchtap='xxk' id='x2'><text style='color:{{style_x2[0]}};border-bottom: 1rpx solid {{style_x2[1]}};'>待付款</text></view>
-  <view catchtap='xxk' id='x3'><text style='color:{{style_x3[0]}};border-bottom: 1rpx solid {{style_x3[1]}};'>待发货</text></view>
-  <view catchtap='xxk' id='x4'><text style='color:{{style_x4[0]}};border-bottom: 1rpx solid {{style_x4[1]}};'>待收货</text></view>
-  <view catchtap='xxk' id='x5'><text style='color:{{style_x5[0]}};border-bottom: 1rpx solid {{style_x5[1]}};'>订单服务</text></view>
+  <view catchtap='xxk' id='x1'>
+    <text style='color:{{style_x1[0]}};border-bottom: 1rpx solid {{style_x1[1]}};'>全部</text>
+  </view>
+  <view catchtap='xxk' id='x2'>
+    <text style='color:{{style_x2[0]}};border-bottom: 1rpx solid {{style_x2[1]}};'>待付款</text>
+  </view>
+  <view catchtap='xxk' id='x3'>
+    <text style='color:{{style_x3[0]}};border-bottom: 1rpx solid {{style_x3[1]}};'>待发货</text>
+  </view>
+  <view catchtap='xxk' id='x4'>
+    <text style='color:{{style_x4[0]}};border-bottom: 1rpx solid {{style_x4[1]}};'>待收货</text>
+  </view>
+  <view catchtap='xxk' id='x5'>
+    <text style='color:{{style_x5[0]}};border-bottom: 1rpx solid {{style_x5[1]}};'>已收货</text>
+  </view>
 </view>
 <!-- 循环订单 -->
-<view class='order'>
-  <view class='order1'><image src='../img/scroll1.png'></image></view>
-  <view class='order2'>宝马3系用AP8520刹车,正品卡钳配国产380mm的盘sddddddddddddddddddddddddddddddddddddddddd</view>
-  <view class='order3'>
-    <text>￥11680</text>
-    <text>+5320</text>
+<view catchtap="delete_tiao_order1" data-wait="{{orderList[index].status}}" id="{{orderList[index].orderId}}" class='order' wx:for='{{goodsMap1}}' wx:key wx:for-index='index' wx:for-item="item">
+  <view class='order1'>
+    <image src='{{item[0].pic}}'></image>
   </view>
-  <view class='order4'><text>共一件商品 合计：￥11680</text></view>
-  <view class='order6'>付款</view>
-  <view class='order5'>取消订单</view>
+  <view class='order2'>{{item[0].name}}</view>
+  <view class='order3'>
+    <text>￥{{we.toFixed(orderList[index].total-orderList[index].postPay)}}</text>
+    <text>￥{{orderList[index].postPay}}</text>
+  </view>
+  <view class='order4'>
+    <text>共{{orderList[index].goodsNumber}}件商品 合计：￥{{we.toFixed(orderList[index].total)}}</text>
+  </view>
+  <view wx:if='{{orderList[index].status==-1}}' class='order6'>付款</view>
+  <view wx:if='{{orderList[index].status==-1}}' catchtap="delete_tiao_order2" id='{{orderList[index].orderId}}' class='order5'>取消订单</view>
+  <view wx:if='{{orderList[index].status==1}}' catchtap="shouhuo_tiao_order2" id='{{orderList[index].orderId}}' class='order5'>确认收货</view>
 </view>
 <!--  -->
-<view class='order'>
-  <view class='order1'><image src='../img/scroll1.png'></image></view>
-  <view class='order2'>宝马3系用AP8520刹车,正品卡钳配国产380mm的盘sddddddddddddddddddddddddddddddddddddddddd</view>
-  <view class='order3'>
-    <text>￥11680</text>
-    <text>+5320</text>
-  </view>
-  <view class='order4'><text>共一件商品 合计：￥11680</text></view>
-  <view class='order6'>付款</view>
-  <view class='order5'>取消订单</view>
-</view>
 <!-- 无订单 -->
-<view class='m_img'>
-    <image src='../img/header1.png'></image>
-    <text>暂无优惠券!</text>
+<view wx:if='{{yw_order==0}}' class='m_img'>
+  <image src='../img/header1.png'></image>
+  <text>暂无订单!</text>
 </view>

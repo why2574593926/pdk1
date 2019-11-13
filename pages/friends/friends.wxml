@@ -31,7 +31,8 @@
         <view wx:if="{{time_pd!=1}}">请选择</view>
         <view wx:else>{{time}}从{{region[0]}}出发到{{region1[0]}}</view>
       </view>
-      <view catchtap='fb' class='fb_min2'>发布</view>
+      <button open-type="getUserInfo" catchtap='fb' bindgetuserinfo="bindGetUserInfo" class='fb_min2'>发布</button>
+      <view catchtap="tiaoguo"  class='fb_min3'>查看匹配列表</view>
     </view>
   </view>
 </view>

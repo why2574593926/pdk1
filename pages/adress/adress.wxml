@@ -1,6 +1,6 @@
 <view class='my_max'>
   <!-- 收货地址 -->
-  <view class='adress_max' wx:key wx:for='{{adress1}}'>
+  <view catchtap="adress_x" id="{{item.id}}" class='adress_max' wx:key wx:for='{{adress1}}'>
     <view class='my_pd'>
       <view class='my_pd_img'>
         <image src='../img/adress3.png'></image>
@@ -22,6 +22,4 @@
     </view>
   </view>
   <button class="add_tishi" wx:if='{{adress1.length==0}}' catchtap='add'>暂无收货地址，点击添加添加</button>
-  <!-- 导航 -->
-  <mp-nav id="mpnav"></mp-nav>
 </view>

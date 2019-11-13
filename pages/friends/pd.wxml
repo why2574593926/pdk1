@@ -5,39 +5,41 @@
   </view>
   <view class='users' id='user1'>
     <view>
-      <image src='../img/loadingxz.png'></image>
+      <image src='{{user2.avatarUrl}}'></image>
     </view>
     <view>
-      <text>core-淡然</text>
-      <text>1小时前</text>
+      <text>{{user2.nickName}}</text>
     </view>
   </view>
   <view class='users'>
     <image src='../img/friends5.png'></image>
-    <text>往返时间：<text id='text_t'>10-6-5</text></text>
+    <text>往返时间：<text id='text_t'>{{con.c1}}</text></text>
   </view>
   <view class='users'>
     <image src='../img/friends6.png'></image>
-    <text>目的地：<text id='text_t'>大理</text></text>
+    <text>目的地：<text id='text_t'>{{con.c2}}</text></text>
   </view>
   <view class='users'>
     <image src='../img/friends7.png'></image>
-    <text>从四川出发</text>
+    <text>{{con.c3}}</text>
   </view>
   <view class='users'>
     <image src='../img/friends8.png'></image>
-    <text id='text_t'>10月6日从成都出发</text>
+    <text id='text_t'>{{con.c4}}</text>
   </view>
   <!-- 匹配 -->
   <view class='pp'>
-    <view bindtap='start_yz' class='max_xz'>
-    <view class='max_xz_img'>
-      <image mode='scaleToFill' src='../img/loadingxz.png'></image>
-    </view>
-    <view class='max_xz_text'>
-      <text>开始</text>
-    </view>
+    <view catchtap='start_yz' id="s1" class='max_xz'>
+      <view class='max_xz_img'>
+        <image mode='scaleToFill' src='../img/loadingxz.png'></image>
+      </view>
+      <view class='max_xz_text'>
+        <text>{{pp_text}}</text>
+      </view>
 
+    </view>
   </view>
+  <view wx:if='{{s==1}}' id="s2" catchtap="start_yz" class="mb">
+  <view class="mb_min">点击任意地方结束</view>
   </view>
 </view>

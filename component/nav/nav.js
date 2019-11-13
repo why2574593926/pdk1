@@ -9,7 +9,7 @@ Page({
     nav:[
       { 'id':'0','name': '首页', 'color': '#AEAEAE', 'url': '../img/nav11.png', 'url2':'../index/index'},
       { 'id': '1','name': '皮皮商城', 'color': '#AEAEAE', 'url': '../img/nav22.png', 'url2': '../shop/shop' },
-      { 'id': '2','name': '尊享特权', 'color': '#AEAEAE', 'url': '../img/nav33.png', 'url2': '../privilege/privilege' },
+      { 'id': '2','name': '皮友圈', 'color': '#AEAEAE', 'url': '../img/nav33.png', 'url2': '../privilege/privilege' },
       { 'id': '3','name': '我的', 'color': '#AEAEAE', 'url': '../img/nav44.png', 'url2': '../my/my' }
     ]
   },

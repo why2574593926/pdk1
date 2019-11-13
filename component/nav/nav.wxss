@@ -6,7 +6,7 @@
   height: 120rpx;
   width: 100%;
   background-color:#FFFFFF;
-  box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+  box-shadow: 0px 0px 4px rgba(0,0,0,0.4);
 }
 .nav navigator{
   font-size: 40rpx;
@@ -26,6 +26,6 @@ navigator text{
 }
 .nav_dingge{
   float: left;
-   height: 120rpx;
+   height: 140rpx;
   width: 100%;
 }

@@ -5,9 +5,7 @@
   <image src='../img/my_jiantou.png'></image>
 </view>
 <!-- 退出登录 -->
-<view class='my_tc'>
+<!-- <view class='my_tc'>
   <text>退出登录</text>
-</view>
-<!-- 导航 -->
-<mp-nav id="mpnav"></mp-nav>
+</view> -->
 </view>

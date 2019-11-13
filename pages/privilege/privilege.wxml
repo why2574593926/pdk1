@@ -4,19 +4,13 @@
 <view class='top_max'>
   <!-- 顶部搜索 -->
   <view class='search'>
-    <input placeholder-class='placer' placeholder='搜索商品或特权'></input>
+    <input placeholder-class='placer' bindinput='watchPassWord' placeholder='请输入商品名'></input>
     <image src='../img/search1.png'></image>
   </view>
   <!-- 顶部滚动 -->
   <swiper indicator-dots='true' indicator-active-color='#FF6D10' indicator-color='white' autoplay='true' interval='3000' duration='1000'>
     <swiper-item>
-      <image src='../img/guanggao1.png'></image>
-    </swiper-item>
-    <swiper-item>
       <image src='../img/guanggao2.png'></image>
-    </swiper-item>
-    <swiper-item>
-      <image src='../img/guanggao3.png'></image>
     </swiper-item>
   </swiper>
 </view>
@@ -33,12 +27,11 @@
     <view class="category-column">
 
       <view style="position: relative;">
-        <image wx:if="{{index<4}}" class="category-imgbox" src="{{item.url}}"></image>
-        <image wx:else class="category-imgbox2" src="{{item.url}}"></image>
+        <image class="category-imgbox2" src="{{item.url}}"></image>
 
         <view wx:if="{{item.url2}}">
-          <view wx:if="{{index<4}}" style="top:-10rpx;" class="tag {{item.tag}}">{{item.url2}}</view>
-          <view wx:else class="tag {{item.tag}}">{{item.url2}}</view>
+          <!-- <view wx:if="{{index<4}}" style="top:-20rpx;" class="tag {{item.tag}}">{{item.url2}}</view> -->
+          <view  class="tag {{item.tag}}">{{item.url2}}</view>
         </view>
       </view>
 
@@ -61,7 +54,7 @@
                 <image  class="category-imgbox2" src="{{item.url}}"></image>
 
                 <view wx:if="{{item.reservedata2}}">
-                <view class="icg {{item.tag}}">{{reservedata1[item.reservedata2].content}}</view>
+                <view class="icg i{{item.tag}}">{{reservedata1[item.reservedata2].content}}</view>
                 </view>
               </view>
               
@@ -144,6 +137,25 @@
             </view>          
           </view>
   </view>
-
+<!-- 未开通弹窗 -->
+<view class="no_kt_max" style="display:{{notkt_dis}}">
+  <view class="no_kt">
+    <view>
+      <image mode="scaleToFill" src="../img/wkt.png"/>
+    </view>
+  <view>
+    <text>非常抱歉</text>
+    <text>功能正在开发中</text>
+    <text>敬请期待</text>
+  </view>
+  <view>
+    <text catchtap="no_kt">知道了</text>
+  </view>
+</view>
+</view>
+<!-- 模糊查询遍历 -->
+<view wx:if='{{cx0==1}}' class="chaxun">
+  <view wx:for='{{cx}}' wx:key catchtap="xiangqing_tiao" id="{{item.id}}">{{item.name}}</view>
+</view>
 <!-- 导航 -->
 <mp-nav id="mpnav"></mp-nav>

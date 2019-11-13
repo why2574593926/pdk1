@@ -6,13 +6,15 @@
   <view class='text'>
     <text>激活信息</text>
   </view>
+  
   <view class='form'>
     <form bindsubmit="formSubmit">
       <input placeholder-class="phcolor" name='user' type='text' placeholder='昵称'></input>
       <input placeholder-class="phcolor" name='ppcard' type='text' placeholder='皮皮车主卡号'></input>
       <input placeholder-class="phcolor" name='number' type='text' placeholder='请输入手机号'></input>
       <button form-type='submit'>确认提交</button>
+      <button catchtap="tiaoguo">跳过激活</button>
     </form>
   </view>
-
+  <!-- <view class="card" catchtap="xcx_tiao">单击免费办卡</view> -->
 </view>
