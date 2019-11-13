@@ -48,21 +48,53 @@
 .top_max swiper{
   float: left;
   width: 100%;
-  height: 320rpx;
+  height: 350rpx;
 }
 .top_max swiper image{
   width: 100%;
-  height: 350rpx;
+  height: 360rpx;
+}
+.tequan1_t1{
+  position: relative;
+  top: -150rpx;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.tequan1_t2{
+  position: relative;
+  top: -140rpx;
+  display: block;
+  width: 100%;
+  line-height: 70rpx;
+  text-align: center;
+  color: white;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+/* 卡片滚动 */
+.sw2{
+  margin-top: 20rpx;
+  width: 100%;
+}
+.sw2 image{
+  width: 90%;
+  height: 90%;
+  transition: all 1s;
 }
 /* 特权 */
 .tequan1{
   z-index: 999;
   width: 100%;
-  height: 45rpx;
+  height: 350rpx;
 }
 .tequan1 image{
   width: 100%;
-  height: 45rpx;
+  height: 650rpx;
+  margin-top: -300rpx;
 }
 .category-box {  
   background-color: #fff;
@@ -125,7 +157,7 @@
   white-space: nowrap; 
 }
 .s-item{
-  width: 35%;
+  width: 38%;
   margin-left: 20rpx;
   display: inline-block;
 }

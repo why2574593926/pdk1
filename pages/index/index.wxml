@@ -8,7 +8,10 @@
   </view>
 
   <!-- 顶部滚动 -->
-  <swiper indicator-dots='true' indicator-active-color='#FF6D10' indicator-color='white' autoplay='true' interval='3000' duration='1000'>
+  <swiper indicator-dots='true' circular='{{true}}' indicator-active-color='#FF6D10' indicator-color='white' autoplay='true' interval='5000' duration='2000'>
+    <swiper-item>
+      <image src='../img/guanggao1.png'></image>
+    </swiper-item>
     <swiper-item>
       <image src='../img/guanggao2.png'></image>
     </swiper-item>
@@ -16,8 +19,23 @@
 </view>
 <!-- 热门特权 -->
 <view class='tequan1'>
-  <image src='../img/tequan1.jpg'></image>
+  <image src='../img/tiaozhan.png'></image>
+  <text class="tequan1_t1">20皮豆</text>
+  <text catchtap="tiaozhan_tiao" class="tequan1_t2">立即加入挑战</text>
 </view>
+<!-- 卡片滚动 -->
+<swiper bindchange='kapiangundong' previous-margin='80rpx' next-margin='80rpx' class="sw2" display-multiple-items='1' interval='3000' duration='1000' circular='{{true}}' autoplay='true' easing-function='linear'>
+    <swiper-item catchtap='kapian_tiao' id='s1' item-id='s1'>
+      <image style="width:{{w1}};height:{{w1}};margin-top: {{m1}};margin-left:{{l1}};" src='../img/kapian1.png'></image>
+    </swiper-item>
+    <swiper-item catchtap='kapian_tiao' id='s2' item-id='s2'>
+      <image style="width:{{w2}};height:{{w2}};margin-top: {{m2}};margin-left:{{l2}};" src='../img/kapian2.png'></image>
+    </swiper-item>
+    <swiper-item catchtap='kapian_tiao' id='s3' item-id='s3'>
+      <image style="width:{{w3}};height:{{w3}};margin-top: {{m3}};margin-left:{{l3}};" src='../img/kapian3.png'></image>
+    </swiper-item>
+  </swiper>
+  <!-- 热门特权 -->
 <view class='pipiicon'>
   <image src='../img/shop_icon.jpg'></image>
   <text>热门特权</text>

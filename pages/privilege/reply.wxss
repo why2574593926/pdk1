@@ -1,0 +1,180 @@
+/* 评论循环 */
+/* 主评论 */
+.pl_max{
+  width: 94%;
+  margin-left: 3%;
+}
+.pl1{
+  width: 100%;
+  height: 80rpx;
+}
+.pl1 image{
+  float: left;
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 20rpx;
+  border-radius: 50%;
+}
+.pl1 text{
+  color: #FF731A;
+  margin-left: 20rpx;
+  float: left;
+  line-height: 80rpx;
+  margin-top: 10rpx;
+  font-size: 35rpx;
+}
+.pl2{
+  width: 90%;
+
+  margin-left: 5%;
+}
+
+.pl3{
+  width: 90%;
+  margin-left: 5%;
+  color: #6D6D6D;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  margin-top: 20rpx;
+}
+.pl4{
+  width: 90%;
+  margin-left: 5%;
+  line-height: 100rpx;
+  height: 100rpx;
+  color: #CFCFCF;
+  font-size: 25rpx;
+}
+.pl4 image{
+  float: left;
+  margin-top: 30rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.pl4 text:nth-of-type(1){
+  float: left;
+  margin-left: 10rpx;
+}
+.pl4 text:nth-of-type(2){
+  float: right;
+}
+/* 附评论 */
+.fu_max{
+  width: 94%;
+  margin-left: 3%;
+  background-color: #FFF7F2;
+}
+.fu1{
+  width: 94%;
+  margin-left: 3%;
+  height: 40rpx;
+}
+.fu1 image{
+  float: left;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  margin-top: 10rpx;
+}
+.fu1 text{
+  color: #AAA8A8;
+  margin-left: 20rpx;
+  float: left;
+  font-size: 25rpx;
+  line-height: 40rpx;
+  margin-top: 10rpx;
+}
+/*  */
+.fu3{
+  width: 80%;
+  margin-left: 12%;
+  color: #6D6D6D;
+  font-size: 27rpx;
+  line-height: 40rpx;
+  margin-top: 20rpx;
+  padding-bottom: 10rpx;
+}
+.fu4{
+  width: 90%;
+  margin-left: 5%;
+  line-height: 100rpx;
+  height: 100rpx;
+  color: #CFCFCF;
+  font-size: 25rpx;
+}
+.fu4 image{
+  float: left;
+  margin-top: 30rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.fu4 text:nth-of-type(1){
+  float: left;
+  margin-left: 10rpx;
+}
+.fu4 text:nth-of-type(2){
+  float: right;
+}
+/* 展开收起回复 */
+.huifu_zs{
+  width: 100%;
+  text-align: center;
+  line-height: 70rpx;
+  height: 70rpx;
+  font-size: 27rpx;
+  color: #969696;
+}
+.huifu_zs text{
+  float: left;
+  margin-left: 37%;
+}
+.huifu_zs image{
+  float: left;
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 20rpx;
+}
+/* 回复 */
+.reply1{
+  width: 100%;
+  height: 150rpx;
+}
+.reply{
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  height: 150rpx;
+  background-color: white;
+  box-shadow: 0 0 10rpx rgba(0,0,0,0.2);
+}
+.reply image{
+  float: left;
+  width: 70rpx;
+  height: 70rpx;
+  margin-top: 20rpx;
+  border-radius: 50%;
+  margin-left: 3%;
+}
+.reply input{
+  float: left;
+  width: 60%;
+  margin-left: 3%;
+  margin-top: 20rpx;
+  background-color: #EFEFEF;
+  height: 70rpx;
+  border-radius: 15rpx;
+  text-indent: 20rpx;
+}
+.reply view{
+  width: 100rpx;
+  height: 70rpx;
+  text-align: center;
+  border-radius: 15rpx;
+  line-height: 70rpx;
+  background-color: #FF6D10;
+  color: white;
+  font-size: 30rpx;
+  float: left;
+  margin-left: 3%;
+  margin-top: 20rpx;
+}

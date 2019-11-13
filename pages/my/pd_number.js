@@ -59,6 +59,10 @@ Page({
             that.setData({
               list3: that.data.list3 + parseInt(that.data.pd_list[i][a])
             })
+          } else if (a == 'challenge') {
+            that.setData({
+              list4: that.data.list3 + parseInt(that.data.pd_list[i][a])
+            })
           }
         }
       }

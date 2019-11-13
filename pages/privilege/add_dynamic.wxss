@@ -1,0 +1,38 @@
+/* pages/privilege/add_dynamic.wxss */
+textarea{
+  float: left;
+  width: 100%;
+  border-bottom: 10rpx solid #E3E3E3;
+}
+.container{
+  width: 100%;
+  float: left;
+}
+.container_v1{
+  width: 150rpx;
+  height: 150rpx;
+  float: left;
+  background-color: white;
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+.container_v1 image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.fabu{
+  width: 90%;
+  margin-left: 5%;
+  background-color: #FF6D10;
+  color: white;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 35rpx;
+  float: left;
+  text-align: center;
+  border-radius: 25rpx;
+  margin-top: 50rpx;
+}
+.fabu1{
+  background-color:gainsboro;
+}

@@ -1,0 +1,91 @@
+<!--pages/index/challenge.wxml-->
+<view class="v_max">
+  <image class="v_max_img1" src="../img/challenge4.png"></image>
+  <view class="v1">挑战得皮豆</view>
+  <view class="v2">
+    <image class="v_max_img1" src="../img/challenge1.png"></image>
+  </view>
+  <view class="v3">
+    <view>
+      <image class="v3_img1" src="../img/pd.png"></image>
+      <view>20皮豆参加</view>
+      <text class="biankuang1"></text>
+    </view>
+    <view>
+      <image class="v3_img2" src="../img/challenge2.png"></image>
+      <view>100天无违章</view>
+    </view>
+  </view>
+  <view class="v4">
+    <view>
+      <view>参与人数</view>
+      <view>12343人</view>
+      <text class="biankuang2"></text>
+    </view>
+    <view>
+      <view>挑战失败</view>
+      <view>6352人</view>
+    </view>
+  </view>
+  <view class="v5">
+    <image src="../img/challenge3.png"></image>
+    <text>车友{{phone_yc}} 报名加入挑战，倡导文明出行</text>
+  </view>
+  <view class="v6">
+    <view class="v6_1">请添加车辆信息</view>
+    <view class="v6_2">
+      <!-- 车牌 -->
+      <view wx:if='{{user_cp.challengeStatus==0}}' class='carnum' catchtap="shen_xuan">
+        <text>{{carnum}}</text>
+        <image src="{{img1}}"></image>
+      </view>
+      <input wx:if='{{user_cp.challengeStatus==0}}' catchtap="shen_xuan" class='province' disabled="disabled" value="{{province}}" placeholder="请输入您的车牌号"></input>
+      <view class="v6_2_other_view" wx:if='{{user_cp.challengeStatus==1}}'>参加挑战车牌号：{{user_cp.carId}}</view>
+    </view>
+    <view wx:if='{{user_cp.challengeStatus==0}}' class="v6_3" catchtap="pay_xianshi">加入挑战</view>
+    <view wx:if='{{user_cp.challengeStatus==1}}' class="v6_3">您已挑战{{user_cp.challengeDays}}天</view>
+  </view>
+  <view catchtap="shen_xuan" wx:if='{{max==1}}' class="keyboard_max">
+
+  </view>
+  <view class='keyboard' style="top:{{key_top}};" catchtap='stoppropagation'>
+    <!-- 省键盘 -->
+    <view class="provinces" hidden='{{hiddenPro}}'>
+      <view class="pro-li fl" wx:key wx:for="{{provinceArr}}" catchtap='proTap' data-province="{{item}}">{{item}}</view>
+    </view>
+    <!-- 号码键盘	 -->
+    <view class="keyNums" hidden='{{hiddenStr}}'>
+      <view wx:key class="pro-li fl" wx:for="{{strArr}}" catchtap='strTap' data-str="{{item}}">{{item}}</view>
+      <view class="bot fl">
+        <view class='kb-icon kb-hide fl pro-li' catchtap='backKeyboard'>返回</view>
+        <view class='kb-icon kb-hide fl pro-li' catchtap='backSpace'>删除</view>
+      </view>
+    </view>
+  </view>
+  <!-- 支付 -->
+  <view catchtap="pay_xianshi" wx:if='{{pay_xs}}' class="pay_quan">
+    <view class="pay_max" wx:if='{{user_cp.challengeStatus==0}}'>
+      <view class="pay1">确认支付</view>
+      <view class="pay2">
+        <text>20</text>
+        <text>皮豆</text>
+      </view>
+      <view catchtap="gougou_xz" id="gou1" class="pay3">钱包 (剩余{{user_cp.pd}}皮豆)
+        <image wx:if='{{gougou_xuanze==0}}' class="pay_gou" src="../img/challenge6.png"></image>
+      </view>
+      <view catchtap="gougou_xz" id="gou2" class="pay4">现金支付
+        <image wx:if='{{gougou_xuanze==1}}' class="pay_gou" src="../img/challenge6.png"></image>
+      </view>
+      <view catchtap="payto" class="pay5">立即支付</view>
+
+    </view>
+    <view class="pay_max2" wx:if='{{user_cp.challengeStatus==1}}'>
+      <view>您已成功加入挑战</view>
+      <view>倡导文明出行</view>
+      <view>
+        <image src="../img/challenge5.png"></image>
+      </view>
+    </view>
+  </view>
+
+</view>

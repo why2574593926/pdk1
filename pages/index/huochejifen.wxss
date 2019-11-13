@@ -1,0 +1,80 @@
+.max1{
+  width: 100%;
+  position: fixed;
+  top: 0rpx;
+  height: 85%;
+   background-image: linear-gradient(to bottom , #FFC199, #FE7B27);
+}
+.max2{
+  width: 100%;
+  position: fixed;
+  top: 85%;
+  height: 15%;
+ background-color: white;
+}
+.max2 view{
+  width: 70%;
+  height: 60rpx;
+  text-align: center;
+  margin-left: 15%;
+  border-radius: 50rpx;
+  color: white;
+  background-color: #FF6D10;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  margin-top: 50rpx;
+}
+.v1{
+  color: #5B5B5B;
+  font-weight: bold;
+  width: 90%;
+  height: 15%;
+  margin-left: 5%;
+  border-radius: 15rpx;
+  line-height: 80rpx;
+  background-color: white;
+  text-align: center;
+  font-size: 30rpx;
+  margin-top: 5%;
+}
+.v1 image{
+  width: 130rpx;
+  height: 40rpx;
+}
+.v2{
+  color: #5B5B5B;
+  font-weight: bold;
+  margin-top: 5%;
+  width: 90%;
+  height: 15%;
+  margin-left: 5%;
+  border-radius: 15rpx;
+  line-height: 80rpx;
+  background-color: white;
+  text-align: center;
+  font-size: 30rpx;
+}
+.v2 image{
+  width: 240rpx;
+  height: 40rpx;
+}
+.v3{
+  color: #5B5B5B;
+  font-weight: bold;
+  margin-top: 5%;
+  overflow: hidden;
+  width: 90%;
+  height: 55%;
+  margin-left: 5%;
+  border-radius: 15rpx;
+  line-height: 80rpx;
+  background-color: white;
+  text-align: center;
+  font-size: 40rpx;
+}
+.v3 image{
+  width: 104%;
+  height: 106%;
+  margin-left: -2%;
+  margin-top: -2%;
+}

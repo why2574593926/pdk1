@@ -1,70 +1,154 @@
 <view class='my_max'>
-<swiper  autoplay='{{scroll_pd}}' interval="1000" duration='1000' easing-function='linear'  circular="{{true}}" class='img1'>
-<swiper-item><image src='../img/truck1.png'></image></swiper-item>
-<swiper-item><image src='../img/truck1.png'></image></swiper-item>
-</swiper>
-<!-- interval="100" duration='100' -->
-<swiper autoplay='{{scroll_pd}}'  interval="1000" duration='1000' easing-function='linear'  circular="{{true}}" class='img2'>
-<swiper-item><image src='../img/truck5.png'></image></swiper-item>
-<swiper-item><image src='../img/truck5.png'></image></swiper-item>
-</swiper>
-<view class="mb">
+  <swiper autoplay='{{scroll_pd}}' interval="3000" duration='3000' easing-function='linear' circular="{{true}}" class='img1'>
+    <swiper-item>
+      <image src='../img/truck1.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../img/truck1.png'></image>
+    </swiper-item>
+  </swiper>
+  <!-- interval="100" duration='100' -->
+  <swiper autoplay='{{scroll_pd}}' interval="3000" duration='3000' easing-function='linear' circular="{{true}}" class='img2'>
+    <swiper-item>
+      <image src='../img/truck5.png'></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../img/truck5.png'></image>
+    </swiper-item>
+  </swiper>
+  <view class="mb">
 
-</view>
-<view class="tui-picker-content">
-  <picker disabled="{{disabled_pd}}" bindchange="changeRegin" mode = "region" value="{{region}}">
-    <view class="tui-picker-detail">{{region[0]}} - {{region[1]}} - {{region[2]}}</view>
-  </picker>
-</view>
-<view class="tui-picker-content">
-  <picker disabled='{{disabled_pd}}' bindchange="changeRegin1" mode = "region" value="{{region1}}">
-    <view class="tui-picker-detail">{{region1[0]}} - {{region1[1]}} - {{region1[2]}}</view>
-  </picker>
-</view>
-<!-- 皮豆计算时的动画 -->
-<view wx:if="{{car_show>=1}}" wx:key class='left' wx:for="{{jinbi}}" style='top: {{item.left_top}};right: {{item.left_left}};'>
-  <image src='../img/pd.png' style='width: {{item.w}};height: {{item.h}};'></image>
-</view>
-<!-- 汽车 -->
-<view catchtap='car_s'  wx:if="{{car_show==0}}" class='car'>
-  <image  src='../img/truck4.png'></image>
-  <image src='../img/truck6.png'></image>
-</view><image></image>
-<view catchtap='car_s'  wx:if="{{car_show==1}}" class='car1'>
-  <image  src='../img/truck2.png'></image>
-  <image src='../img/truck6.png'></image>
-  
-</view><image></image>
-<view catchtap='car_s'  wx:if="{{car_show==2}}" class='car2'>
-  <image  src='../img/truck3.png'></image>
-  <image src='../img/truck6.png'></image>
-</view><image></image>
-<!-- 时间 -->
-<view class="car_time">{{car_time}}</view>
-<!-- 皮豆数量 -->
-<view class='pdnumber'>
-  <image src='../img/pd.png'></image>
-  <text>皮豆：{{pd_num}}</text>
-</view>
-<!-- 皮豆说明 -->
-<view catchtap='pd_display' class='qiandao'>
-<text>皮豆说明</text>
-</view>
-<!-- 皮豆说明详情 -->
-<view class='pd_xq_max' wx:if='{{pd_display}}'>
-<view class='pd_xq'>
-  <view class='pd_xq1'>
-  <text>皮豆说明</text>
-  <text>1、我们会根据你的实际路程和时间共同计算出皮豆.</text>
-  <text>2、如果行驶时间不足1小时按1小时计算.</text>
-  <text>3、单次出行超过6小时取6小时计算.</text>
-  <text>4、任何作弊手段都会清掉皮豆.</text>
-  <text>5、皮豆可以直接在商场购买东西哦.</text>
   </view>
-  <view class='pd_xq2'>
-  <text id='pd2' catchtap='pd_display'>知道了</text>
+  <view class="tui-picker-content">
+    <picker disabled="{{disabled_pd}}" bindchange="changeRegin" mode="region" value="{{region}}">
+      <view class="tui-picker-detail">{{region[0]}} - {{region[1]}} - {{region[2]}}</view>
+    </picker>
   </view>
-</view>
-</view>
+  <view class="tui-picker-content">
+    <picker disabled='{{disabled_pd}}' bindchange="changeRegin1" mode="region" value="{{region1}}">
+      <view class="tui-picker-detail">{{region1[0]}} - {{region1[1]}} - {{region1[2]}}</view>
+    </picker>
+  </view>
+  <!-- 皮豆计算时的动画 -->
+  <view wx:if="{{car_show>=1}}" wx:key class='left' wx:for="{{jinbi}}" style='top: {{item.left_top}};right: {{item.left_left}};'>
+    <image src='../img/pd.png' style='width: {{item.w}};height: {{item.h}};'></image>
+  </view>
+  <!-- 汽车 -->
+  <view catchtap='car_s' wx:if="{{car_show==0}}" class='car'>
+    <image src='../img/truck4.png'></image>
+    <image src='../img/truck6.png'></image>
+  </view>
+  <image></image>
+  <view catchtap='end_xy' wx:if="{{car_show==1}}" class='car1'>
+    <image src='../img/truck2.png'></image>
+    <image src='../img/truck6.png'></image>
 
+  </view>
+  <image></image>
+  <view catchtap='car_s' wx:if="{{car_show==2}}" class='car2'>
+    <image src='../img/truck3.png'></image>
+    <image src='../img/truck6.png'></image>
+  </view>
+  <image></image>
+  <!-- 时间 -->
+  <view class="car_time">{{car_time}}</view>
+  <!-- 皮豆数量 -->
+  <view class='pdnumber'>
+    <image src='../img/pd.png'></image>
+    <text>皮豆：{{pd_num}}</text>
+  </view>
+  <!-- 皮豆说明 -->
+  <view catchtap='pd_display' class='qiandao'>
+    <text>皮豆说明</text>
+  </view>
+  <!-- 皮豆说明详情 -->
+  <view class='pd_xq_max' wx:if='{{pd_display}}'>
+    <view class='pd_xq'>
+      <view class='pd_xq1'>
+        <text>皮豆说明</text>
+        <text>1、我们会根据你的实际路程和时间共同计算出皮豆.</text>
+        <text>2、如果行驶时间不足1小时按1小时计算.</text>
+        <text>3、单次出行超过6小时取6小时计算.</text>
+        <text>4、任何作弊手段都会清掉皮豆.</text>
+        <text>5、皮豆可以直接在商场购买东西哦.</text>
+      </view>
+      <view class='pd_xq2'>
+        <text id='pd2' catchtap='pd_display'>知道了</text>
+      </view>
+    </view>
+  </view>
+  <!-- 确认是否结束 -->
+  <view wx:if='{{end_pd}}' class="end_max">
+    <view class="end">
+      <view class="end1">本次获得</view>
+      <view class="end2">{{end_pd_pd}}</view>
+      <view catchtap="car_s" class="end3">确认</view>
+      <view catchtap="end_xy" class="end4">取消</view>
+    </view>
+  </view>
+  <!-- 资料填写 -->
+  <view wx:if='{{information_xy}}' catchtap="shen_xuan" class="information_max">
+    <view class="information">
+      <view class="information1">资料填写</view>
+      <view class="information2">
+        <!-- 车牌 -->
+        <text id="icon">车牌:</text>
+        <view class='carnum' catchtap="shen_xuan">
+          <text>{{carnum}}</text>
+          <image src="{{img1}}"></image>
+        </view>
+        <input catchtap="shen_xuan" class='province' disabled="disabled" value="{{province}}" placeholder="请输入您的车牌号"></input>
+      </view>
+      <view class="information3">
+        <picker mode="selector" value="{{index}}" range="{{range1}}" bindchange="bindViewEvent">
+          <view class="picker">
+            <text id="icon">载重量:</text> {{range1[value1]}}
+          </view>
+        </picker>
+        <image src="../img/sx2.png"></image>
+      </view>
+      <view class="information4">
+        <picker mode="selector" value="{{index}}" range="{{range2}}" bindchange="bindViewEvent2">
+          <view class="picker">
+            <text id="icon">所拉货物:</text> {{range2[value2]}}
+          </view>
+        </picker>
+        <image src="../img/sx2.png"></image>
+      </view>
+      <view class="information5">
+        <view class="information51">
+          <picker disabled="{{disabled_pd}}" bindchange="changeRegin" mode="region" value="{{region}}">
+            <view class="tui-picker-detail" id="information52">{{region[0]}} - {{region[1]}} - {{region[2]}}</view>
+          </picker>
+        </view>
+        <view class="information51">
+          <picker disabled='{{disabled_pd}}' bindchange="changeRegin1" mode="region" value="{{region1}}">
+            <view class="tui-picker-detail" id="information52">{{region1[0]}} - {{region1[1]}} - {{region1[2]}}</view>
+          </picker>
+        </view>
+      </view>
+
+      <view class="information6">
+        <image wx:if='{{!information_img1}}' catchtap="chooseImageTap" id="information1" src="../img/truck7.png"></image>
+        <image wx:else src="{{information_img1}}"></image>
+        <image wx:if='{{!information_img2}}' catchtap="chooseImageTap" id="information2" src="../img/truck8.png"></image>
+        <image wx:else src="{{information_img2}}"></image>
+      </view>
+      <view class="information7" catchtap="information_to">确认</view>
+    </view>
+    <view class='keyboard' style="bottom:{{key_top}};" catchtap='stoppropagation'>
+      <!-- 省键盘 -->
+      <view class="provinces" hidden='{{hiddenPro}}'>
+        <view class="pro-li fl" wx:key wx:for="{{provinceArr}}" catchtap='proTap' data-province="{{item}}">{{item}}</view>
+      </view>
+      <!-- 号码键盘	 -->
+      <view class="keyNums" hidden='{{hiddenStr}}'>
+        <view wx:key class="pro-li fl" wx:for="{{strArr}}" catchtap='strTap' data-str="{{item}}">{{item}}</view>
+        <view class="bot fl">
+          <view class='kb-icon kb-hide fl pro-li' catchtap='backKeyboard'>返回</view>
+          <view class='kb-icon kb-hide fl pro-li' catchtap='backSpace'>删除</view>
+        </view>
+      </view>
+    </view>
+  </view>
 </view>

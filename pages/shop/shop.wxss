@@ -3,7 +3,7 @@
 .top_max{
   z-index: 888;
   width: 100%;
-  height: 430rpx;
+  height: 110rpx;
   background-color: #FF6D10;
 }
 .search{
@@ -44,15 +44,22 @@
 .chaxun view{
   border-bottom: 1rpx solid gainsboro;
 }
-/* 顶部滚动 */
-.top_max swiper{
-  float: left;
+/* shop选项卡 */
+.shop_xxk{
   width: 100%;
-  height: 320rpx;
+  height: 80rpx;
+  color: #4E4E4E;
 }
-.top_max swiper image{
-  width: 100%;
-  height: 350rpx;
+.shop_xxk1{
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+  text-align: center;
+}
+.shop_xxk1 text{
+  
+  display: inline-block
 }
 /* 皮皮商城 */
 .shop_max_view{

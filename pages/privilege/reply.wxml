@@ -1,0 +1,43 @@
+<!--pages/privilege/privilege.wxml-->
+<!-- 评论循环 -->
+
+<view class="pl_max">
+  <!-- 主评论 -->
+  <view class="pl1">
+    <image src="{{content1.img}}"></image>
+    <text>{{content1.username}}</text>
+  </view>
+  <view class="pl3">
+    {{content1.content}}
+  </view>
+  <view class="pl2">
+    <image wx:for='{{content1.pics}}' wx:key mode="aspectFit" src="{{item}}"></image>
+  </view>
+  
+  <view class="pl4">
+    <image id='{{content1.id}}' catchtap="dianzan" src="{{dianzan_img}}"></image>
+    <text>{{content1.zan}} · 回复人数 {{content1.review}}</text>
+    <text>1小时前</text>
+  </view>
+  <!-- 附评论 -->
+  <view class="fu_max" wx:for='{{content2}}' wx:key>
+    <view class="fu1">
+      <image src="{{item.img}}"></image>
+    <text>{{item.username}}</text>
+    </view>
+    <view class="fu3">
+      {{item.content}}
+    </view>
+    <!-- 展开收起回复 -->
+    <!-- <view catchtap="hufu_zs" wx:if='{{hufu_zs_pd}}' class="huifu_zs"><text>查看5条回复</text><image src="../img/sx2.png"></image></view>
+    <view catchtap="hufu_zs" wx:else class="huifu_zs"><text>收起所有回复</text><image src="../img/sx1.png"></image></view> -->
+  </view>
+</view>
+<view class="reply1">
+  
+</view>
+<view class="reply">
+  <image src="{{content1.img}}"></image>
+  <input bindinput="review_jt" value="{{review1}}" placeholder="请发表您的感言吧"></input>
+  <view catchtap="review">发送</view>
+</view>

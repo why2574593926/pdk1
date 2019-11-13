@@ -1,0 +1,30 @@
+<view class="max1">
+  <view class="v1">
+    <view>
+      <text>填写资料\n</text>
+    <image mode="scaleToFill" src="../img/jieban1.png"/>
+    </view>
+    <view>
+      <text>匹配信息\n</text>
+    <image mode="scaleToFill" src="../img/jieban2.png"/>
+    <view id='pp'>匹配</view>
+    </view>
+    </view>
+  <view class="v2">
+    <text>结伴而行\n</text>
+    <image mode="scaleToFill" src="../img/jieban3.png"/>
+    </view>
+  <view class="v3">
+    <view class="v3_min">
+      <view class="v3_min1">结伴而行</view>
+      <view class="v3_min2"><text>选择出发地</text><image mode="scaleToFill" src="../img/jieban4.png"/><text>选择目的地</text></view>
+      <view class="v3_min3"><text>往返时间</text><text>10月6日-14日</text></view>
+      <view class="v3_min4">10月6日从成都出发途经雅安、攀枝花到大理</view>
+    </view>
+  </view>
+</view>
+<view class="max2">
+  <view catchtap="handleClick">
+  立即享受
+  </view>
+</view>

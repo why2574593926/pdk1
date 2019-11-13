@@ -1,0 +1,18 @@
+<view class="max1">
+  <view class="v1">
+    <text>拉拉货\n</text>
+    <image mode="scaleToFill" src="../img/huoche1.png"/>
+    </view>
+  <view class="v2">
+    <text>积分换皮豆\n</text>
+    <image mode="scaleToFill" src="../img/huoche2.png"/>
+    </view>
+  <view class="v3">
+    <image mode="scaleToFill" src="../img/huoche3.png"/>
+  </view>
+</view>
+<view class="max2">
+  <view catchtap="handleClick">
+  立即享受
+  </view>
+</view>

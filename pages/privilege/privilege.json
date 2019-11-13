@@ -4,5 +4,6 @@
   },
   "navigationBarBackgroundColor": "#ffffff",
   "navigationBarTextStyle": "black",
-  "navigationBarTitleText": "尊享特权"
+  "navigationBarTitleText": "皮友圈",
+  "enablePullDownRefresh": true
 }

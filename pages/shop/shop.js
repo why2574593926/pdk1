@@ -12,7 +12,34 @@ Page({
     shop2: {},
     // 价格，皮豆
     shop_price:'',
-    shop_pd: ''
+    shop_pd: '',
+    // 选项卡
+    color1:'#FF5200',
+    color2:'#4E4E4E',
+    b1:'1',
+    b2:'0',
+    xxk_xy:0
+  },
+  // 选项卡
+  xxk:function(e){
+    let that=this;
+    if(e.currentTarget.id=='xxk1'){
+      that.setData({
+        color1: '#FF5200',
+        color2: '#4E4E4E',
+        b1: '1',
+        b2: '0',
+        xxk_xy:0
+      })
+    }else{
+      that.setData({
+        color1: '#4E4E4E',
+        color2: '#FF5200',
+        b1: '0',
+        b2: '1',
+        xxk_xy: 1
+      }) 
+    }
   },
   //事件处理函数
   bindViewTap: function () {
@@ -46,7 +73,27 @@ Page({
   },
   onLoad: function () {
     let that = this;
-    
+    // 选项卡
+    that.setData({
+      xxk_xy: app.globalData.shop_xxk
+    })
+    if (that.data.xxk_xy == 0) {
+      that.setData({
+        color1: '#FF5200',
+        color2: '#4E4E4E',
+        b1: '1',
+        b2: '0',
+        xxk_xy: 0
+      })
+    } else {
+      that.setData({
+        color1: '#4E4E4E',
+        color2: '#FF5200',
+        b1: '0',
+        b2: '1',
+        xxk_xy: 1
+      })
+    }
     // 导航判断
     app.globalData.nav = that.data.nav;
     this.selectComponent("#mpnav").navbh();
@@ -78,10 +125,10 @@ Page({
   },
   onReady: function () {
     // 页面指定位置跳转
-    wx.pageScrollTo({
-      selector: '.' + app.globalData.index_tiao
-    })
-    app.globalData.index_tiao='index'
+    // wx.pageScrollTo({
+    //   selector: '.' + app.globalData.index_tiao
+    // })
+    // app.globalData.index_tiao='index'
   },
   // 跳转商品详情页
   xiangqing_tiao: function (e) {

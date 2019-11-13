@@ -6,9 +6,10 @@
 </view>
 <view class='pd_mx'>
   <view class="pd_mx_view1">皮豆收支明细</view>
-  <view class="pd_mx_view"><text>高速积分</text><text><text wx:if='{{list1>=0}}'>+</text><text wx:else>-</text>{{list1}}</text></view>
-  <view class="pd_mx_view"><text>签到</text><text><text wx:if='{{list2>=0}}'>+</text><text wx:else>-</text>{{list2}}</text></view>
-  <view class="pd_mx_view"><text>商品抵扣</text><text><text wx:if='{{list3>=0}}'>+</text><text wx:else>-</text>{{list3}}</text></view>
+  <view class="pd_mx_view"><text>高速积分</text><text><text wx:if='{{list1>=0}}'>+</text><text wx:else></text>{{list1}}</text></view>
+  <view class="pd_mx_view"><text>签到</text><text><text wx:if='{{list2>=0}}'>+</text><text wx:else></text>{{list2}}</text></view>
+  <view class="pd_mx_view"><text>商品抵扣</text><text><text wx:if='{{list3>=0}}'>+</text><text wx:else></text>{{list3}}</text></view>
+  <view class="pd_mx_view"><text>活动消费</text><text><text wx:if='{{list4>=0}}'>+</text><text wx:else></text>{{list4}}</text></view>
   <view class="pd_mx_viewlast" wx:if='{{!pd_num}}'>
     <image src='../img/pd.png'></image>
     <text>您还没有获得皮豆,快去使用特权吧！</text>

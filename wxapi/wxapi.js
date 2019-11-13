@@ -2,7 +2,7 @@
 // const API_BASE_URL = 'https://pptq.online/ppcard/'
 // 测试
 const API_BASE_URL = 'http://pptq.online:1000/ppcard/'
-// const API_BASE_URL = 'http://192.168.0.116:8082/ppcard/'
+// const API_BASE_URL = 'http://192.168.0.112:8082/ppcard/'
 const request = (url, method, data) => {
   let _url = API_BASE_URL + url 
   return new Promise((resolve, reject) => {
@@ -82,6 +82,13 @@ module.exports = {
   users: (data) => {
     console.log(data)
     var res = request('user/getUserInfo', 'post', data)
+    console.log(res)
+    return res
+  },
+  // 更新用户信息
+  users_update: (data) => {
+    console.log(data)
+    var res = request('user/update', 'post', data)
     console.log(res)
     return res
   },
@@ -222,6 +229,69 @@ adress_delete: (data) => {
   dingdan_num: (data) => {
     console.log(data)
     var res = request('order/count', 'post', data)
+    console.log(res)
+    return res
+  },
+  // 直接支付，不创建订单
+  pay_others: (data) => {
+    console.log(data)
+    var res = request('pay/wxpay/create/others', 'post', data)
+    console.log(res)
+    return res
+  },
+  // 结伴而行添加匹配任务
+  travel_add: (data) => {
+    console.log(data)
+    var res = request('user/travel/add', 'post', data)
+    console.log(res)
+    return res
+  },
+  // 结伴而行删除匹配任务
+  travel_delete: (data) => {
+    console.log(data)
+    var res = request('user/travel/del', 'post', data)
+    console.log(res)
+    return res
+  },
+  // 结伴而行查看匹配列表
+  travel_list: (data) => {
+    console.log(data)
+    var res = request('user/travel/list', 'post', data)
+    console.log(res)
+    return res
+  },
+  // 皮友圈，添加动态
+  pyq_add: (data) => {
+    console.log(data)
+    var res = request('user/message/add', 'post', data)
+    console.log(res)
+    return res
+  },
+  // 皮友圈，查看全部动态
+  pyq_list_all: (data) => {
+    console.log(data)
+    var res = request('user/message/list/all', 'post', data)
+    console.log(res)
+    return res
+  },
+  // 皮友圈，查看动态回复
+  pyq_list_child: (data) => {
+    console.log(data)
+    var res = request('user/message/list/child', 'post', data)
+    console.log(res)
+    return res
+  },
+  // 皮友圈，评论动态，回复
+  pyq_list_review: (data) => {
+    console.log(data)
+    var res = request('user/message/review', 'post', data)
+    console.log(res)
+    return res
+  },
+  // 皮友圈，点赞
+  pyq_zan: (data) => {
+    console.log(data)
+    var res = request('user/message/zan', 'post', data)
     console.log(res)
     return res
   }

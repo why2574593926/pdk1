@@ -1,11 +1,11 @@
 <!--index.wxml-->
 <wxs module="we">
-  var toFixed = function (value) {
-  return value.toFixed(2);
-}
-module.exports = {
-   toFixed :toFixed
-}
+  var toFixed = function(value) {
+    return value.toFixed(2);
+  }
+  module.exports = {
+    toFixed: toFixed
+  }
 </wxs>
 <view class='top_max index'>
   <!-- 顶部搜索 -->
@@ -13,84 +13,89 @@ module.exports = {
     <input placeholder-class='placer' bindinput='watchPassWord' placeholder='请输入商品名'></input>
     <image src='../img/search1.png'></image>
   </view>
-  <!-- 顶部滚动 -->
-  <swiper indicator-dots='true' indicator-active-color='#FF6D10' indicator-color='white' autoplay='true' interval='3000' duration='1000'>
-    <swiper-item>
-      <image src='../img/guanggao2.png'></image>
-    </swiper-item>
-    <swiper-item>
-      <image src='../img/guanggao4.png'></image>
-    </swiper-item>
-  </swiper>
+
+</view>
+<!--  选项卡 -->
+<view class="shop_xxk">
+  <view bindtap="xxk" id="xxk1" class="shop_xxk1">
+    <text style="color: {{color1}};border-bottom: {{b1}}rpx solid #FF5200;">汽车用品</text>
+  </view>
+  <view bindtap="xxk" id="xxk2" class="shop_xxk1">
+    <text style="color: {{color2}};border-bottom: {{b2}}rpx solid #FF5200;">汽车改装</text>
+  </view>
 </view>
 <!-- 汽车改装 -->
-<view class='pipiicon cars_gaizhuang'>
+<view wx:if='{{xxk_xy==1}}' class='pipiicon cars_gaizhuang'>
   <image src='../img/shop_icon.jpg'></image>
   <text>汽车改装</text>
 </view>
 <!-- 商品循环 -->
-<view catchtap="xiangqing_tiao" id='{{item.id}}' class='shop_max' wx:key wx:for="{{shop1}}">
+<view wx:if='{{xxk_xy==1}}' catchtap="xiangqing_tiao" id='{{item.id}}' class='shop_max' wx:key wx:for="{{shop1}}">
   <view class='shop'>
     <view class='shop_img'>
       <image src='{{item.pic}}'></image>
     </view>
     <view class='shop_text1'>{{item.name}}</view>
-    <view class='shop_text2'>￥<text>{{we.toFixed(item.price-item.pd)}}</text>+<text>{{item.pd}}</text>皮豆</view>
+    <view class='shop_text2'>￥
+      <text>{{we.toFixed(item.price-item.pd)}}</text>+
+      <text>{{item.pd}}</text>皮豆</view>
   </view>
 </view>
 <!-- 商品结尾 -->
-<view class='shop_last_max'>
-<view class='shop_last'>
-<text class='shop_last_text3'></text>
-<text class='shop_last_text1'>更多商品</text>
-<text class='shop_last_text2'>持续上线中  </text>
-<text class='shop_last_text4'>......  </text>
+<view wx:if='{{xxk_xy==1}}' class='shop_last_max'>
+  <view class='shop_last'>
+    <text class='shop_last_text3'></text>
+    <text class='shop_last_text1'>更多商品</text>
+    <text class='shop_last_text2'>持续上线中  </text>
+    <text class='shop_last_text4'>......  </text>
 
-<image class='shop_last_img' src='../img/loadingbg.png'></image>
-</view>
+    <image class='shop_last_img' src='../img/loadingbg.png'></image>
+  </view>
 
 </view>
 <!-- 商品max_view -->
 <view class='shop_max_view'>
-<!-- 汽车用品 -->
-<view class='pipiicon cars_yong'>
-  <image src='../img/shop_icon.jpg'></image>
-  <text>汽车用品</text>
-</view>
-<!-- 商品循环 -->
-<view catchtap="xiangqing_tiao" id='{{item.id}}' class='shop_max' wx:key wx:for="{{shop2}}">
-  <view class='shop'>
-    <view class='shop_img'>
-      <image src='{{item.pic}}'></image>
-    </view>
-    <view class='shop_text1'>{{item.name}}</view>
-    <view class='shop_text2'>￥<text>{{we.toFixed(item.price-item.pd)}}</text>+<text>{{item.pd}}</text>皮豆</view>
+  <!-- 汽车用品 -->
+  <view wx:if='{{xxk_xy==0}}' class='pipiicon cars_yong'>
+    <image src='../img/shop_icon.jpg'></image>
+    <text>汽车用品</text>
   </view>
-</view>
+  <!-- 商品循环 -->
+  <view wx:if='{{xxk_xy==0}}' catchtap="xiangqing_tiao" id='{{item.id}}' class='shop_max' wx:key wx:for="{{shop2}}">
+    <view class='shop'>
+      <view class='shop_img'>
+        <image src='{{item.pic}}'></image>
+      </view>
+      <view class='shop_text1'>{{item.name}}</view>
+      <view class='shop_text2'>￥
+        <text>{{we.toFixed(item.price-item.pd)}}</text>+
+        <text>{{item.pd}}</text>皮豆</view>
+    </view>
+  </view>
 
-<!-- 商品结尾 -->
-<view class='shop_last_max'>
-<view class='shop_last'>
-<text class='shop_last_text3'></text>
-<text class='shop_last_text1'>更多商品</text>
-<text class='shop_last_text2'>持续上线中  </text>
-<text class='shop_last_text4'>......  </text>
+  <!-- 商品结尾 -->
+  <view wx:if='{{xxk_xy==0}}' class='shop_last_max'>
+    <view class='shop_last'>
+      <text class='shop_last_text3'></text>
+      <text class='shop_last_text1'>更多商品</text>
+      <text class='shop_last_text2'>持续上线中  </text>
+      <text class='shop_last_text4'>......  </text>
 
-<image class='shop_last_img' src='../img/loadingbg.png'></image>
-</view>
+      <image class='shop_last_img' src='../img/loadingbg.png'></image>
+    </view>
 
-</view>
+  </view>
 </view>
 <!-- 商城底部敬请期待 -->
 <view class='shop_bottom'>
-<view class='shop_bottom1'>
+  <view class='shop_bottom1'>
     <text class="line"></text>
-   	<text decode="{{true}}" class="txt">&nbsp;敬请期待&nbsp;</text>
-   	<text class="line"></text>
-</view>
-<view class='shop_bottom2'>
-<text>正品二手改装件买卖</text>
-</view>
+    <text decode="{{true}}" class="txt">&nbsp;敬请期待&nbsp;</text>
+    <text class="line"></text>
+  </view>
+  <view class='shop_bottom2'>
+    <text>正品二手改装件买卖</text>
+  </view>
 </view>
 <!-- 模糊查询遍历 -->
 <view wx:if='{{cx0==1}}' class="chaxun">

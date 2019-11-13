@@ -1,0 +1,22 @@
+<view class="max1">
+  <view class="v1">
+    <text>豪车租赁\n</text>
+    <image mode="scaleToFill" src="../img/p2.png"/>
+    </view>
+  <view class="v2">
+    <image mode="scaleToFill" src="../img/p3.png"/>
+    </view>
+  <view class="v3">
+    <text class="t1">租赁地址</text>
+    <text class="t2">南京：南京市江宁区竹山路551号纳科汽车创意园</text>
+    <text class="t2">武汉：武汉市硚口区古田四路江城壹号3号楼101</text>
+    <text class="t2">成都：成都市武侯区世纪路198号105-1-1</text>
+    <text class="t2">北京市：北京市丰台区南三环西路中林置业大底商品</text>
+    <text class="t2">即将增设：上海、深圳、三亚</text>
+  </view>
+</view>
+<view class="max2">
+  <view catchtap="handleClick">
+  立即享受
+  </view>
+</view>

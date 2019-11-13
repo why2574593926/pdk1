@@ -1,0 +1,7 @@
+<!--pages/privilege/add_dynamic.wxml-->
+<textarea bindinput="teatarea1" maxlength='150' placeholder="分享你的好心情吧"></textarea>
+<view wx:for='{{img1}}' wx:key class="container_v1"><image src="{{item}}"></image></view>
+<view  class="container_v1" bindtap='chooseImageTap'><image src="../img/add_img.png"></image></view>
+<view wx:if='{{fb_content&&img2.length>0&&xspd==0}}' class="fabu" catchtap="fb">发布</view>
+<view wx:if='{{!fb_content||img2.length<=0}}' class="fabu fabu1">填写动态</view>
+<view  wx:if='{{fb_content&&img2.length>0&&xspd==1}}' class="fabu fabu1">正在发布</view>

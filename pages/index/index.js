@@ -25,14 +25,14 @@ Page({
         'reservedata2': '1',
         "url2": 'NEW'
       },
-      {
-        'tag': 'tag3',
-        'url': '../img/icon3.png',
-        'content': '违章查询',
-        'reservedata1': '',
-        'reservedata2': '1',
-        "url2": ''
-      },
+      // {
+      //   'tag': 'tag3',
+      //   'url': '../img/icon3.png',
+      //   'content': '违章记录',
+      //   'reservedata1': '',
+      //   'reservedata2': '1',
+      //   "url2": ''
+      // },
       {
         'tag': 'tag4',
         'url': '../img/icon4.png',
@@ -71,14 +71,81 @@ Page({
         'content': '豪车租赁',
         'reservedata1': '',
         'reservedata2': '1',
-        "url2": '5折起'
+        "url2": '七折起'
       }
     ],
     //商品
     shop: {},
     // 模糊查询
     cx0:0,
-    cx:{}
+    cx:{},
+    // 卡片滚动判断
+    w1:'100%',
+    w2:'90%',
+    w3: '90%',
+    m1: '0%',
+    m2: '2.5%',
+    m3: '2.5%',
+    l1: '0%',
+    l2: '5%',
+    l3: '5%'
+  },
+  // 卡片滚动
+  kapiangundong:function(e){
+    let that=this;
+    if (e.detail.currentItemId=='s1'){
+      that.setData({
+        w1: '100%',
+        w2: '90%',
+        w3: '90%',
+        m1: '0%',
+        m2: '2.5%',
+        m3: '2.5%',
+        l1: '0%',
+        l2: '5%',
+        l3: '5%'
+      })
+    } else if (e.detail.currentItemId == 's2'){
+      that.setData({
+        w1: '90%',
+        w2: '100%',
+        w3: '90%',
+        m1: '2.5%',
+        m2: '0%',
+        m3: '2.5%',
+        l1: '5%',
+        l2: '0%',
+        l3: '5%'
+      })
+    }else{
+      that.setData({
+        w1: '90%',
+        w2: '90%',
+        w3: '100%',
+        m1: '2.5%',
+        m2: '2.5%',
+        m3: '0%',
+        l1: '5%',
+        l2: '5%',
+        l3: '0%'
+      })
+    }
+  },
+  // 卡片跳转
+  kapian_tiao:function(e){
+    if(e.currentTarget.id=='s1'){
+      wx.navigateTo({
+        url: 'huochejifen',
+      })
+    } else if (e.currentTarget.id == 's2') {
+      wx.navigateTo({
+        url: 'Luxury_car_rental',
+      })
+    }else{
+      wx.navigateTo({
+        url: 'friends',
+      })
+    }
   },
   watchPassWord: function(e) {
     let that=this;
@@ -179,8 +246,8 @@ Page({
         })
       } else if (e.currentTarget.id == 'tag4') {
         wx.navigateToMiniProgram({
-          appId: 'wx694af04f8681686f',//要打开的小程序 appId
-          path: 'pages/home/home',//打开的页面路径，如果为空则打开首页
+          appId: 'wx694af04f8681686f',//道路救援 appId
+          path: 'pages/home/home?ly=pdkwh',//打开的页面路径，如果为空则打开首页
           extraData: {
             foo: 'bar'//需要传递给目标小程序的数据，目标小程序可在 App.onLaunch，App.onShow 中获取到这份数据
           },
@@ -190,7 +257,33 @@ Page({
             console.log('成功')
           }
         })
-      } else {
+      } else if (e.currentTarget.id == 'tag5') {
+        wx.navigateToMiniProgram({
+          appId: 'wx8c66ffb4cc3c1baf',//违章查缴 appId
+          path: 'pages/wzcj/index/index?from_key=pdkwh',
+          extraData: {
+            foo: 'bar'//需要传递给目标小程序的数据，目标小程序可在 App.onLaunch，App.onShow 中获取到这份数据
+          },
+          envVersion: 'release',//要打开的小程序版本。仅在当前小程序为开发版或体验版时此参数有效。如果当前小程序是正式版，则打开的小程序必定是正式版。
+          success(res) {
+            // 打开成功
+            console.log('成功')
+          }
+        })
+      }else if (e.currentTarget.id == 'tag6') {
+        wx.navigateToMiniProgram({
+          appId: 'wx8d709ee6a311f04f',//车辆年检 appId
+          path: 'pages/index/index?source=pdkwh',//打开的页面路径，如果为空则打开首页
+          extraData: {
+            foo: 'bar'//需要传递给目标小程序的数据，目标小程序可在 App.onLaunch，App.onShow 中获取到这份数据
+          },
+          envVersion: 'release',//要打开的小程序版本。仅在当前小程序为开发版或体验版时此参数有效。如果当前小程序是正式版，则打开的小程序必定是正式版。
+          success(res) {
+            // 打开成功
+            console.log('成功')
+          }
+        })
+      }else {
         this.setData({
           notkt_dis: 'block'
         })
@@ -201,11 +294,11 @@ Page({
   // 滑块跳转
   huakuai_tiao: function(e) {
     if (e.currentTarget.id == 'img1') {
-      app.globalData.index_tiao = 'cars_yong'
+      app.globalData.shop_xxk = 0
     } else if (e.currentTarget.id == 'img2') {
-      app.globalData.index_tiao = 'cars_gaizhuang'
+      app.globalData.shop_xxk = 1
     } else {
-      app.globalData.index_tiao = 'index'
+      app.globalData.shop_xxk = 0
     }
     wx.reLaunch({
       url: '../shop/shop'
@@ -253,6 +346,12 @@ Page({
   youhuifanxian:function(){
     wx.navigateTo({
       url: '../youhui/youhui',
+    })
+  },
+  // 挑战跳转
+  tiaozhan_tiao:function(){
+    wx.navigateTo({
+      url: 'challenge',
     })
   }
 })

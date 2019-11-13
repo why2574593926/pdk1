@@ -1,161 +1,41 @@
 <!--pages/privilege/privilege.wxml-->
-<!--index.wxml-->
-
-<view class='top_max'>
-  <!-- 顶部搜索 -->
-  <view class='search'>
-    <input placeholder-class='placer' bindinput='watchPassWord' placeholder='请输入商品名'></input>
-    <image src='../img/search1.png'></image>
+<!-- 评论循环 -->
+<view class="pl_max" id='{{item.id}}' wx:for='{{dongtai}}' wx:key catchtap="reply_tiao">
+  <view class="pl1">
+    <image src="{{item.img}}"></image>
+    <text>{{item.username}}</text>
   </view>
-  <!-- 顶部滚动 -->
-  <swiper indicator-dots='true' indicator-active-color='#FF6D10' indicator-color='white' autoplay='true' interval='3000' duration='1000'>
-    <swiper-item>
-      <image src='../img/guanggao2.png'></image>
-    </swiper-item>
-  </swiper>
-</view>
-<!-- 热门特权 -->
-<view class='tequan1'>
-  <image src='../img/tequan1.jpg'></image>
-</view>
-<view class='pipiicon'>
-  <image src='../img/shop_icon.jpg'></image>
-  <text>热门特权</text>
-</view>
-<view class="category-box">
-  <view catchtap='tequantiaozhuan' class="category-list" wx:key wx:for="{{tequan1}}" id="{{item.tag}}">
-    <view class="category-column">
-
-      <view style="position: relative;">
-        <image class="category-imgbox2" src="{{item.url}}"></image>
-
-        <view wx:if="{{item.url2}}">
-          <!-- <view wx:if="{{index<4}}" style="top:-20rpx;" class="tag {{item.tag}}">{{item.url2}}</view> -->
-          <view  class="tag {{item.tag}}">{{item.url2}}</view>
-        </view>
-      </view>
-
-
-      <view class="category-title">{{item.content}}</view>
-      <view a:if="{{item.reservedata1}}" class="category-title">{{item.reservedata1}}</view>
-    </view>
+  <view wx:if='{{item.pics.length==1}}' class="pl21">
+    <view class="pl2_11"><image src="{{item.pics[0]}}"></image></view>
+  </view>
+  <view wx:if='{{item.pics.length==2}}' class="pl22">
+    <view class="pl2_12"><image src="{{item.pics[0]}}"></image></view>
+    <view class="pl2_22"><image src="{{item.pics[1]}}"></image></view>
+  </view>
+  <view wx:if='{{item.pics.length>=3}}' class="pl2">
+    <view class="pl2_1"><image src="{{item.pics[0]}}"></image></view>
+    <view class="pl2_2"><image src="{{item.pics[1]}}"></image></view>
+    <view class="pl2_3"><image src="{{item.pics[2]}}"></image></view>
+  </view>
+  <view class="pl3">
+    {{item.content}}
+  </view>
+  <view class="pl4">
+    <image id='{{item.id}}' catchtap="dianzan" src="../img/dianzan1.png"></image>
+    <text>{{item.zan}} · 回复 {{item.review}}</text>
+    <text wx:if='{{item.time<1}}'>刚刚</text>
+    <text wx:else>{{item.time}}小时前</text>
   </view>
 </view>
-<!-- car功能区 -->
-<view class='pipiicon'>
-  <image src='../img/shop_icon.jpg'></image>
-  <text>汽车服务</text>
+<!-- m -->
+<view wx:if='{{!m}}' class="m">没有更多了...</view>
+<!-- 添加动态 -->
+<view catchtap="add_dynamic_tiao" class="add_dynamic">
+  <image src="../img/piyouquan1.png"></image>
 </view>
-  <view class="category-box" style="margin-top:-20px">
-          <view catchtap='tequantiaozhuan' class="category-list" wx:key wx:for="{{cars}}" id="{{item.tag}}">
-            <view class="category-column" >
-              
-              <view style="position: relative;">
-                <image  class="category-imgbox2" src="{{item.url}}"></image>
-
-                <view wx:if="{{item.reservedata2}}">
-                <view class="icg i{{item.tag}}">{{reservedata1[item.reservedata2].content}}</view>
-                </view>
-              </view>
-              
-              
-              <view class="category-title">{{item.content}}</view>
-              <view wx:if="{{item.reservedata1=='-1'}}" class="category-title"><text style="opacity: 0;">text</text></view>
-              <view wx:else class="category-title">{{item.reservedata1}}</view>
-            </view>          
-          </view>
-  </view>
- <!--  -->
-<!-- 货车服务 -->
-<view class='pipiicon'>
-  <image src='../img/shop_icon.jpg'></image>
-  <text>货车服务</text>
-</view>
-  <view class="category-box" style="margin-top:-20px">
-          <view catchtap='tequantiaozhuan' class="category-list" wx:key wx:for="{{kache}}" id="{{item.tag}}">
-            <view class="category-column" >
-              
-              <view style="position: relative;">
-                <image  class="category-imgbox2" src="{{item.url}}"></image>
-
-                 <view wx:if="{{item.reservedata2}}">
-                  <view class="icg {{item.tag}}">{{reservedata1[item.reservedata2].content}}</view>
-                </view>
-              </view>
-              
-              
-             <view class="category-title">{{item.content}}</view>
-             <view wx:if="{{item.reservedata1=='-1'}}" class="category-title"><text style="opacity: 0;">text</text></view>
-             <view wx:else class="category-title">{{item.reservedata1}}</view>
-            </view>          
-          </view>
-  </view>
-
-
-<!-- 机车服务 -->
-<view class='pipiicon'>
-  <image src='../img/shop_icon.jpg'></image>
-  <text>机车服务</text>
-</view>
-  <view class="category-box" style="margin-top:-20px">
-          <view catchtap='tequantiaozhuan' class="category-list" wx:key wx:for="{{jiche}}" id="{{item.tag}}" >
-            <view class="category-column" >
-              
-              <view style="position: relative;">
-                <image  class="category-imgbox2" src="{{item.url}}"></image>
-
-                <view wx:if="{{item.reservedata2}}">
-                  <view class="icg {{item.tag}}">{{reservedata1[item.reservedata2].content}}</view>
-                </view>
-              </view>
-              
-              
-              <view class="category-title">{{item.content}}</view>
-            </view>          
-          </view>
-  </view>
-
-<!-- 旅行服务 -->
-<view class='pipiicon'>
-  <image src='../img/shop_icon.jpg'></image>
-  <text>旅行服务</text>
-</view>
-<view class="category-box" style="margin-top:-20px">
-          <view catchtap='tequantiaozhuan' class="category-list" wx:key wx:for="{{lvxing}}" id="{{item.tag}}" >
-            <view class="category-column" >
-              
-              <view style="position: relative;">
-                 <image  class="category-imgbox" src="{{item.url}}"></image>
-
-                 <view wx:if="{{item.reservedata2}}">
-                  <view class="icg {{item.tag}}" style="top:-10rpx;">{{reservedata1[item.reservedata2].content}}</view>
-                </view>
-              </view>
-              
-              
-              <view class="category-title">{{item.content}}</view>
-            </view>          
-          </view>
-  </view>
-<!-- 未开通弹窗 -->
-<view class="no_kt_max" style="display:{{notkt_dis}}">
-  <view class="no_kt">
-    <view>
-      <image mode="scaleToFill" src="../img/wkt.png"/>
-    </view>
-  <view>
-    <text>非常抱歉</text>
-    <text>功能正在开发中</text>
-    <text>敬请期待</text>
-  </view>
-  <view>
-    <text catchtap="no_kt">知道了</text>
-  </view>
-</view>
-</view>
-<!-- 模糊查询遍历 -->
-<view wx:if='{{cx0==1}}' class="chaxun">
-  <view wx:for='{{cx}}' wx:key catchtap="xiangqing_tiao" id="{{item.id}}">{{item.name}}</view>
+<view wx:if='{{pyq_xy}}' class="bt_max">
+  <view>不获取头像无法使用本功能哦~</view>
+  <button open-type='getUserInfo' lang="zh_CN" bindgetuserinfo="onGotUserInfo">点击获取头像昵称</button>
 </view>
 <!-- 导航 -->
 <mp-nav id="mpnav"></mp-nav>
